@@ -45,7 +45,6 @@ export const DROP_ANIMATION = trigger("drop", [
       position: relative;
       text-align: center;
     }
-
     .pizza-display__topping {
       position: absolute;
       top: 0;
