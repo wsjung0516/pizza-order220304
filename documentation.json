@@ -94,12 +94,12 @@
         },
         {
             "name": "SequenceTopping",
-            "id": "interface-SequenceTopping-714bb48f6cb808656ca0e2e1b0aef4336fab2fa1aed4a1897dab0ff50e8d4af9586f9d7ad195f810543daa3c8ab7eaebd5b0c76172b56f8ecbc5bbdc13e8f127",
+            "id": "interface-SequenceTopping-256a96a2e1b09ee866c02d6e2db0a45541cfe591e9f4e031bde3369bf94401304352006d33fb332faa350e5ee06c52c67d59f60a9e0f2534d861999a307899f0",
             "file": "src/app/models/topping.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface Topping {\r\n  no?: number;\r\n  id?: number;\r\n  name?: string;\r\n  [key: string]: any;\r\n  price?: number;\r\n  count?: number;\r\n  active?: boolean;\r\n}\r\nexport interface SequenceTopping extends Topping {\r\n  image?: string;\r\n}\r\n",
+            "sourceCode": "export interface Topping {\r\n  no?: number;\r\n  id?: number;\r\n  name?: string;\r\n  // [key: string]: any;\r\n  price?: number;\r\n  count?: number;\r\n  active?: boolean;\r\n}\r\nexport interface SequenceTopping extends Topping {\r\n  image?: string;\r\n}\r\n",
             "properties": [
                 {
                     "name": "image",
@@ -118,12 +118,12 @@
         },
         {
             "name": "Topping",
-            "id": "interface-Topping-714bb48f6cb808656ca0e2e1b0aef4336fab2fa1aed4a1897dab0ff50e8d4af9586f9d7ad195f810543daa3c8ab7eaebd5b0c76172b56f8ecbc5bbdc13e8f127",
+            "id": "interface-Topping-256a96a2e1b09ee866c02d6e2db0a45541cfe591e9f4e031bde3369bf94401304352006d33fb332faa350e5ee06c52c67d59f60a9e0f2534d861999a307899f0",
             "file": "src/app/models/topping.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface Topping {\r\n  no?: number;\r\n  id?: number;\r\n  name?: string;\r\n  [key: string]: any;\r\n  price?: number;\r\n  count?: number;\r\n  active?: boolean;\r\n}\r\nexport interface SequenceTopping extends Topping {\r\n  image?: string;\r\n}\r\n",
+            "sourceCode": "export interface Topping {\r\n  no?: number;\r\n  id?: number;\r\n  name?: string;\r\n  // [key: string]: any;\r\n  price?: number;\r\n  count?: number;\r\n  active?: boolean;\r\n}\r\nexport interface SequenceTopping extends Topping {\r\n  image?: string;\r\n}\r\n",
             "properties": [
                 {
                     "name": "active",
@@ -180,23 +180,7 @@
                     "line": 6
                 }
             ],
-            "indexSignatures": [
-                {
-                    "id": "index-declaration-714bb48f6cb808656ca0e2e1b0aef4336fab2fa1aed4a1897dab0ff50e8d4af9586f9d7ad195f810543daa3c8ab7eaebd5b0c76172b56f8ecbc5bbdc13e8f127",
-                    "args": [
-                        {
-                            "name": "key",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "returnType": "any",
-                    "line": 4,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "indexSignatures": [],
             "kind": 165,
             "methods": []
         },
@@ -3639,7 +3623,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: args\r\n})"
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n  template: `<pizza-display [toppings]=\"toppings\"></pizza-display>`\r\n\r\n})"
             }
         ],
         "functions": [],
@@ -3838,7 +3822,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: args\r\n})"
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n  template: `<pizza-display [toppings]=\"toppings\"></pizza-display>`\r\n\r\n})"
                 }
             ],
             "src/app/state/index.ts": [
