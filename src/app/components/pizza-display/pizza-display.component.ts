@@ -36,13 +36,11 @@ export const DROP_ANIMATION = trigger("drop", [
     :host {
       display: block;
     }
-
     .pizza-display {
       background: #f5f5f5;
       border-radius: 4px;
       padding: 15px 0;
     }
-
     .pizza-display__base {
       position: relative;
       text-align: center;
