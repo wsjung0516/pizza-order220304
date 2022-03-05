@@ -14,6 +14,7 @@ import { PizzaDisplayComponent } from './components/pizza-display/pizza-display.
     BrowserModule,
     BrowserAnimationsModule
   ],
+  exports: [PizzaDisplayComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

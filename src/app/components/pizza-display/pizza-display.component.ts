@@ -62,6 +62,7 @@ export const DROP_ANIMATION = trigger("drop", [
 export class PizzaDisplayComponent implements OnInit {
   @Input() set toppings(v: any) {
     this.nToppings = this.toppingImageService.setEachToppingImage(v);
+    console.log(' toppings', this.nToppings, v);
   };
 
   nToppings: any[];

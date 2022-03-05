@@ -1,24 +1,28 @@
 import {PizzaDisplayComponent} from "./pizza-display.component";
 import {Meta, moduleMetadata, Story} from "@storybook/angular";
+import {AppModule} from "../../app.module";
 
 export default {
   title:'PizzaDisplayComponent',
   component: PizzaDisplayComponent,
   decorators: [
     moduleMetadata ({
-      imports:[]
+      declarations: [],
+      imports:[AppModule]
     })
   ]
-} as Meta;
-export const Template: Story = (args) => ({
-  props: args,
+} as Meta<PizzaDisplayComponent>;
+const Template: Story = (args) => ({
+  props: {
+    ...args
+  },
   template: `<pizza-display [toppings]="toppings"></pizza-display>`
 
 })
-const Primary = Template.bind({});
+export const Primary = Template.bind({});
 Primary.args = {
   toppings:[
-    {id:1, name:'anchoby'},
+    {id:1, name:'anchovy'},
     {id:2, name:'bacon'},
     {id:3, name:'chili'}
   ]
