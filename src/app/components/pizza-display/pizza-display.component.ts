@@ -64,7 +64,6 @@ export class PizzaDisplayComponent implements OnInit {
     this.nToppings = this.toppingImageService.setEachToppingImage(v);
     console.log(' toppings', this.nToppings, v);
   };
-
   nToppings: any[];
 
   constructor(private toppingImageService: ToppingImageService) { }
