@@ -42,7 +42,7 @@ export const DROP_ANIMATION = trigger("drop", [
       padding: 15px 0;
     }
     .pizza-display__base {
-      position: relative;
+      position: absolute;
       text-align: center;
     }
     .pizza-display__topping {

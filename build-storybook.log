@@ -21,284 +21,287 @@ Node.js version : v16.13.1
 
 Operating system : Windows 10
 
-[09:06:57] No configuration file found, switching to CLI flags.
-[09:06:57] Using tsconfig file : C:\Angular\pizza-order220304\tsconfig.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\.browserslistrc
-[09:06:57] Including      : C:\Angular\pizza-order220304\.editorconfig
-[09:06:57] Including      : C:\Angular\pizza-order220304\.gitignore
-[09:06:57] Including      : C:\Angular\pizza-order220304\documentation.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\karma.conf.js
-[09:06:57] Including      : C:\Angular\pizza-order220304\angular.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\package-lock.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\package.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\build-storybook.log
-[09:06:57] Including      : C:\Angular\pizza-order220304\README.md
-[09:06:57] Including      : C:\Angular\pizza-order220304\tailwind.config.js
-[09:06:57] Including      : C:\Angular\pizza-order220304\tsconfig.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\tsconfig.app.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\tsconfig.spec.json
-[09:06:57] Including      : C:\Angular\pizza-order220304\.idea\.gitignore
-[09:06:57] Including      : C:\Angular\pizza-order220304\.idea\modules.xml
-[09:06:57] Including      : C:\Angular\pizza-order220304\.idea\pizza-order220304.iml
-[09:06:57] Including      : C:\Angular\pizza-order220304\.idea\vcs.xml
-[09:06:57] Including      : C:\Angular\pizza-order220304\.storybook\preview.js
-[09:06:57] Including      : C:\Angular\pizza-order220304\.idea\workspace.xml
-[09:06:57] Including      : C:\Angular\pizza-order220304\.storybook\tsconfig.json
-[09:06:57] Ignoring       : C:\Angular\pizza-order220304\.storybook\typings.d.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\.storybook\main.js
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\favicon.ico
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\index.html
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\main.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\polyfills.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\test.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\styles.css
-[09:06:57] Including      : C:\Angular\pizza-order220304\.github\workflows\chromatic.yml
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\app.component.css
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\app.component.html
-[09:06:57] Ignoring       : C:\Angular\pizza-order220304\src\app\app.component.spec.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\app.module.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\app.component.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\.gitkeep
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\environments\environment.prod.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\environments\environment.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\models\pizza.model.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\models\topping.model.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\models\index.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\pizzas.service.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\index.ts
-[09:06:57] Ignoring       : C:\Angular\pizza-order220304\src\app\services\price.service.spec.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\price.service.ts
-[09:06:57] Ignoring       : C:\Angular\pizza-order220304\src\app\services\topping-image.service.spec.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\topping-added.service.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\topping-image.service.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\topping-total.service.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\services\toppings.service.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.actions.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\state\index.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.actions.ts
-[09:06:57] Ignoring       : C:\Angular\pizza-order220304\src\app\state\toppings.state.spec.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.state.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\css\style.css
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.state.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff2
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\logo.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\pizza.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\json\db.json
-[09:06:57] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.spec.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.stories.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.ts
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\actions\checked.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\bacon.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\basil.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\chili.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mozzarella.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mushroom.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\olive.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\onion.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepper.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepperoni.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\prawn.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\sweetcorn.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\tomato.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\md\images\structure1.png
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_1.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_2.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_3.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_4.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\anchovy.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_5.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\bacon.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\basil.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\chili.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mozzarella.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mushroom.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\onion.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\olive.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepper.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepperoni.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\prawn.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\sweetcorn.svg
-[09:06:57] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\tomato.svg
-[09:06:57] Searching package.json file
-[09:06:57] package.json file found
-[09:06:57] Processing package.json dependencies
-[09:06:57] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
-[09:06:57] README.md file found
-[09:06:57] Error during C:\Angular\pizza-order220304\CHANGELOG read
-[09:06:57] Continuing without CHANGELOG.md file
-[09:06:57] Error during C:\Angular\pizza-order220304\CONTRIBUTING read
-[09:06:57] Continuing without CONTRIBUTING.md file
-[09:06:57] Error during C:\Angular\pizza-order220304\LICENSE read
-[09:06:57] Continuing without LICENSE.md file
-[09:06:57] Error during C:\Angular\pizza-order220304\TODO read
-[09:06:57] Continuing without TODO.md file
-[09:06:57] Get dependencies data
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/main.ts
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/polyfills.ts
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/test.ts
-[09:06:57] found          : require
-[09:06:57] found          : context
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/app.module.ts
-[09:06:57] found          : AppModule
-[09:06:57]                : - imports:
-[09:06:57]                : 	- BrowserModule
-[09:06:57]                : 	- BrowserAnimationsModule
-[09:06:57]                : - declarations:
-[09:06:57]                : 	- AppComponent
-[09:06:57]                : 	- PizzaDisplayComponent
-[09:06:57]                : - bootstrap:
-[09:06:57]                : 	- AppComponent
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/app.component.ts
-[09:06:57] found          : AppComponent
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/environments/environment.prod.ts
-[09:06:57] found          : environment
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/environments/environment.ts
-[09:06:57] found          : environment
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/models/pizza.model.ts
-[09:06:57] found          : Pizza
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/models/topping.model.ts
-[09:06:57] found          : Topping
-[09:06:57] found          : SequenceTopping
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/models/index.ts
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/pizzas.service.ts
-[09:06:57] found          : PizzasService
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/index.ts
-[09:06:57] found          : services
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/price.service.ts
-[09:06:57] found          : PriceService
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-added.service.ts
-[09:06:57] found          : ToppingAddedService
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-image.service.ts
-[09:06:57] found          : ToppingImageService
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-total.service.ts
-[09:06:57] found          : ToppingTotalService
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/services/toppings.service.ts
-[09:06:57] found          : ToppingsService
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.actions.ts
-[09:06:57] found          : LoadPizzas
-[09:06:57] found          : LoadPizzasSuccess
-[09:06:57] found          : LoadPizzasFail
-[09:06:57] found          : CreatePizza
-[09:06:57] found          : CreatePizzaSuccess
-[09:06:57] found          : CreatePizzaFail
-[09:06:57] found          : UpdatePizza
-[09:06:57] found          : UpdatePizzaSuccess
-[09:06:57] found          : UpdatePizzaFail
-[09:06:57] found          : RemovePizza
-[09:06:57] found          : RemovePizzaSuccess
-[09:06:57] found          : RemovePizzaFail
-[09:06:57] found          : SelectPizza
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/state/index.ts
-[09:06:57] found          : ProductsState
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.actions.ts
-[09:06:57] found          : LoadToppings
-[09:06:57] found          : LoadToppingsSuccess
-[09:06:57] found          : LoadToppingsFail
-[09:06:57] found          : UpdateToppings
-[09:06:57] found          : UpdateToppingsSuccess
-[09:06:57] found          : UpdateToppingsFail
-[09:06:57] found          : VisualiseToppings
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.state.ts
-[09:06:57] found          : Pizzac
-[09:06:57] found          : PizzasStateModel
-[09:06:57] found          : PizzasState
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.state.ts
-[09:06:57] found          : ToppingsStateModel
-[09:06:57] found          : ToppingsState
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.stories.ts
-[09:06:57] found          : Template
-[09:06:57] found          : Primary
-[09:06:57] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.ts
-[09:06:57] found          : DROP_ANIMATION
-[09:06:57] found          : PizzaDisplayComponent
-[09:06:57] -------------------
-[09:06:57] Project statistics 
-[09:06:57] - files      : 154
-[09:06:57] - module     : 1
-[09:06:57] - component  : 2
-[09:06:57] - injectable : 8
-[09:06:57] - class      : 21
-[09:06:57] - interface  : 5
-[09:06:57] -------------------
-[09:06:57] Prepare components
-[09:06:57]  AppComponent has a templateUrl, include it
-[09:06:57]  AppComponent has styleUrls, include them
-[09:06:57]  PizzaDisplayComponent has styles, include them
-[09:06:57] Prepare modules
-[09:06:57] Prepare injectables
-[09:06:57] Prepare classes
-[09:06:57] Prepare interfaces
-[09:06:57] Prepare miscellaneous
-[09:06:57] Process documentation coverage report
-[09:06:57] Generating documentation in export format json
-[09:06:57] Documentation generated in ./ in 0.483 seconds
+[10:55:31] No configuration file found, switching to CLI flags.
+[10:55:31] Using tsconfig file : C:\Angular\pizza-order220304\tsconfig.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\.editorconfig
+[10:55:31] Including      : C:\Angular\pizza-order220304\.browserslistrc
+[10:55:31] Including      : C:\Angular\pizza-order220304\.gitignore
+[10:55:31] Including      : C:\Angular\pizza-order220304\angular.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\documentation.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\karma.conf.js
+[10:55:31] Including      : C:\Angular\pizza-order220304\package-lock.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\package.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\README.md
+[10:55:31] Including      : C:\Angular\pizza-order220304\build-storybook.log
+[10:55:31] Including      : C:\Angular\pizza-order220304\tailwind.config.js
+[10:55:31] Including      : C:\Angular\pizza-order220304\tsconfig.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\tsconfig.app.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\tsconfig.spec.json
+[10:55:31] Including      : C:\Angular\pizza-order220304\.idea\.gitignore
+[10:55:31] Including      : C:\Angular\pizza-order220304\.idea\vcs.xml
+[10:55:31] Including      : C:\Angular\pizza-order220304\.idea\pizza-order220304.iml
+[10:55:31] Including      : C:\Angular\pizza-order220304\.idea\modules.xml
+[10:55:31] Including      : C:\Angular\pizza-order220304\.storybook\main.js
+[10:55:31] Including      : C:\Angular\pizza-order220304\.idea\workspace.xml
+[10:55:31] Including      : C:\Angular\pizza-order220304\.storybook\preview.js
+[10:55:31] Including      : C:\Angular\pizza-order220304\.storybook\tsconfig.json
+[10:55:31] Ignoring       : C:\Angular\pizza-order220304\.storybook\typings.d.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\favicon.ico
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\index.html
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\main.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\polyfills.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\styles.css
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\test.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\app.component.css
+[10:55:31] Including      : C:\Angular\pizza-order220304\.github\workflows\chromatic.yml
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\app.component.html
+[10:55:31] Ignoring       : C:\Angular\pizza-order220304\src\app\app.component.spec.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\app.component.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\app.module.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\.gitkeep
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\environments\environment.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\environments\environment.prod.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\components\build-storybook.log
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\models\index.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\models\topping.model.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\models\pizza.model.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\index.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\pizzas.service.ts
+[10:55:31] Ignoring       : C:\Angular\pizza-order220304\src\app\services\price.service.spec.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\price.service.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\topping-added.service.ts
+[10:55:31] Ignoring       : C:\Angular\pizza-order220304\src\app\services\topping-image.service.spec.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\topping-image.service.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\topping-total.service.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\services\toppings.service.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.actions.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\state\index.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.state.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.actions.ts
+[10:55:31] Ignoring       : C:\Angular\pizza-order220304\src\app\state\toppings.state.spec.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.state.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\css\style.css
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff2
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\logo.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\pizza.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\json\db.json
+[10:55:31] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.spec.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.stories.ts
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\actions\checked.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\bacon.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\basil.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mozzarella.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mushroom.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\chili.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\olive.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepper.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\prawn.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\onion.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepperoni.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\sweetcorn.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\tomato.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\md\images\structure1.png
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_1.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_2.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_3.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_4.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_5.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\anchovy.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\bacon.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\basil.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\chili.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mozzarella.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mushroom.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\olive.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\onion.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepper.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepperoni.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\prawn.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\sweetcorn.svg
+[10:55:31] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\tomato.svg
+[10:55:31] Searching package.json file
+[10:55:31] package.json file found
+[10:55:31] Processing package.json dependencies
+[10:55:31] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[10:55:31] README.md file found
+[10:55:31] Error during C:\Angular\pizza-order220304\CHANGELOG read
+[10:55:31] Continuing without CHANGELOG.md file
+[10:55:31] Error during C:\Angular\pizza-order220304\CONTRIBUTING read
+[10:55:31] Continuing without CONTRIBUTING.md file
+[10:55:31] Error during C:\Angular\pizza-order220304\LICENSE read
+[10:55:31] Continuing without LICENSE.md file
+[10:55:31] Error during C:\Angular\pizza-order220304\TODO read
+[10:55:31] Continuing without TODO.md file
+[10:55:31] Get dependencies data
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/main.ts
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/polyfills.ts
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/test.ts
+[10:55:31] found          : require
+[10:55:31] found          : context
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/app.component.ts
+[10:55:31] found          : AppComponent
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/app.module.ts
+[10:55:31] found          : AppModule
+[10:55:31]                : - imports:
+[10:55:31]                : 	- BrowserModule
+[10:55:31]                : 	- BrowserAnimationsModule
+[10:55:31]                : - exports:
+[10:55:31]                : 	- PizzaDisplayComponent
+[10:55:31]                : - declarations:
+[10:55:31]                : 	- AppComponent
+[10:55:31]                : 	- PizzaDisplayComponent
+[10:55:31]                : - bootstrap:
+[10:55:31]                : 	- AppComponent
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/environments/environment.ts
+[10:55:31] found          : environment
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/environments/environment.prod.ts
+[10:55:31] found          : environment
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/models/index.ts
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/models/topping.model.ts
+[10:55:31] found          : Topping
+[10:55:31] found          : SequenceTopping
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/models/pizza.model.ts
+[10:55:31] found          : Pizza
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/index.ts
+[10:55:31] found          : services
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/pizzas.service.ts
+[10:55:31] found          : PizzasService
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/price.service.ts
+[10:55:31] found          : PriceService
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-added.service.ts
+[10:55:31] found          : ToppingAddedService
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-image.service.ts
+[10:55:31] found          : ToppingImageService
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-total.service.ts
+[10:55:31] found          : ToppingTotalService
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/services/toppings.service.ts
+[10:55:31] found          : ToppingsService
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.actions.ts
+[10:55:31] found          : LoadPizzas
+[10:55:31] found          : LoadPizzasSuccess
+[10:55:31] found          : LoadPizzasFail
+[10:55:31] found          : CreatePizza
+[10:55:31] found          : CreatePizzaSuccess
+[10:55:31] found          : CreatePizzaFail
+[10:55:31] found          : UpdatePizza
+[10:55:31] found          : UpdatePizzaSuccess
+[10:55:31] found          : UpdatePizzaFail
+[10:55:31] found          : RemovePizza
+[10:55:31] found          : RemovePizzaSuccess
+[10:55:31] found          : RemovePizzaFail
+[10:55:31] found          : SelectPizza
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/state/index.ts
+[10:55:31] found          : ProductsState
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.state.ts
+[10:55:31] found          : Pizzac
+[10:55:31] found          : PizzasStateModel
+[10:55:31] found          : PizzasState
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.actions.ts
+[10:55:31] found          : LoadToppings
+[10:55:31] found          : LoadToppingsSuccess
+[10:55:31] found          : LoadToppingsFail
+[10:55:31] found          : UpdateToppings
+[10:55:31] found          : UpdateToppingsSuccess
+[10:55:31] found          : UpdateToppingsFail
+[10:55:31] found          : VisualiseToppings
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.state.ts
+[10:55:31] found          : ToppingsStateModel
+[10:55:31] found          : ToppingsState
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.ts
+[10:55:31] found          : DROP_ANIMATION
+[10:55:31] found          : PizzaDisplayComponent
+[10:55:31] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.stories.ts
+[10:55:31] found          : Template
+[10:55:31] found          : Primary
+[10:55:31] -------------------
+[10:55:31] Project statistics 
+[10:55:31] - files      : 155
+[10:55:31] - module     : 1
+[10:55:31] - component  : 2
+[10:55:31] - injectable : 8
+[10:55:31] - class      : 21
+[10:55:31] - interface  : 5
+[10:55:31] -------------------
+[10:55:31] Prepare components
+[10:55:31]  AppComponent has a templateUrl, include it
+[10:55:31]  AppComponent has styleUrls, include them
+[10:55:31]  PizzaDisplayComponent has styles, include them
+[10:55:31] Prepare modules
+[10:55:31] Prepare injectables
+[10:55:31] Prepare classes
+[10:55:31] Prepare interfaces
+[10:55:31] Prepare miscellaneous
+[10:55:31] Process documentation coverage report
+[10:55:31] Generating documentation in export format json
+[10:55:31] Documentation generated in ./ in 0.472 seconds
 info @storybook/angular v6.4.19
 info 
-info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--10132-9AsAbExd5efR
+info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--22636-DChKhH1Mowqt
 info => Loading presets
 info => Compiling manager..
 info => Compiling preview..
@@ -435,38 +438,43 @@ Starting type checking service...
 <s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building 0/18 entries 17/18 dependencies 0/17 modules
-<s> [webpack.Progress] 10% building 0/18 entries 21/69 dependencies 0/20 modules
-<s> [webpack.Progress] 10% building 0/18 entries 171/200 dependencies 11/96 modules
-<s> [webpack.Progress] 13% building 1/18 entries 704/916 dependencies 24/268 modules
+<s> [webpack.Progress] 10% building 0/18 entries 21/77 dependencies 0/20 modules
+<s> [webpack.Progress] 10% building 0/18 entries 169/200 dependencies 11/94 modules
+<s> [webpack.Progress] 13% building 1/18 entries 506/908 dependencies 22/240 modules
+[BABEL] Note: The code generator has deoptimised the styling of C:\Angular\pizza-order220304\node_modules\prettier\standalone.js as it exceeds the max of 500KB.
+<s> [webpack.Progress] 13% building 1/18 entries 600/908 dependencies 22/265 modules
 <s> [webpack.Progress] 13% building import loader ./node_modules/ts-loader/index.js
 <s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
 <s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
-<s> [webpack.Progress] 13% building 1/18 entries 876/916 dependencies 42/305 modules
-[BABEL] Note: The code generator has deoptimised the styling of C:\Angular\pizza-order220304\node_modules\prettier\standalone.js as it exceeds the max of 500KB.
-<s> [webpack.Progress] 13% building 1/18 entries 1093/1200 dependencies 81/334 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1700/1728 dependencies 228/456 modules
-<s> [webpack.Progress] 16% building 2/18 entries 1932/2231 dependencies 243/480 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2800/2899 dependencies 350/752 modules
-<s> [webpack.Progress] 19% building 3/18 entries 2815/2899 dependencies 352/760 modules
-<s> [webpack.Progress] 19% building 3/18 entries 3379/3400 dependencies 461/837 modules
-<s> [webpack.Progress] 19% building 3/18 entries 3800/3940 dependencies 681/924 modules
-<s> [webpack.Progress] 19% building 3/18 entries 4300/4399 dependencies 779/1089 modules
-<s> [webpack.Progress] 22% building 3/18 entries 5061/5086 dependencies 1100/1275 modules
-<s> [webpack.Progress] 22% building 4/18 entries 5107/5139 dependencies 1138/1292 modules
-<s> [webpack.Progress] 25% building 5/18 entries 5107/5139 dependencies 1139/1292 modules
-<s> [webpack.Progress] 28% building 6/18 entries 5107/5139 dependencies 1140/1292 modules
-<s> [webpack.Progress] 31% building 7/18 entries 5107/5139 dependencies 1141/1292 modules
-<s> [webpack.Progress] 34% building 8/18 entries 5107/5139 dependencies 1142/1292 modules
-<s> [webpack.Progress] 37% building 9/18 entries 5107/5139 dependencies 1143/1292 modules
-<s> [webpack.Progress] 40% building 10/18 entries 5107/5139 dependencies 1144/1292 modules
-<s> [webpack.Progress] 43% building 11/18 entries 5107/5139 dependencies 1145/1292 modules
-<s> [webpack.Progress] 46% building 12/18 entries 5107/5139 dependencies 1146/1292 modules
-<s> [webpack.Progress] 49% building 13/18 entries 5107/5139 dependencies 1147/1292 modules
-<s> [webpack.Progress] 52% building 14/18 entries 5107/5139 dependencies 1148/1292 modules
-<s> [webpack.Progress] 55% building 15/18 entries 5796/5808 dependencies 1402/1436 modules
-<s> [webpack.Progress] 58% building 16/18 entries 5817/5819 dependencies 1428/1442 modules
-<s> [webpack.Progress] 61% building 17/18 entries 5829/5829 dependencies 1448/1449 modules
-<s> [webpack.Progress] 65% building 18/18 entries 5829/5829 dependencies 1449/1449 modules
+<s> [webpack.Progress] 13% building 1/18 entries 973/1060 dependencies 55/309 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1072/1100 dependencies 67/336 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1400/1599 dependencies 165/372 modules
+<s> [webpack.Progress] 16% building 2/18 entries 1889/2099 dependencies 242/478 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2200/2640 dependencies 290/575 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2800/2895 dependencies 367/758 modules
+<s> [webpack.Progress] 19% building 3/18 entries 2804/2895 dependencies 374/758 modules
+<s> [webpack.Progress] 19% building import loader ./node_modules/raw-loader/dist/cjs.js
+<s> [webpack.Progress] 19% building 3/18 entries 3048/3111 dependencies 408/812 modules
+<s> [webpack.Progress] 19% building 3/18 entries 3300/3584 dependencies 520/828 modules
+<s> [webpack.Progress] 19% building 3/18 entries 3641/3747 dependencies 594/900 modules
+<s> [webpack.Progress] 19% building 3/18 entries 4000/4067 dependencies 733/996 modules
+<s> [webpack.Progress] 19% building 3/18 entries 4200/4272 dependencies 748/1082 modules
+<s> [webpack.Progress] 20% building 3/18 entries 4690/4800 dependencies 919/1203 modules
+<s> [webpack.Progress] 22% building 4/18 entries 5085/5111 dependencies 1112/1285 modules
+<s> [webpack.Progress] 25% building 5/18 entries 5085/5111 dependencies 1113/1285 modules
+<s> [webpack.Progress] 28% building 6/18 entries 5085/5111 dependencies 1114/1285 modules
+<s> [webpack.Progress] 31% building 7/18 entries 5085/5111 dependencies 1115/1285 modules
+<s> [webpack.Progress] 34% building 8/18 entries 5085/5111 dependencies 1116/1285 modules
+<s> [webpack.Progress] 37% building 9/18 entries 5085/5111 dependencies 1117/1285 modules
+<s> [webpack.Progress] 40% building 10/18 entries 5085/5111 dependencies 1118/1285 modules
+<s> [webpack.Progress] 43% building 11/18 entries 5085/5111 dependencies 1119/1285 modules
+<s> [webpack.Progress] 46% building 12/18 entries 5085/5111 dependencies 1120/1285 modules
+<s> [webpack.Progress] 49% building 13/18 entries 5085/5111 dependencies 1124/1285 modules
+<s> [webpack.Progress] 52% building 14/18 entries 5085/5111 dependencies 1130/1285 modules
+<s> [webpack.Progress] 55% building 15/18 entries 5822/5830 dependencies 1415/1443 modules
+<s> [webpack.Progress] 58% building 16/18 entries 5838/5838 dependencies 1434/1450 modules
+<s> [webpack.Progress] 61% building 17/18 entries 5848/5848 dependencies 1454/1455 modules
+<s> [webpack.Progress] 65% building 18/18 entries 5848/5848 dependencies 1455/1455 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
 <s> [webpack.Progress] 69% building finish
@@ -566,11 +574,11 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing copy-webpack-plugin
 <s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
 <s> [webpack.Progress] 92% sealing asset processing TerserPlugin
-info => Manager built (30 s)
+info => Manager built (34 s)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.510ac0a9.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.510ac0a9.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.43deb3fe.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.43deb3fe.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.a72d0157.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.a72d0157.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 701.afc546ab.iframe.bundle.js generate SourceMap
@@ -593,8 +601,8 @@ info => Manager built (30 s)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.082c5d07.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.49c00c83.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.49c00c83.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 901.93cc9342.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 901.93cc9342.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 586.79ad1181.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 586.79ad1181.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin assets/css/style.css generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin assets/css/style.css generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
@@ -605,8 +613,8 @@ info => Manager built (30 s)
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.03887d14.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.03887d14.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.9dce093e.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.9dce093e.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.b85036c9.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.b85036c9.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 701.5c6edf83.iframe.bundle.js generate SourceMap
@@ -629,8 +637,8 @@ info => Manager built (30 s)
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 331.9a4f69b5.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.139ff10e.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.139ff10e.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 901.beabd8fa.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 901.beabd8fa.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 586.f2a21e81.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 586.f2a21e81.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin resolve sources
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing AnyComponentStyleBudgetChecker
@@ -660,7 +668,7 @@ info => Manager built (30 s)
 <s> [webpack.Progress] 99% cache begin idle
 <s> [webpack.Progress] 100% 
 
-info => Preview built (34 s)
+info => Preview built (42 s)
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
@@ -671,16 +679,16 @@ WARN Assets:
 WARN   assets/img/toppings/pepperoni.svg (627 KiB)
 WARN   42.0f491190.iframe.bundle.js (634 KiB)
 WARN   236.463453b5.iframe.bundle.js (595 KiB)
-WARN   901.beabd8fa.iframe.bundle.js (2.86 MiB)
+WARN   586.f2a21e81.iframe.bundle.js (2.98 MiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
-WARN   main (3.06 MiB)
+WARN   main (3.2 MiB)
 WARN       runtime~main.b85036c9.iframe.bundle.js
-WARN       901.beabd8fa.iframe.bundle.js
-WARN       main.03887d14.iframe.bundle.js
+WARN       586.f2a21e81.iframe.bundle.js
+WARN       main.9dce093e.iframe.bundle.js
 WARN 
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--10132-9AsAbExd5efR
+info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--22636-DChKhH1Mowqt
