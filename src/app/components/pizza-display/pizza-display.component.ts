@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from "@angular/animations";
 import {ToppingImageService} from "../../services/topping-image.service";
+
 export const DROP_ANIMATION = trigger("drop", [
   transition(":enter", [
     style({transform: "translateY(-200px)", opacity: 0}),
@@ -23,7 +24,9 @@ export const DROP_ANIMATION = trigger("drop", [
   template: `
     <div class="pizza-display">
       <div class="pizza-display__base">
-        <img src="assets/img/pizza.svg">
+        <div class="flex justify-center">
+            <img src="assets/img/pizza.svg">
+        </div>
         <img  *ngFor="let topping of nToppings; index as i;"
           src="assets/img/toppings/multi/{{ topping.image }}.svg"
           [style.zIndex]="i"
@@ -42,7 +45,7 @@ export const DROP_ANIMATION = trigger("drop", [
       padding: 15px 0;
     }
     .pizza-display__base {
-      position: absolute;
+      position: relative;
       text-align: center;
     }
     .pizza-display__topping {

@@ -1,6 +1,7 @@
 import {PizzaDisplayComponent} from "./pizza-display.component";
 import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {AppModule} from "../../app.module";
+import {PizzaModule} from "../pizza.module";
 
 export default {
   title:'PizzaDisplayComponent',
@@ -8,7 +9,7 @@ export default {
   decorators: [
     moduleMetadata ({
       declarations: [],
-      imports:[AppModule]
+      imports:[PizzaModule]
     })
   ]
 } as Meta<PizzaDisplayComponent>;
