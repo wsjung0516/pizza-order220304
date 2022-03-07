@@ -2962,7 +2962,7 @@
         },
         {
             "name": "ButtonsComponent",
-            "id": "component-ButtonsComponent-afe2712886ca5e38f099b1a9565a4c0cfe2883837bb82966b4076fe24ea6d3d0273ba5ed169413933edda4d0dd42d40d158946b9fc7057c8526dcf982e3bbf64",
+            "id": "component-ButtonsComponent-90d75c31f4e312f4151477e6ad3da0c75ceca18217690392002375f601c7e29b962976ab6e87b34c319155af17e7e5018e089b0fd711834e90e1bcb4003cb01b",
             "file": "src/app/components/pizza-form/buttons/buttons.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2972,7 +2972,7 @@
             "selector": "app-buttons",
             "styleUrls": [],
             "styles": [
-                "\n    .pizza-form__actions {\n      margin: 35px 0 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .pizza-form__actions button:last-child {\n      margin-left: auto;\n    }\n    .btn {\n      display: inline-block;\n      padding: 10px 15px;\n      margin: 0;\n      outline: 0;\n      border: 0;\n      border-radius: 3px;\n      font-size: 16px;\n      font-family: 'cornerstone';\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n    .btn__ok {\n      background: #0f9675;\n      color: #fff;\n    }\n    .btn__ok:hover {\n      background: #0a7d61;\n    }\n    .btn__warning {\n      background: #ab131c;\n      color: #fff;\n    }\n    .btn__warning:hover {\n      background: #880c14;\n    }\n\n  "
+                "\n    .pizza-form__actions {\n      position: relative;\n      margin: 35px 0 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .pizza-form__actions button:last-child {\n      margin-left: auto;\n    }\n    .btn {\n      display: inline-block;\n      padding: 10px 15px;\n      margin: 0;\n      outline: 0;\n      border: 0;\n      border-radius: 3px;\n      font-size: 16px;\n      font-family: 'cornerstone';\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n    .btn__ok {\n      background: #0f9675;\n      color: #fff;\n    }\n    .btn__ok:hover {\n      background: #0a7d61;\n    }\n    .btn__warning {\n      background: #ab131c;\n      color: #fff;\n    }\n    .btn__warning:hover {\n      background: #880c14;\n    }\n\n  "
             ],
             "template": "<div class=\"pizza-form__actions\">\n  <button\n    type=\"button\"\n    class=\"btn btn__ok\"\n    *ngIf=\"!exists\"\n    (click)=\"createPizza(form)\">\n    Create Pizza\n  </button>\n\n  <button\n    type=\"button\"\n    class=\"btn btn__ok\"\n    *ngIf=\"exists\"\n    (click)=\"updatePizza(form)\">\n    Save changes\n  </button>\n\n  <button\n    type=\"button\"\n    class=\"btn btn__warning\"\n    *ngIf=\"exists\"\n    (click)=\"removePizza(form)\">\n    Delete Pizza\n  </button>\n</div>\n",
             "templateUrl": [],
@@ -2982,7 +2982,7 @@
                     "name": "exists",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 74,
+                    "line": 75,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -2990,7 +2990,7 @@
                     "name": "form",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 75,
+                    "line": 76,
                     "type": "FormGroup",
                     "decorators": []
                 },
@@ -2998,7 +2998,7 @@
                     "name": "pizza",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 76,
+                    "line": 77,
                     "type": "Pizza",
                     "decorators": []
                 }
@@ -3009,7 +3009,7 @@
                     "defaultValue": "new EventEmitter<Pizza>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 77,
+                    "line": 78,
                     "type": "EventEmitter"
                 },
                 {
@@ -3017,7 +3017,7 @@
                     "defaultValue": "new EventEmitter<Pizza>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 79,
+                    "line": 80,
                     "type": "EventEmitter"
                 },
                 {
@@ -3025,7 +3025,7 @@
                     "defaultValue": "new EventEmitter<Pizza>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 78,
+                    "line": 79,
                     "type": "EventEmitter"
                 }
             ],
@@ -3044,7 +3044,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 85,
+                    "line": 86,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3065,7 +3065,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 83,
+                    "line": 84,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -3082,7 +3082,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 104,
+                    "line": 105,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3110,7 +3110,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 95,
+                    "line": 96,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3133,17 +3133,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\nimport {Pizza} from \"../../../models\";\nimport {Form, FormGroup} from \"@angular/forms\";\n\n@Component({\n  selector: 'app-buttons',\n  template: `\n    <div class=\"pizza-form__actions\">\n      <button\n        type=\"button\"\n        class=\"btn btn__ok\"\n        *ngIf=\"!exists\"\n        (click)=\"createPizza(form)\">\n        Create Pizza\n      </button>\n\n      <button\n        type=\"button\"\n        class=\"btn btn__ok\"\n        *ngIf=\"exists\"\n        (click)=\"updatePizza(form)\">\n        Save changes\n      </button>\n\n      <button\n        type=\"button\"\n        class=\"btn btn__warning\"\n        *ngIf=\"exists\"\n        (click)=\"removePizza(form)\">\n        Delete Pizza\n      </button>\n    </div>\n  `,\n  styles: [`\n    .pizza-form__actions {\n      margin: 35px 0 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .pizza-form__actions button:last-child {\n      margin-left: auto;\n    }\n    .btn {\n      display: inline-block;\n      padding: 10px 15px;\n      margin: 0;\n      outline: 0;\n      border: 0;\n      border-radius: 3px;\n      font-size: 16px;\n      font-family: 'cornerstone';\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n    .btn__ok {\n      background: #0f9675;\n      color: #fff;\n    }\n    .btn__ok:hover {\n      background: #0a7d61;\n    }\n    .btn__warning {\n      background: #ab131c;\n      color: #fff;\n    }\n    .btn__warning:hover {\n      background: #880c14;\n    }\n\n  `]\n})\nexport class ButtonsComponent implements OnInit {\n  @Input() exists: boolean;\n  @Input() form: FormGroup;\n  @Input() pizza: Pizza;\n  @Output() create = new EventEmitter<Pizza>();\n  @Output() update = new EventEmitter<Pizza>();\n  @Output() remove = new EventEmitter<Pizza>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n  createPizza(form: FormGroup) {\n    const { value, valid } = form;\n    // console.log('--- value', value, valid, form);\n    if( value['name'].split(':')[0] === '') window.alert('이름을 입력하세요!')\n    // if( value['name'] === '') window.alert('이름을 입력하세요!')\n    if (valid) {\n      this.create.emit(value);\n    }\n  }\n\n  updatePizza(form: FormGroup) {\n    const { value, valid, touched, dirty } = form;\n    if (valid) {\n      // console.log('updatePizza-form', form, value);\n      // if (touched && valid) {\n      this.update.emit({ ...this.pizza, ...value });\n    }\n  }\n\n  removePizza(form: FormGroup) {\n    const { value } = form;\n    this.remove.emit({ ...this.pizza, ...value });\n  }\n\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\nimport {Pizza} from \"../../../models\";\nimport {Form, FormGroup} from \"@angular/forms\";\n\n@Component({\n  selector: 'app-buttons',\n  template: `\n    <div class=\"pizza-form__actions\">\n      <button\n        type=\"button\"\n        class=\"btn btn__ok\"\n        *ngIf=\"!exists\"\n        (click)=\"createPizza(form)\">\n        Create Pizza\n      </button>\n\n      <button\n        type=\"button\"\n        class=\"btn btn__ok\"\n        *ngIf=\"exists\"\n        (click)=\"updatePizza(form)\">\n        Save changes\n      </button>\n\n      <button\n        type=\"button\"\n        class=\"btn btn__warning\"\n        *ngIf=\"exists\"\n        (click)=\"removePizza(form)\">\n        Delete Pizza\n      </button>\n    </div>\n  `,\n  styles: [`\n    .pizza-form__actions {\n      position: relative;\n      margin: 35px 0 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .pizza-form__actions button:last-child {\n      margin-left: auto;\n    }\n    .btn {\n      display: inline-block;\n      padding: 10px 15px;\n      margin: 0;\n      outline: 0;\n      border: 0;\n      border-radius: 3px;\n      font-size: 16px;\n      font-family: 'cornerstone';\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n    .btn__ok {\n      background: #0f9675;\n      color: #fff;\n    }\n    .btn__ok:hover {\n      background: #0a7d61;\n    }\n    .btn__warning {\n      background: #ab131c;\n      color: #fff;\n    }\n    .btn__warning:hover {\n      background: #880c14;\n    }\n\n  `]\n})\nexport class ButtonsComponent implements OnInit {\n  @Input() exists: boolean;\n  @Input() form: FormGroup;\n  @Input() pizza: Pizza;\n  @Output() create = new EventEmitter<Pizza>();\n  @Output() update = new EventEmitter<Pizza>();\n  @Output() remove = new EventEmitter<Pizza>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n  createPizza(form: FormGroup) {\n    const { value, valid } = form;\n    // console.log('--- value', value, valid, form);\n    if( value['name'].split(':')[0] === '') window.alert('이름을 입력하세요!')\n    // if( value['name'] === '') window.alert('이름을 입력하세요!')\n    if (valid) {\n      this.create.emit(value);\n    }\n  }\n\n  updatePizza(form: FormGroup) {\n    const { value, valid, touched, dirty } = form;\n    if (valid) {\n      // console.log('updatePizza-form', form, value);\n      // if (touched && valid) {\n      this.update.emit({ ...this.pizza, ...value });\n    }\n  }\n\n  removePizza(form: FormGroup) {\n    const { value } = form;\n    this.remove.emit({ ...this.pizza, ...value });\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n    .pizza-form__actions {\n      margin: 35px 0 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .pizza-form__actions button:last-child {\n      margin-left: auto;\n    }\n    .btn {\n      display: inline-block;\n      padding: 10px 15px;\n      margin: 0;\n      outline: 0;\n      border: 0;\n      border-radius: 3px;\n      font-size: 16px;\n      font-family: 'cornerstone';\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n    .btn__ok {\n      background: #0f9675;\n      color: #fff;\n    }\n    .btn__ok:hover {\n      background: #0a7d61;\n    }\n    .btn__warning {\n      background: #ab131c;\n      color: #fff;\n    }\n    .btn__warning:hover {\n      background: #880c14;\n    }\n\n  \n",
+            "stylesData": "\n    .pizza-form__actions {\n      position: relative;\n      margin: 35px 0 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .pizza-form__actions button:last-child {\n      margin-left: auto;\n    }\n    .btn {\n      display: inline-block;\n      padding: 10px 15px;\n      margin: 0;\n      outline: 0;\n      border: 0;\n      border-radius: 3px;\n      font-size: 16px;\n      font-family: 'cornerstone';\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n    .btn__ok {\n      background: #0f9675;\n      color: #fff;\n    }\n    .btn__ok:hover {\n      background: #0a7d61;\n    }\n    .btn__warning {\n      background: #ab131c;\n      color: #fff;\n    }\n    .btn__warning:hover {\n      background: #880c14;\n    }\n\n  \n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 79
+                "line": 80
             },
             "implements": [
                 "OnInit"
@@ -3151,7 +3151,7 @@
         },
         {
             "name": "PizzaDisplayComponent",
-            "id": "component-PizzaDisplayComponent-175d692052011ad5d4b16af4b3957d2ef8a82f8f49a615b8d994d79d06212fffd97a1396663eea0be9149cf9d66de6c8d1b4c9a764f5e0067abf9334ff5e40cd",
+            "id": "component-PizzaDisplayComponent-4e5281b10d76b39956038b3823c51422d0e4360d9468ef0cd1709e54eebae8d4d8b31234bafd27392ca5723406ca19bc3bd5aa0ebacf7737d837c07362129d36",
             "file": "src/app/components/pizza-display/pizza-display.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -3162,9 +3162,9 @@
             "selector": "pizza-display",
             "styleUrls": [],
             "styles": [
-                "\n    :host {\n      display: block;\n    }\n    .pizza-display {\n      background: #f5f5f5;\n      border-radius: 4px;\n      padding: 15px 0;\n    }\n    .pizza-display__base {\n      position: absolute;\n      text-align: center;\n    }\n    .pizza-display__topping {\n      position: absolute;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      height: 100%;\n      width: 100%;\n    }\n  "
+                "\n    :host {\n      display: block;\n    }\n    .pizza-display {\n      background: #f5f5f5;\n      border-radius: 4px;\n      padding: 15px 0;\n    }\n    .pizza-display__base {\n      position: relative;\n      text-align: center;\n    }\n    .pizza-display__topping {\n      position: absolute;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      height: 100%;\n      width: 100%;\n    }\n  "
             ],
-            "template": "<div class=\"pizza-display\">\n  <div class=\"pizza-display__base\">\n    <img src=\"assets/img/pizza.svg\">\n    <img  *ngFor=\"let topping of nToppings; index as i;\"\n      src=\"assets/img/toppings/multi/{{ topping.image }}.svg\"\n      [style.zIndex]=\"i\"\n      class=\"pizza-display__topping\"\n      @drop>\n  </div>\n</div>\n",
+            "template": "<div class=\"pizza-display\">\n  <div class=\"pizza-display__base\">\n    <div class=\"flex justify-center\">\n        <img src=\"assets/img/pizza.svg\">\n    </div>\n    <img  *ngFor=\"let topping of nToppings; index as i;\"\n      src=\"assets/img/toppings/multi/{{ topping.image }}.svg\"\n      [style.zIndex]=\"i\"\n      class=\"pizza-display__topping\"\n      @drop>\n  </div>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -3172,7 +3172,7 @@
                     "name": "toppings",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 64,
+                    "line": 66,
                     "type": "any",
                     "decorators": []
                 }
@@ -3186,7 +3186,7 @@
                     "type": "any[]",
                     "optional": false,
                     "description": "",
-                    "line": 68
+                    "line": 70
                 }
             ],
             "methodsClass": [
@@ -3196,7 +3196,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 72,
+                    "line": 74,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -3208,10 +3208,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';\nimport {animate, style, transition, trigger} from \"@angular/animations\";\nimport {ToppingImageService} from \"../../services/topping-image.service\";\n\nexport const DROP_ANIMATION = trigger(\"drop\", [\n  transition(\":enter\", [\n    style({transform: \"translateY(-200px)\", opacity: 0}),\n    animate(\n      \"300ms cubic-bezier(1.000, 0.000, 0.000, 1.000)\",\n      style({transform: \"translateY(0)\", opacity: 1})\n    )\n  ]),\n  transition(\":leave\", [\n    style({transform: \"translateY(0)\", opacity: 1}),\n    animate(\n      \"200ms cubic-bezier(1.000, 0.000, 0.000, 1.000)\",\n      style({transform: \"translateY(-200px)\", opacity: 0})\n    )\n  ])\n]);\n\n@Component({\n  selector: 'pizza-display',\n  template: `\n    <div class=\"pizza-display\">\n      <div class=\"pizza-display__base\">\n        <img src=\"assets/img/pizza.svg\">\n        <img  *ngFor=\"let topping of nToppings; index as i;\"\n          src=\"assets/img/toppings/multi/{{ topping.image }}.svg\"\n          [style.zIndex]=\"i\"\n          class=\"pizza-display__topping\"\n          @drop>\n      </div>\n    </div>\n  `,\n  styles: [`\n    :host {\n      display: block;\n    }\n    .pizza-display {\n      background: #f5f5f5;\n      border-radius: 4px;\n      padding: 15px 0;\n    }\n    .pizza-display__base {\n      position: absolute;\n      text-align: center;\n    }\n    .pizza-display__topping {\n      position: absolute;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      height: 100%;\n      width: 100%;\n    }\n  `\n  ],\n  animations:[DROP_ANIMATION],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class PizzaDisplayComponent implements OnInit {\n  @Input() set toppings(v: any) {\n    this.nToppings = this.toppingImageService.setEachToppingImage(v);\n    console.log(' toppings', this.nToppings, v);\n  };\n  nToppings: any[];\n\n  constructor(private toppingImageService: ToppingImageService) { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';\nimport {animate, style, transition, trigger} from \"@angular/animations\";\nimport {ToppingImageService} from \"../../services/topping-image.service\";\n\nexport const DROP_ANIMATION = trigger(\"drop\", [\n  transition(\":enter\", [\n    style({transform: \"translateY(-200px)\", opacity: 0}),\n    animate(\n      \"300ms cubic-bezier(1.000, 0.000, 0.000, 1.000)\",\n      style({transform: \"translateY(0)\", opacity: 1})\n    )\n  ]),\n  transition(\":leave\", [\n    style({transform: \"translateY(0)\", opacity: 1}),\n    animate(\n      \"200ms cubic-bezier(1.000, 0.000, 0.000, 1.000)\",\n      style({transform: \"translateY(-200px)\", opacity: 0})\n    )\n  ])\n]);\n\n@Component({\n  selector: 'pizza-display',\n  template: `\n    <div class=\"pizza-display\">\n      <div class=\"pizza-display__base\">\n        <div class=\"flex justify-center\">\n            <img src=\"assets/img/pizza.svg\">\n        </div>\n        <img  *ngFor=\"let topping of nToppings; index as i;\"\n          src=\"assets/img/toppings/multi/{{ topping.image }}.svg\"\n          [style.zIndex]=\"i\"\n          class=\"pizza-display__topping\"\n          @drop>\n      </div>\n    </div>\n  `,\n  styles: [`\n    :host {\n      display: block;\n    }\n    .pizza-display {\n      background: #f5f5f5;\n      border-radius: 4px;\n      padding: 15px 0;\n    }\n    .pizza-display__base {\n      position: relative;\n      text-align: center;\n    }\n    .pizza-display__topping {\n      position: absolute;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      height: 100%;\n      width: 100%;\n    }\n  `\n  ],\n  animations:[DROP_ANIMATION],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class PizzaDisplayComponent implements OnInit {\n  @Input() set toppings(v: any) {\n    this.nToppings = this.toppingImageService.setEachToppingImage(v);\n    console.log(' toppings', this.nToppings, v);\n  };\n  nToppings: any[];\n\n  constructor(private toppingImageService: ToppingImageService) { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n    :host {\n      display: block;\n    }\n    .pizza-display {\n      background: #f5f5f5;\n      border-radius: 4px;\n      padding: 15px 0;\n    }\n    .pizza-display__base {\n      position: absolute;\n      text-align: center;\n    }\n    .pizza-display__topping {\n      position: absolute;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      height: 100%;\n      width: 100%;\n    }\n  \n",
+            "stylesData": "\n    :host {\n      display: block;\n    }\n    .pizza-display {\n      background: #f5f5f5;\n      border-radius: 4px;\n      padding: 15px 0;\n    }\n    .pizza-display__base {\n      position: relative;\n      text-align: center;\n    }\n    .pizza-display__topping {\n      position: absolute;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      height: 100%;\n      width: 100%;\n    }\n  \n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -3225,7 +3225,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 68,
+                "line": 70,
                 "jsdoctags": [
                     {
                         "name": "toppingImageService",
@@ -3258,7 +3258,7 @@
                             }
                         ],
                         "returnType": "void",
-                        "line": 64,
+                        "line": 66,
                         "jsdoctags": [
                             {
                                 "name": "v",
@@ -3276,24 +3276,127 @@
         },
         {
             "name": "PizzaFormComponent",
-            "id": "component-PizzaFormComponent-a63dd2f95a40d7933dc38e31d6802f952ce9601e5d7faed16949500c3a60d0830e41302941fa20be34a8e79706dfca1f64b3bbd9ac84160329b8355776e422cf",
+            "id": "component-PizzaFormComponent-2c7d43eabed73e966d5ae7b2db7298d875ed2d2873355c9f2db934a3c8e9b19a46f960c63826803d379eaa45dcb0eff807d9101a0293c9dab1280cfda6107be3",
             "file": "src/app/components/pizza-form/pizza-form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-pizza-form",
-            "styleUrls": [
-                "./pizza-form.component.css"
+            "selector": "pizza-form",
+            "styleUrls": [],
+            "styles": [
+                "\n    .pizza-form__list {\n      margin: -20px 0 0;\n    }\n\n    .pizza-form ::ng-deep pizza-display {\n      margin: 0 0 35px;\n    }\n\n    .pizza-form label {\n      margin: 0 0 35px;\n      display: block;\n    }\n\n    .pizza-form label h4 {\n      margin: 0 0 15px;\n    }\n\n    .pizza-form__error {\n      padding: 10px;\n      border-radius: 0 0 4px 4px;\n      display: flex;\n      align-items: center;\n      background: #aa141b;\n      color: #fff;\n    }\n\n    .pizza-form__error p {\n      font-size: 14px;\n      margin: 0;\n    }\n\n  "
             ],
-            "styles": [],
-            "template": "<p>\n  pizza-form works!\n</p>\n",
+            "template": "<div class=\"pizza-form\">\n  <pizza-name\n    [price] = 'pizzaPrice'\n    (name)=\"onInputName($event)\"\n    (isInvalid) = onIsInvalid($event)\n  >\n  </pizza-name>\n    <!-- Angular CDK Overlay를 표시하기 위한 Anchor point, 선태된 토핑에 대한 Count를\n     표시하기 위함 selected-item.service.ts와 관련이 있음 -->\n    <ng-container>\n      <div style=\"float: left\" #subTotal></div>\n    </ng-container>\n    <div class=\"m-10 w-auto h-auto\">\n        <!-- Pizza display   -->\n        <ng-content></ng-content>\n    </div>\n\n    <label>\n      <div class=\"text-xl\">Select toppings</div>\n    </label>\n    <div class=\"\">\n      <!-- 선택할 토핑 메뉴. <pizza-toppings>에서 ControlValueAccess 를 구현함-->\n      <pizza-toppings\n        [toppings]=\"toppings\"\n        (selected)=\"onSelectedToppings($event)\">\n      </pizza-toppings>\n    </div>\n\n    <div class=\"\">\n        <app-buttons></app-buttons>\n    </div>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
+            "inputsClass": [
+                {
+                    "name": "pizza",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 81,
+                    "type": "Pizza",
+                    "decorators": []
+                },
+                {
+                    "name": "toppings",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 82,
+                    "type": "Topping[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "create",
+                    "defaultValue": "new EventEmitter<Pizza>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 84,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "remove",
+                    "defaultValue": "new EventEmitter<Pizza>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 86,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "selectedToppings",
+                    "defaultValue": "new EventEmitter<Topping[]>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 83,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "update",
+                    "defaultValue": "new EventEmitter<Pizza>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 85,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_isInvalid",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 76
+                },
+                {
+                    "name": "_name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 77
+                },
+                {
+                    "name": "exists",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 78
+                },
+                {
+                    "name": "pizzaPrice",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 75
+                },
+                {
+                    "name": "selected_origin",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 79,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'subTotal', {static: false}"
+                        }
+                    ]
+                }
+            ],
             "methodsClass": [
                 {
                     "name": "ngOnInit",
@@ -3301,9 +3404,93 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 16,
+                    "line": 91,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "onInputName",
+                    "args": [
+                        {
+                            "name": "ev",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 93,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "ev",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onIsInvalid",
+                    "args": [
+                        {
+                            "name": "ev",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 96,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "ev",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onSelectedToppings",
+                    "args": [
+                        {
+                            "name": "ev",
+                            "type": "Topping[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 99,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "ev",
+                            "type": "Topping[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
@@ -3313,22 +3500,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-pizza-form',\n  template: `\n    <p>\n      pizza-form works!\n    </p>\n  `,\n  styleUrls: ['./pizza-form.component.css']\n})\nexport class PizzaFormComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';\nimport {Pizza, Topping} from \"../../models\";\n\n@Component({\n  selector: 'pizza-form',\n  template: `\n    <div class=\"pizza-form\">\n      <pizza-name\n        [price] = 'pizzaPrice'\n        (name)=\"onInputName($event)\"\n        (isInvalid) = onIsInvalid($event)\n      >\n      </pizza-name>\n        <!-- Angular CDK Overlay를 표시하기 위한 Anchor point, 선태된 토핑에 대한 Count를\n         표시하기 위함 selected-item.service.ts와 관련이 있음 -->\n        <ng-container>\n          <div style=\"float: left\" #subTotal></div>\n        </ng-container>\n        <div class=\"m-10 w-auto h-auto\">\n            <!-- Pizza display   -->\n            <ng-content></ng-content>\n        </div>\n\n        <label>\n          <div class=\"text-xl\">Select toppings</div>\n        </label>\n        <div class=\"\">\n          <!-- 선택할 토핑 메뉴. <pizza-toppings>에서 ControlValueAccess 를 구현함-->\n          <pizza-toppings\n            [toppings]=\"toppings\"\n            (selected)=\"onSelectedToppings($event)\">\n          </pizza-toppings>\n        </div>\n\n        <div class=\"\">\n            <app-buttons></app-buttons>\n        </div>\n    </div>\n  `,\n  styles: [`\n    .pizza-form__list {\n      margin: -20px 0 0;\n    }\n\n    .pizza-form ::ng-deep pizza-display {\n      margin: 0 0 35px;\n    }\n\n    .pizza-form label {\n      margin: 0 0 35px;\n      display: block;\n    }\n\n    .pizza-form label h4 {\n      margin: 0 0 15px;\n    }\n\n    .pizza-form__error {\n      padding: 10px;\n      border-radius: 0 0 4px 4px;\n      display: flex;\n      align-items: center;\n      background: #aa141b;\n      color: #fff;\n    }\n\n    .pizza-form__error p {\n      font-size: 14px;\n      margin: 0;\n    }\n\n  `]\n})\nexport class PizzaFormComponent implements OnInit {\n  pizzaPrice:string;\n  _isInvalid: boolean;\n  _name: string\n  exists = false;\n  @ViewChild('subTotal', {static:false}) selected_origin: any;\n\n  @Input() pizza: Pizza;\n  @Input() toppings : Topping[];\n  @Output() selectedToppings = new EventEmitter<Topping[]>();\n  @Output() create = new EventEmitter<Pizza>();\n  @Output() update = new EventEmitter<Pizza>();\n  @Output() remove = new EventEmitter<Pizza>();\n  constructor(\n\n  ) { }\n\n  ngOnInit(): void {\n  }\n  onInputName(ev: string) {\n    this._name = ev;\n  }\n  onIsInvalid(ev: boolean) {\n    this._isInvalid = ev;\n  }\n  onSelectedToppings(ev: Topping[]) {\n\n  }\n}\n",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./pizza-form.component.css"
-                }
-            ],
-            "stylesData": "",
+            "styleUrlsData": "",
+            "stylesData": "\n    .pizza-form__list {\n      margin: -20px 0 0;\n    }\n\n    .pizza-form ::ng-deep pizza-display {\n      margin: 0 0 35px;\n    }\n\n    .pizza-form label {\n      margin: 0 0 35px;\n      display: block;\n    }\n\n    .pizza-form label h4 {\n      margin: 0 0 15px;\n    }\n\n    .pizza-form__error {\n      padding: 10px;\n      border-radius: 0 0 4px 4px;\n      display: flex;\n      align-items: center;\n      background: #aa141b;\n      color: #fff;\n    }\n\n    .pizza-form__error p {\n      font-size: 14px;\n      margin: 0;\n    }\n\n  \n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 12
+                "line": 86
             },
             "implements": [
                 "OnInit"
@@ -3336,8 +3518,9 @@
         },
         {
             "name": "PizzaNameComponent",
-            "id": "component-PizzaNameComponent-48c772a473553c33c176a631c6bd9419863a8ec42cf7732e87a095e9223dec0e69e026b6edb21d88ebda933eb9d75a82367373ec7d656cf2b34820004c5f358f",
+            "id": "component-PizzaNameComponent-1417c9558d17f00623340554b41a4d6091e2421f39012dfdd1fdd7df4483c2f0aed7800b638fcae416f0b7d876ec386a870a37be209df5cb42f1ddcefb1c28cc",
             "file": "src/app/components/pizza-form/pizza-name/pizza-name.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -3351,18 +3534,52 @@
             "template": "<form [formGroup]=\"form\">\n  <label>\n    <input\n      type=\"text\"\n      formControlName=\"name\"\n      placeholder=\"피자 이름을 입력하세요!\"\n      class=\"pizza-form__input\"\n      [class.error]=\"nameControlInvalid\">\n    <div\n      class=\"pizza-form__error\"\n      *ngIf=\"nameControlInvalid\">\n      <p>피자이름을 입력하세요!</p>\n    </div>\n  </label>\n</form>\n",
             "templateUrl": [],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
+            "inputsClass": [
                 {
                     "name": "form",
-                    "defaultValue": "this.fb.group({\n    name: [\"\", Validators.required],\n  })",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "line": 44,
+                    "type": "FormGroup",
+                    "decorators": []
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 45,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "isInvalid",
+                    "defaultValue": "new EventEmitter<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 49,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 50,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "tName",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 44
+                    "line": 51
                 }
             ],
             "methodsClass": [
@@ -3372,7 +3589,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 52,
+                    "line": 59,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -3384,7 +3601,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport {FormBuilder, FormControl, Validators} from \"@angular/forms\";\n\n@Component({\n  selector: 'pizza-name',\n  template: `\n    <form [formGroup]=\"form\">\n      <label>\n        <input\n          type=\"text\"\n          formControlName=\"name\"\n          placeholder=\"피자 이름을 입력하세요!\"\n          class=\"pizza-form__input\"\n          [class.error]=\"nameControlInvalid\">\n        <div\n          class=\"pizza-form__error\"\n          *ngIf=\"nameControlInvalid\">\n          <p>피자이름을 입력하세요!</p>\n        </div>\n      </label>\n    </form>\n  `,\n  styles: [`\n    .pizza-form__input {\n      margin: 0;\n      padding: 15px;\n      outline: 0;\n      width: 100%;\n      border-radius: 4px;\n      font-size: 20px;\n      font-weight: 600;\n      background: #f5f5f5;\n      border: 1px solid transparent;\n    }\n\n    .pizza-form__input.error {\n      border-radius: 4px 4px 0 0;\n      border-color: #b54846;\n    }\n  `]\n})\nexport class PizzaNameComponent implements OnInit {\n\n  form = this.fb.group({\n    name: [\"\", Validators.required],\n  });\n\n  constructor(\n    private fb: FormBuilder,\n  ) {}\n\n  ngOnInit(): void {\n  }\n  get nameControl() {\n    return this.form.get(\"name\") as FormControl;\n  }\n\n  get nameControlInvalid() {\n    return this.nameControl.hasError(\"required\") && this.nameControl.touched;\n  }\n\n}\n",
+            "sourceCode": "import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\nimport {Form, FormBuilder, FormControl, FormGroup, Validators} from \"@angular/forms\";\n\n@Component({\n  selector: 'pizza-name',\n  template: `\n    <form [formGroup]=\"form\">\n      <label>\n        <input\n          type=\"text\"\n          formControlName=\"name\"\n          placeholder=\"피자 이름을 입력하세요!\"\n          class=\"pizza-form__input\"\n          [class.error]=\"nameControlInvalid\">\n        <div\n          class=\"pizza-form__error\"\n          *ngIf=\"nameControlInvalid\">\n          <p>피자이름을 입력하세요!</p>\n        </div>\n      </label>\n    </form>\n  `,\n  styles: [`\n    .pizza-form__input {\n      margin: 0;\n      padding: 15px;\n      outline: 0;\n      width: 100%;\n      border-radius: 4px;\n      font-size: 20px;\n      font-weight: 600;\n      background: #f5f5f5;\n      border: 1px solid transparent;\n    }\n\n    .pizza-form__input.error {\n      border-radius: 4px 4px 0 0;\n      border-color: #b54846;\n    }\n  `],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class PizzaNameComponent implements OnInit {\n  @Input() form: FormGroup;\n  @Input() set price (v: string ) {\n    const n = this.tName + ': ' + v;\n    if( this.tName !== '' ) this.form.patchValue({name: n  })\n  }\n  @Output() isInvalid = new EventEmitter<boolean>();\n  @Output() name = new EventEmitter<string>();\n  tName: string = '';\n  constructor(\n    private fb: FormBuilder,\n  ) {\n    this.form = this.fb.group({\n      name: [\"\", Validators.required],\n    });\n  }\n  ngOnInit(): void {\n    this.form.valueChanges.pipe().subscribe(val => {\n      this.tName = val;\n      // console.log('val', val)\n      this.name.emit(val);\n      this.isInvalid.emit(this.nameControlInvalid);\n    })\n  }\n  get nameControl(): any {\n    // console.log('name', this.form);\n    return this.form.get(\"name\") as FormControl;\n  }\n  get nameControlInvalid() {\n    return this.nameControl.hasError(\"required\") && this.nameControl.touched;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    .pizza-form__input {\n      margin: 0;\n      padding: 15px;\n      outline: 0;\n      width: 100%;\n      border-radius: 4px;\n      font-size: 20px;\n      font-weight: 600;\n      background: #f5f5f5;\n      border: 1px solid transparent;\n    }\n\n    .pizza-form__input.error {\n      border-radius: 4px 4px 0 0;\n      border-color: #b54846;\n    }\n  \n",
@@ -3401,7 +3618,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 46,
+                "line": 51,
                 "jsdoctags": [
                     {
                         "name": "fb",
@@ -3418,13 +3635,43 @@
                 "OnInit"
             ],
             "accessors": {
+                "price": {
+                    "name": "price",
+                    "setSignature": {
+                        "name": "price",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "v",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 45,
+                        "jsdoctags": [
+                            {
+                                "name": "v",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    }
+                },
                 "nameControl": {
                     "name": "nameControl",
                     "getSignature": {
                         "name": "nameControl",
-                        "type": "",
-                        "returnType": "",
-                        "line": 54
+                        "type": "any",
+                        "returnType": "any",
+                        "line": 67
                     }
                 },
                 "nameControlInvalid": {
@@ -3433,25 +3680,21 @@
                         "name": "nameControlInvalid",
                         "type": "",
                         "returnType": "",
-                        "line": 58
+                        "line": 71
                     }
                 }
             }
         },
         {
             "name": "PizzaToppingsComponent",
-            "id": "component-PizzaToppingsComponent-ba13a223a731a09adc181600a060dda5fb14d56498406d14e1b608f31cd34baa7d233c09c67a5067b9c796302c518c65e1cea7b320d02f3d9ae2ca97b9ca1eb7",
+            "id": "component-PizzaToppingsComponent-00e8acb47a387aacbe0289eadbe054f9ccbed94a21fa6e5c21ff99b573e3112e0c945f5b21e80ca3da61cbaeabae8eed57367b7603ac59fcd29ce765c52e5d9d",
             "file": "src/app/components/pizza-toppings/pizza-toppings.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
-            "providers": [
-                {
-                    "name": "PIZZA_TOPPINGS_ACCESSOR"
-                }
-            ],
+            "providers": [],
             "selector": "pizza-toppings",
             "styleUrls": [],
             "styles": [
@@ -3463,42 +3706,24 @@
             "inputsClass": [
                 {
                     "name": "toppings",
-                    "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 87,
+                    "line": 80,
                     "type": "Topping[]",
                     "decorators": []
                 }
             ],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "selected",
+                    "defaultValue": "new EventEmitter<Topping[]>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 81,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [
-                {
-                    "name": "_onChange",
-                    "defaultValue": "() => {...}",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Function",
-                    "optional": false,
-                    "description": "",
-                    "line": 93,
-                    "modifierKind": [
-                        121
-                    ]
-                },
-                {
-                    "name": "onTouch",
-                    "defaultValue": "() => {...}",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Function",
-                    "optional": false,
-                    "description": "",
-                    "line": 91,
-                    "modifierKind": [
-                        121
-                    ]
-                },
                 {
                     "name": "pizza",
                     "deprecated": false,
@@ -3506,7 +3731,7 @@
                     "type": "Pizza",
                     "optional": false,
                     "description": "",
-                    "line": 90
+                    "line": 84
                 },
                 {
                     "name": "pizzaId",
@@ -3515,7 +3740,16 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 89
+                    "line": 83
+                },
+                {
+                    "name": "snackBar",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatSnackBar",
+                    "optional": false,
+                    "description": "",
+                    "line": 85
                 },
                 {
                     "name": "topp",
@@ -3525,7 +3759,7 @@
                     "type": "Topping[]",
                     "optional": false,
                     "description": "",
-                    "line": 88
+                    "line": 82
                 }
             ],
             "methodsClass": [
@@ -3542,7 +3776,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 123,
+                    "line": 94,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n토핑을 추가하는 부분 토핑은 5회까지 만 선택하게 제한함",
@@ -3572,7 +3806,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 135,
+                    "line": 109,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3593,155 +3827,9 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 99,
+                    "line": 90,
                     "deprecated": false,
                     "deprecationMessage": ""
-                },
-                {
-                    "name": "registerOnChange",
-                    "args": [
-                        {
-                            "name": "fn",
-                            "type": "function",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "function": [
-                                {
-                                    "name": "_",
-                                    "type": "any",
-                                    "deprecated": false,
-                                    "deprecationMessage": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 105,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "fn",
-                            "type": "function",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "function": [
-                                {
-                                    "name": "_",
-                                    "type": "any",
-                                    "deprecated": false,
-                                    "deprecationMessage": ""
-                                }
-                            ],
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "registerOnTouched",
-                    "args": [
-                        {
-                            "name": "fn",
-                            "type": "function",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "function": [
-                                {
-                                    "name": "_",
-                                    "type": "any",
-                                    "deprecated": false,
-                                    "deprecationMessage": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 110,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "fn",
-                            "type": "function",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "function": [
-                                {
-                                    "name": "_",
-                                    "type": "any",
-                                    "deprecated": false,
-                                    "deprecationMessage": ""
-                                }
-                            ],
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "setDisabledState",
-                    "args": [
-                        {
-                            "name": "isDisabled",
-                            "type": "boolean",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 102,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\nControl Value Accessor 관련 함수",
-                    "description": "<p>Control Value Accessor 관련 함수</p>\n",
-                    "jsdoctags": [
-                        {
-                            "name": "isDisabled",
-                            "type": "boolean",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "writeValue",
-                    "args": [
-                        {
-                            "name": "value",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 115,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "value",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
                 }
             ],
             "deprecated": false,
@@ -3751,7 +3839,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {ChangeDetectionStrategy, Component, forwardRef, Input, OnInit} from '@angular/core';\nimport {NG_VALUE_ACCESSOR} from \"@angular/forms\";\nimport {Pizza, Topping} from \"../../models\";\nimport {MatSnackBar} from \"@angular/material/snack-bar\";\nconst PIZZA_TOPPINGS_ACCESSOR = {\n  provide: NG_VALUE_ACCESSOR,\n  useExisting: forwardRef(() => PizzaToppingsComponent),\n  multi: true,\n};\n\n@Component({\n  selector: 'pizza-toppings',\n  template: `\n      <div class=\"pizza-toppings\" >\n         <ng-container *ngFor=\"let topping of toppings;\">\n             <div  class=\"pizza-toppings-item\" (click)=\"addTopping(topping)\" style=\"text-align: justify-all\"\n                 [class.active]=\"isExistInToppings(topping)\">\n                <img src=\"assets/img/toppings/singles/{{ topping.name }}.svg\">\n                 {{ topping.name }}<div class=\"topping_price\" >{{topping.price && topping.price * 1000}}원</div>\n             </div>\n          </ng-container>\n      </div>\n  `,\n\n  styles: [`\n    :host {\n      display: block;\n    }\n\n    .pizza-toppings {\n      display: flex;\n      justify-content: space-between;\n      flex-wrap: wrap;\n    }\n\n    .pizza-toppings-item {\n      position: relative;\n      display: flex;\n      align-items: center;\n      justify-content: left;\n      padding: 8px;\n      margin: 0 0 10px;\n      border-radius: 4px;\n      font-size: 15px;\n      font-family: 'cornerstone';\n      border: 1px solid grey;\n      flex: 0 0 23%;\n      transition: all 0.2s ease;\n      cursor: pointer;\n    }\n\n    .pizza-toppings-item div.topping_price {\n      position: absolute;\n      color: blue;\n      right: 10px;\n    }\n\n    .pizza-toppings-item.active {\n      background: #f5f5f5;\n    }\n\n    .pizza-toppings-item.active:after {\n      content: '';\n      border-radius: 50%;\n      background: #19b55f url('/src/assets/img/actions/checked.svg') no-repeat center center;\n      width: 16px;\n      height: 16px;\n      position: absolute;\n      top: -5px;\n      right: -5px;\n      background-size: 10px;\n    }\n\n    .pizza-toppings-item.fulled {\n      background: aqua;\n    }\n\n    .pizza-toppings-item img {\n      width: 22px;\n      margin: 0 10px 0 0;\n    }\n  `],\n  providers: [PIZZA_TOPPINGS_ACCESSOR],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class PizzaToppingsComponent implements OnInit {\n  @Input() toppings: Topping[] = [];\n  topp: Topping[] = [];\n  pizzaId: number;\n  pizza: Pizza;\n  private onTouch: Function = ()=>{};\n  // private onTouch: Function;\n  private _onChange: Function = ()=>{};\n\n  constructor(\n    // private snackBar: MatSnackBar,\n  ) { }\n\n  ngOnInit(): void {\n  }\n  /** Control Value Accessor 관련 함수*/\n  setDisabledState(isDisabled: boolean): void {\n    //this.disabled = isDisabled;\n  }\n  registerOnChange(fn: (_:any)=> void) {\n    //console.log('registerOnChange is called',fn);\n    this._onChange = fn;\n  }\n\n  registerOnTouched(fn: (_:any) => void) {\n    //console.log('registerOnTouched is called',fn);\n    this.onTouch = fn;\n  }\n\n  writeValue(value: any) {\n    //\n    this.topp = value;\n    // console.log('writeValue-->',value);\n  }\n  /** Control Value Accessor 관련함수*/\n\n  /** 토핑을 추가하는 부분 토핑은 5회까지 만 선택하게 제한함 */\n  addTopping( topping: Topping) {\n    let count = this.topp.filter( val=> val.id === topping.id);\n    if( count.length >= 5) { // addTopping add each topping util each count 5\n      // this.snackBar.open(\"Limited to 5 toppings level\", 'Check!!', {duration:3000});\n      return;\n    }\n    this.topp = [...this.topp, topping];\n    // this.writeValue(this.value)\n    /** Parent component로 데이터를 전달하는 부분 */\n    this._onChange(this.topp);\n\n  }\n  isExistInToppings( topping: Topping) {\n    /** 이미 선택된 토핑인지 판다하여 메뉴에 체크 표시를 함*/\n    return Array.from(this.topp).some(val => val.id === topping.id);\n  }\n}\n",
+            "sourceCode": "import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\nimport {Pizza, Topping} from \"../../models\";\nimport {MatSnackBar} from \"@angular/material/snack-bar\";\n\n@Component({\n  selector: 'pizza-toppings',\n  template: `\n      <div class=\"pizza-toppings\" >\n         <ng-container *ngFor=\"let topping of toppings;\">\n             <div  class=\"pizza-toppings-item\" (click)=\"addTopping(topping)\" style=\"text-align: justify-all\"\n                 [class.active]=\"isExistInToppings(topping)\">\n                <img src=\"assets/img/toppings/singles/{{ topping.name }}.svg\">\n                 {{ topping.name }}<div class=\"topping_price\" >{{topping.price && topping.price * 1000}}원</div>\n             </div>\n          </ng-container>\n      </div>\n  `,\n\n  styles: [`\n    :host {\n      display: block;\n    }\n\n    .pizza-toppings {\n      display: flex;\n      justify-content: space-between;\n      flex-wrap: wrap;\n    }\n\n    .pizza-toppings-item {\n      position: relative;\n      display: flex;\n      align-items: center;\n      justify-content: left;\n      padding: 8px;\n      margin: 0 0 10px;\n      border-radius: 4px;\n      font-size: 15px;\n      font-family: 'cornerstone';\n      border: 1px solid grey;\n      flex: 0 0 23%;\n      transition: all 0.2s ease;\n      cursor: pointer;\n    }\n\n    .pizza-toppings-item div.topping_price {\n      position: absolute;\n      color: blue;\n      right: 10px;\n    }\n\n    .pizza-toppings-item.active {\n      background: #f5f5f5;\n    }\n\n    .pizza-toppings-item.active:after {\n      content: '';\n      border-radius: 50%;\n      background: #19b55f url('/src/assets/img/actions/checked.svg') no-repeat center center;\n      width: 16px;\n      height: 16px;\n      position: absolute;\n      top: -5px;\n      right: -5px;\n      background-size: 10px;\n    }\n\n    .pizza-toppings-item.fulled {\n      background: aqua;\n    }\n\n    .pizza-toppings-item img {\n      width: 22px;\n      margin: 0 10px 0 0;\n    }\n  `],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class PizzaToppingsComponent implements OnInit {\n  @Input() toppings: Topping[];\n  @Output() selected = new EventEmitter<Topping[]>();\n  topp: Topping[] = [];\n  pizzaId: number;\n  pizza: Pizza;\n  snackBar: MatSnackBar,\n\n  constructor(\n  ) { }\n\n  ngOnInit(): void {\n  }\n\n  /** 토핑을 추가하는 부분 토핑은 5회까지 만 선택하게 제한함 */\n  addTopping( topping: Topping) {\n    let count = Array.from(this.topp).filter( val=> val.id === topping.id);\n    if( count.length >= 5) { // addTopping add each topping util each count 5\n      this.snackBar.open(\"Limited to 5 toppings level\", 'Check!!', {duration:3000});\n      return;\n    }\n    this.topp = [...this.topp, topping];\n    console.log('--- this.topp', this.topp, this.topp.length, topping)\n    // this.topp = [...this.topp, topping];\n    // this.writeValue(this.value)\n    /** Parent component로 데이터를 전달하는 부분 */\n    this.selected.emit(this.topp);\n    // this._onChange(this.topp);\n\n  }\n  isExistInToppings( topping: Topping) {\n    /** 이미 선택된 토핑인지 판다하여 메뉴에 체크 표시를 함*/\n    return Array.from(this.topp).some(val => val.id === topping.id);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    :host {\n      display: block;\n    }\n\n    .pizza-toppings {\n      display: flex;\n      justify-content: space-between;\n      flex-wrap: wrap;\n    }\n\n    .pizza-toppings-item {\n      position: relative;\n      display: flex;\n      align-items: center;\n      justify-content: left;\n      padding: 8px;\n      margin: 0 0 10px;\n      border-radius: 4px;\n      font-size: 15px;\n      font-family: 'cornerstone';\n      border: 1px solid grey;\n      flex: 0 0 23%;\n      transition: all 0.2s ease;\n      cursor: pointer;\n    }\n\n    .pizza-toppings-item div.topping_price {\n      position: absolute;\n      color: blue;\n      right: 10px;\n    }\n\n    .pizza-toppings-item.active {\n      background: #f5f5f5;\n    }\n\n    .pizza-toppings-item.active:after {\n      content: '';\n      border-radius: 50%;\n      background: #19b55f url('/src/assets/img/actions/checked.svg') no-repeat center center;\n      width: 16px;\n      height: 16px;\n      position: absolute;\n      top: -5px;\n      right: -5px;\n      background-size: 10px;\n    }\n\n    .pizza-toppings-item.fulled {\n      background: aqua;\n    }\n\n    .pizza-toppings-item img {\n      width: 22px;\n      margin: 0 10px 0 0;\n    }\n  \n",
@@ -3761,7 +3849,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 93
+                "line": 85
             },
             "implements": [
                 "OnInit"
@@ -3891,13 +3979,13 @@
         },
         {
             "name": "PizzaModule",
-            "id": "module-PizzaModule-8b9832940fc98efa88f387f3d92b556a500cec695a8e36d196ef35b02fe60cb81e55157fad5a478492131af1e1573a6b15a5d1dc21b5cbce8c385aeef4d6346f",
+            "id": "module-PizzaModule-48c239549debdcfbc461d7877839c858226a77cee0efd28c9fe07928f2f94ba1d1a1791b15a3a1120878945c6a4ea06df0b81d52624efe0e350839ee42ec8011",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/components/pizza.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport {PizzaDisplayComponent} from \"./pizza-display/pizza-display.component\";\nimport {PizzaToppingsComponent} from \"./pizza-toppings/pizza-toppings.component\";\nimport {AngularMaterialModule} from \"../shared/angular-material.module\";\nimport {BrowserAnimationsModule} from \"@angular/platform-browser/animations\";\nimport { PizzaFormComponent } from './pizza-form/pizza-form.component';\nimport { ButtonsComponent } from './pizza-form/buttons/buttons.component';\nimport { PizzaNameComponent } from './pizza-form/pizza-name/pizza-name.component';\nimport {FormsModule, ReactiveFormsModule} from \"@angular/forms\";\n\n@NgModule({\n  declarations: [\n    PizzaDisplayComponent,\n    PizzaToppingsComponent,\n    PizzaFormComponent,\n    ButtonsComponent,\n    PizzaNameComponent\n  ],\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule,\n    AngularMaterialModule,\n    BrowserAnimationsModule,\n  ],\n  exports: [\n    PizzaDisplayComponent,\n    PizzaToppingsComponent,\n  ]\n})\nexport class PizzaModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport {PizzaDisplayComponent} from \"./pizza-display/pizza-display.component\";\nimport {PizzaToppingsComponent} from \"./pizza-toppings/pizza-toppings.component\";\nimport {AngularMaterialModule} from \"../shared/angular-material.module\";\nimport {BrowserAnimationsModule} from \"@angular/platform-browser/animations\";\nimport { PizzaFormComponent } from './pizza-form/pizza-form.component';\nimport { ButtonsComponent } from './pizza-form/buttons/buttons.component';\nimport { PizzaNameComponent } from './pizza-form/pizza-name/pizza-name.component';\nimport {FormsModule, ReactiveFormsModule} from \"@angular/forms\";\n\n@NgModule({\n  declarations: [\n    PizzaDisplayComponent,\n    PizzaToppingsComponent,\n    PizzaFormComponent,\n    ButtonsComponent,\n    PizzaNameComponent\n  ],\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule,\n    AngularMaterialModule,\n    BrowserAnimationsModule,\n  ],\n  exports: [\n    PizzaDisplayComponent,\n    PizzaToppingsComponent,\n    PizzaFormComponent,\n    ButtonsComponent,\n    PizzaNameComponent\n  ]\n})\nexport class PizzaModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -3935,7 +4023,16 @@
                     "type": "exports",
                     "elements": [
                         {
+                            "name": "ButtonsComponent"
+                        },
+                        {
                             "name": "PizzaDisplayComponent"
+                        },
+                        {
+                            "name": "PizzaFormComponent"
+                        },
+                        {
+                            "name": "PizzaNameComponent"
                         },
                         {
                             "name": "PizzaToppingsComponent"
@@ -4006,20 +4103,10 @@
                 "defaultValue": "[\r\n  MatSnackBarModule\r\n]"
             },
             {
-                "name": "PIZZA_TOPPINGS_ACCESSOR",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/pizza-toppings/pizza-toppings.component.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  provide: NG_VALUE_ACCESSOR,\n  useExisting: forwardRef(() => PizzaToppingsComponent),\n  multi: true,\n}"
-            },
-            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
+                "file": "src/app/components/pizza-display/pizza-display.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4029,7 +4116,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/pizza-display/pizza-display.component.stories.ts",
+                "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4098,16 +4185,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  template: `\r\n  <form [formGroup]=\"form\">\r\n\r\n  </form>\r\n  `\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/pizza-display/pizza-display.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4118,11 +4195,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    addToppings: action('selectedToppings'),\r\n    onCreate: action('create'),\r\n    onUpdate: action('update'),\r\n    onRemove: action('remove')\r\n  },\r\n  template: `\r\n  <pizza-form\r\n            [pizza]=\"pizza\"\r\n            [toppings]=\"toppings\"\r\n            (selectedToppings)=\"addToppings($event)\"\r\n            (create)=\"onCreate($event)\"\r\n            (update)=\"onUpdate($event)\"\r\n            (remove)=\"onRemove($event)\">\r\n        <pizza-display\r\n                [toppings]=\"nToppings\">\r\n        </pizza-display>\r\n  </pizza-form>\r\n  `\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/pizza-toppings/pizza-toppings.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  decorators:[\r\n    moduleMetadata({\r\n      imports:[\r\n        PizzaModule,\r\n      ],\r\n    })\r\n  ],\r\n  template: ` <pizza-toppings [toppings]=\"toppings\"></pizza-toppings>\r\n  `\r\n})"
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelect: action('selected')\r\n  },\r\n  decorators:[\r\n    moduleMetadata({\r\n      imports:[\r\n        PizzaModule,\r\n      ],\r\n    })\r\n  ],\r\n  template: ` <pizza-toppings [toppings]=\"toppings\"\r\n                                (selected)=\"onSelect($event)\"\r\n                ></pizza-toppings>\r\n  `\r\n})"
             },
             {
                 "name": "Template",
@@ -4142,7 +4229,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => {\r\n  const formGroup = new FormGroup({\r\n    name: new FormControl(undefined)\r\n  })\r\n  return {\r\n    component: PizzaNameComponent,\r\n    template: `\r\n        <pizza-name></pizza-name>\r\n      `,\r\n    props: {\r\n      ...args,\r\n      form: FormGroup\r\n    },\r\n  }\r\n}"
+                "defaultValue": "(args) => ({\r\n    component: PizzaNameComponent,\r\n    template: `\r\n    <pizza-name\r\n        [price]=\"price\"\r\n        (isInvalid) = \"onIsInvalid($event)\"\r\n        (name) = \"onInputName($event)\"\r\n    ></pizza-name>\r\n      `,\r\n    props: {\r\n      ...args,\r\n      onIsInvalid: action('isInvalid'),\r\n      onInputName: action('name')\r\n    }\r\n})"
             }
         ],
         "functions": [],
@@ -4218,40 +4305,6 @@
                     "defaultValue": "[\r\n  MatSnackBarModule\r\n]"
                 }
             ],
-            "src/app/components/pizza-toppings/pizza-toppings.component.ts": [
-                {
-                    "name": "PIZZA_TOPPINGS_ACCESSOR",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/pizza-toppings/pizza-toppings.component.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  provide: NG_VALUE_ACCESSOR,\n  useExisting: forwardRef(() => PizzaToppingsComponent),\n  multi: true,\n}"
-                }
-            ],
-            "src/app/components/pizza-form/pizza-form.component.stories.ts": [
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  template: `\r\n  <form [formGroup]=\"form\">\r\n\r\n  </form>\r\n  `\r\n})"
-                }
-            ],
             "src/app/components/pizza-display/pizza-display.component.stories.ts": [
                 {
                     "name": "Primary",
@@ -4274,6 +4327,28 @@
                     "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  template: `<pizza-display [toppings]=\"toppings\"></pizza-display>`\r\n\r\n})"
                 }
             ],
+            "src/app/components/pizza-form/pizza-form.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/pizza-form/pizza-form.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    addToppings: action('selectedToppings'),\r\n    onCreate: action('create'),\r\n    onUpdate: action('update'),\r\n    onRemove: action('remove')\r\n  },\r\n  template: `\r\n  <pizza-form\r\n            [pizza]=\"pizza\"\r\n            [toppings]=\"toppings\"\r\n            (selectedToppings)=\"addToppings($event)\"\r\n            (create)=\"onCreate($event)\"\r\n            (update)=\"onUpdate($event)\"\r\n            (remove)=\"onRemove($event)\">\r\n        <pizza-display\r\n                [toppings]=\"nToppings\">\r\n        </pizza-display>\r\n  </pizza-form>\r\n  `\r\n})"
+                }
+            ],
             "src/app/components/pizza-toppings/pizza-toppings.component.stories.ts": [
                 {
                     "name": "Primary",
@@ -4293,7 +4368,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  decorators:[\r\n    moduleMetadata({\r\n      imports:[\r\n        PizzaModule,\r\n      ],\r\n    })\r\n  ],\r\n  template: ` <pizza-toppings [toppings]=\"toppings\"></pizza-toppings>\r\n  `\r\n})"
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelect: action('selected')\r\n  },\r\n  decorators:[\r\n    moduleMetadata({\r\n      imports:[\r\n        PizzaModule,\r\n      ],\r\n    })\r\n  ],\r\n  template: ` <pizza-toppings [toppings]=\"toppings\"\r\n                                (selected)=\"onSelect($event)\"\r\n                ></pizza-toppings>\r\n  `\r\n})"
                 }
             ],
             "src/app/components/pizza-form/buttons/buttons.component.stories.ts": [
@@ -4337,7 +4412,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => {\r\n  const formGroup = new FormGroup({\r\n    name: new FormControl(undefined)\r\n  })\r\n  return {\r\n    component: PizzaNameComponent,\r\n    template: `\r\n        <pizza-name></pizza-name>\r\n      `,\r\n    props: {\r\n      ...args,\r\n      form: FormGroup\r\n    },\r\n  }\r\n}"
+                    "defaultValue": "(args) => ({\r\n    component: PizzaNameComponent,\r\n    template: `\r\n    <pizza-name\r\n        [price]=\"price\"\r\n        (isInvalid) = \"onIsInvalid($event)\"\r\n        (name) = \"onInputName($event)\"\r\n    ></pizza-name>\r\n      `,\r\n    props: {\r\n      ...args,\r\n      onIsInvalid: action('isInvalid'),\r\n      onInputName: action('name')\r\n    }\r\n})"
                 }
             ],
             "src/app/state/index.ts": [
@@ -4477,7 +4552,7 @@
                 "linktype": "component",
                 "name": "PizzaFormComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/17",
                 "status": "low"
             },
             {
@@ -4506,7 +4581,7 @@
                 "linktype": "component",
                 "name": "PizzaNameComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -4534,18 +4609,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "PizzaToppingsComponent",
-                "coveragePercent": 13,
-                "coverageCount": "2/15",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/pizza-toppings/pizza-toppings.component.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "PIZZA_TOPPINGS_ACCESSOR",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coveragePercent": 9,
+                "coverageCount": "1/11",
                 "status": "low"
             },
             {

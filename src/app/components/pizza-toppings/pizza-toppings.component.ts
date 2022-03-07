@@ -82,7 +82,7 @@ export class PizzaToppingsComponent implements OnInit {
   topp: Topping[] = [];
   pizzaId: number;
   pizza: Pizza;
-  snackBar: MatSnackBar,
+  snackBar: MatSnackBar;
 
   constructor(
   ) { }
