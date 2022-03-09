@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Pizza, Topping} from "../../models";
 
 @Component({
@@ -27,13 +27,17 @@ import {Pizza, Topping} from "../../models";
         <div class="">
           <!-- 선택할 토핑 메뉴. <pizza-toppings>에서 ControlValueAccess 를 구현함-->
           <pizza-toppings
-            [toppings]="toppings"
-            (selected)="onSelectedToppings($event)">
+            [toppings]="nToppings"
+            (selected)="addToppings.emit($event)">
           </pizza-toppings>
         </div>
 
         <div class="">
-            <app-buttons></app-buttons>
+            <app-buttons
+              (create)="create.emit($event)"
+              (update)="update.emit($event)"
+              (remove)="remove.emit($event)"
+            ></app-buttons>
         </div>
     </div>
   `,
@@ -69,7 +73,8 @@ import {Pizza, Topping} from "../../models";
       margin: 0;
     }
 
-  `]
+  `],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PizzaFormComponent implements OnInit {
   pizzaPrice:string;
@@ -80,7 +85,8 @@ export class PizzaFormComponent implements OnInit {
 
   @Input() pizza: Pizza;
   @Input() toppings : Topping[];
-  @Output() selectedToppings = new EventEmitter<Topping[]>();
+  @Input() nToppings: Topping[];
+  @Output() addToppings = new EventEmitter<Topping[]>();
   @Output() create = new EventEmitter<Pizza>();
   @Output() update = new EventEmitter<Pizza>();
   @Output() remove = new EventEmitter<Pizza>();

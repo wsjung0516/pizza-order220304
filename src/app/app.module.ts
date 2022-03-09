@@ -8,6 +8,7 @@ import { PizzaToppingsComponent } from './components/pizza-toppings/pizza-toppin
 import {PizzaModule} from "./components/pizza.module";
 import {AngularMaterialModule} from "./shared/angular-material.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     BrowserAnimationsModule,
     PizzaModule,
     // AngularMaterialModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule
   ],
   providers: [MatSnackBarModule],
   bootstrap: [AppComponent]

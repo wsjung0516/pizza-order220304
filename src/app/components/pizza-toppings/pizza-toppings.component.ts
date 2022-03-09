@@ -1,4 +1,11 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output
+} from '@angular/core';
 import {Pizza, Topping} from "../../models";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
@@ -7,11 +14,15 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   template: `
       <div class="pizza-toppings" >
          <ng-container *ngFor="let topping of toppings;">
-             <div  class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
-                 [class.active]="isExistInToppings(topping)">
-                <img src="assets/img/toppings/singles/{{ topping.name }}.svg">
+           <div class="">
+             <div class="w-40 min-w-full md:min-w-0">
+               <div  class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
+                     matBadge="{{toppingCount(topping)}}" matBadgeColor="accent" >
+                 <img src="assets/img/toppings/singles/{{ topping.name }}.svg">
                  {{ topping.name }}<div class="topping_price" >{{topping.price && topping.price * 1000}}원</div>
+               </div>
              </div>
+           </div>
           </ng-container>
       </div>
   `,
@@ -77,7 +88,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PizzaToppingsComponent implements OnInit {
-  @Input() toppings: Topping[];
+  @Input() toppings : Topping[];
   @Output() selected = new EventEmitter<Topping[]>();
   topp: Topping[] = [];
   pizzaId: number;
@@ -98,9 +109,7 @@ export class PizzaToppingsComponent implements OnInit {
       return;
     }
     this.topp = [...this.topp, topping];
-    console.log('--- this.topp', this.topp, this.topp.length, topping)
-    // this.topp = [...this.topp, topping];
-    // this.writeValue(this.value)
+    // console.log('--- this.topp', this.topp, this.topp.length, topping)
     /** Parent component로 데이터를 전달하는 부분 */
     this.selected.emit(this.topp);
     // this._onChange(this.topp);
@@ -109,5 +118,10 @@ export class PizzaToppingsComponent implements OnInit {
   isExistInToppings( topping: Topping) {
     /** 이미 선택된 토핑인지 판다하여 메뉴에 체크 표시를 함*/
     return Array.from(this.topp).some(val => val.id === topping.id);
+  }
+  toppingCount(topping: Topping) : number{
+    let count = Array.from(this.topp).filter( val=> val.id === topping.id);
+    const ret = count.length === 0 ? null : count.length;
+    return ret;
   }
 }
