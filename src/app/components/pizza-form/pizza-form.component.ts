@@ -22,7 +22,8 @@ import { takeUntil, tap} from "rxjs/operators";
   template: `
     <div class="pizza-form">
       <pizza-name
-        [price] = 'pizzaPrice'
+        [input_name]="pizza?.name"
+        [price] = 'pizza?.price'
         (name)="onInputName($event)"
         (isInvalid) = onIsInvalid($event)
       >
@@ -103,6 +104,9 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
     };
     this.toppings2 = v;
     this.cdr.markForCheck();
+  }
+  @Input() set name (n: any) {
+    this._name = n;
   }
   // @Input() nToppings: Topping[];
   @Output() addToppings = new EventEmitter<Topping[]>();

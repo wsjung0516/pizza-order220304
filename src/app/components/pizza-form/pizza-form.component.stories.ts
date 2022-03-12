@@ -30,7 +30,7 @@ const Template: Story = (args) => ({
             (update)="onUpdate($event)"
             (remove)="onRemove($event)">
         <pizza-display
-                [toppings]="toppings">
+                [toppings]="pizza.toppings">
         </pizza-display>
   </pizza-form>
   `
@@ -40,6 +40,7 @@ Primary.args = {
   pizza:{
     id: 1,
     name: 'aaa pizza',
+    price: '20,000 원',
     toppings: [
       {id: 1, name: "anchovy"},
       {id: 2, name: "bacon"},
@@ -53,17 +54,65 @@ Primary.args = {
     ]
   },
   nToppings:[
-    {id:1, name:'anchovy', price:1},
-    {id:2, name:'bacon', price:0.7},
-    {id:3, name:'chili', price:1.1},
-    {id:4, name:'basil', price:1},
-    {id:5, name:'mozzarella', price:0.8}
+    {
+      "id": 1,
+      "name": "anchovy",
+      "price": 1.0
+    },
+    {
+      "id": 2,
+      "name": "bacon",
+      "price": 0.8
+    },
+    {
+      "id": 3,
+      "name": "basil",
+      "price": 1.2
+    },
+    {
+      "id": 4,
+      "name": "chili",
+      "price": 0.9
+    },
+    {
+      "id": 5,
+      "name": "mozzarella",
+      "price": 0.8
+    },
+    {
+      "id": 6,
+      "name": "mushroom",
+      "price": 0.7
+    },
+    {
+      "id": 7,
+      "name": "olive",
+      "price": 1.1
+    },
+    {
+      "id": 8,
+      "name": "onion",
+      "price": 1.0
+    },
+    {
+      "id": 9,
+      "name": "pepper",
+      "price": 0.9
+    },
+    {
+      "id": 10,
+      "name": "pepperoni",
+      "price": 0.7
+    },
+    {
+      "id": 11,
+      "name": "sweetcorn",
+      "price": 1.3
+    },
+    {
+      "id": 12,
+      "name": "tomato",
+      "price": 1.2
+    }
   ],
-  toppings:[
-    {id:1, name:'anchovy', price:1},
-    {id:2, name:'bacon', price:0.7},
-    {id:3, name:'chili', price:1.1},
-    {id:4, name:'basil', price:1},
-    {id:5, name:'mozzarella', price:0.8}
-  ]
 }

@@ -2,16 +2,17 @@ import {
   ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   EventEmitter,
-  Input, OnChanges,
+  Input, OnChanges, OnDestroy,
   OnInit,
   Output, SimpleChanges
 } from '@angular/core';
 import {Pizza, Topping} from "../../models";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {tap} from "rxjs/operators";
+import {take, takeUntil, tap} from "rxjs/operators";
 import {Select} from "@ngxs/store";
 import {ToppingsState} from "../../state";
-import {Observable} from "rxjs";
+import {Observable, Subject} from "rxjs";
+import {PriceService} from "../../services/price.service";
 
 @Component({
   selector: 'pizza-toppings',
@@ -91,7 +92,7 @@ import {Observable} from "rxjs";
   `],
    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PizzaToppingsComponent implements OnInit {
+export class PizzaToppingsComponent implements OnInit, OnDestroy {
   @Input() set toppings (to: any) {
     this._toppings = to.toppings;
   }
@@ -100,13 +101,16 @@ export class PizzaToppingsComponent implements OnInit {
   _toppings: Topping[] = [];
   pizzaId: number;
   pizza: Pizza;
+  price:string;
+  unsubscribe = new Subject();
+  unsubscribe$ = this.unsubscribe.asObservable();
   snackBar: MatSnackBar;
   @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
 
   constructor(
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private priceService: PriceService
   ) { }
-
   ngOnInit(): void {
     /**
      * Save the result of selected toppings
@@ -115,13 +119,27 @@ export class PizzaToppingsComponent implements OnInit {
       // this.selectedToppings$ && this.selectedToppings$.pipe(
       tap(val => {
         this.topp = val;
-        console.log('topp-4',val);
-        // this.total = this.priceService.calcTotal(pi.toppings);
+        // console.log('topp-4',val);
+        this.calcuratePrice(val);
         // this.toppings = pi.toppings;
       }),
     ).subscribe();
     // this.cd.detectChanges();
 
+  }
+
+  private calcuratePrice(val: any[]) {
+    this.priceService.calcSubTotalToppings(val).pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe((val: any) => {
+      // console.log(' price-2', val)
+      this.priceService.calcTotal(val).pipe(
+        takeUntil(this.unsubscribe$)// take(1)
+      ).subscribe(val => {
+        this.price = (val * 1000).toFixed(0).toLocaleString()
+        // console.log(' price-3',this.price, val)
+      });
+    });
   }
 
   /** 토핑을 추가하는 부분 토핑은 5회까지 만 선택하게 제한함 */
@@ -143,5 +161,9 @@ export class PizzaToppingsComponent implements OnInit {
     let count = Array.from(this.topp).filter( val=> val.id === topping.id);
     const ret = count.length === 0 ? null : count.length;
     return ret;
+  }
+  ngOnDestroy() {
+    this.unsubscribe.next({});
+    this.unsubscribe.complete();
   }
 }

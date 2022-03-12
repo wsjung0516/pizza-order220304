@@ -18,10 +18,34 @@ import {Form, FormBuilder, FormControl, FormGroup, Validators} from "@angular/fo
           <p>피자이름을 입력하세요!</p>
         </div>
       </label>
+      <label>
+        <input
+          type="text"
+          formControlName="price"
+          placeholder="Pizza price!"
+          class="pizza-price"
+          >
+      </label>
     </form>
   `,
   styles: [`
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
     .pizza-form__input {
+      margin: 0;
+      padding: 15px;
+      outline: 0;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      background: #f5f5f5;
+      border: 1px solid transparent;
+    }
+    .pizza-price {
       margin: 0;
       padding: 15px;
       outline: 0;
@@ -42,9 +66,14 @@ import {Form, FormBuilder, FormControl, FormGroup, Validators} from "@angular/fo
 })
 export class PizzaNameComponent implements OnInit {
   @Input() form: FormGroup;
+  @Input() set input_name (name: string) {
+    this.form.patchValue({name:name});
+  }
   @Input() set price (v: string ) {
-    const n = this.tName + ': ' + v;
-    if( this.tName !== '' ) this.form.patchValue({name: n  })
+    // console.log('price', v)
+    // const n = this.tName + ': ' + v;
+    this.form.patchValue({price: v  })
+    // if( this.tName !== '' ) this.form.patchValue({price: n  })
   }
   @Output() isInvalid = new EventEmitter<boolean>();
   @Output() name = new EventEmitter<string>();
@@ -54,12 +83,13 @@ export class PizzaNameComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       name: ["", Validators.required],
+      price: [""],
     });
   }
   ngOnInit(): void {
     this.form.valueChanges.pipe().subscribe(val => {
       this.tName = val;
-      // console.log('val', val)
+      console.log('val', val)
       this.name.emit(val);
       this.isInvalid.emit(this.nameControlInvalid);
     })

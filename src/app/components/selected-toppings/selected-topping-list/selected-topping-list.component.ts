@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import {Pizza, Topping} from "../../../models";
 import {ToppingsState, UpdateToppingsSuccess} from "../../../state";
-import {takeUntil, tap} from "rxjs/operators";
+import {take, takeUntil, tap} from "rxjs/operators";
 import {PriceService} from "../../../services/price.service";
 import {PIZZA_CONFIG_TOKEN} from "../../../services/selected-item.service";
 import {Select, Store} from "@ngxs/store";
@@ -63,7 +63,8 @@ export class SelectedToppingListComponent implements OnInit, OnDestroy {
          DB와 연결되어 있지 않고, ngxs를 사용하므로, 선택된 토핑 결과를 전달하기 위한 데이터 배열 */
         topp.map( (val: any) => this.nToppings.push(val));
         /** Calculate total price*/
-        this.rawToppings = this.priceService.calcSubTotalToppings(topp);
+        this.priceService.calcSubTotalToppings(topp).pipe(takeUntil(this.unsubscribe$))
+          .subscribe((val:any) => this.rawToppings = val);
         //
         this.cdr.markForCheck();
       }),
