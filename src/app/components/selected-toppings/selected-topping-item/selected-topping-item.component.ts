@@ -4,8 +4,8 @@ import {Topping} from "../../../models";
 @Component({
   selector: 'selected-topping-item',
   template: `
-    <div class="selected-toppings-item" (click)="remove.emit(topping)">
-      <div class="w-12 h-auto"  href="#">
+    <div class="selected-toppings-item hover:bg-red-100" (click)="remove.emit(topping)">
+      <div class="h-auto"  href="#">
         <img src="assets/img/toppings/singles/{{ topping.name }}.svg"></div>
         <div class="mr-1">{{topping.name}}</div>
       <div class="text-red-900">{{topping.count}}</div>
@@ -16,11 +16,12 @@ import {Topping} from "../../../models";
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 2px;
-      margin: 0 0 10px;
+      min-width: 100px;
       border-radius: 4px;
       font-size: 12px;
+      margin: 3px;
       font-family: 'cornerstone';
       border: 1px solid grey;
       flex: 0 0 23%;

@@ -9,7 +9,7 @@ import {catchError, map, tap} from 'rxjs/operators';
 import { Topping } from '../models';
 import {throwError} from "rxjs";
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ToppingsService {
   constructor(private http: HttpClient) {}
 

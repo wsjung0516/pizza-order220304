@@ -1,5 +1,21 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy, ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input, OnDestroy,
+  OnInit,
+  Output,
+  ViewChild
+} from '@angular/core';
 import {Pizza, Topping} from "../../models";
+import {Observable, Subject} from "rxjs";
+import {OverlayRef} from "@angular/cdk/overlay";
+import {PriceService} from "../../services/price.service";
+import {SelectedItemService} from "../../services/selected-item.service";
+import {Select, Store} from "@ngxs/store";
+import {LoadToppings, ToppingsState} from "../../state";
+import { takeUntil, tap} from "rxjs/operators";
 
 @Component({
   selector: 'pizza-form',
@@ -16,6 +32,7 @@ import {Pizza, Topping} from "../../models";
         <ng-container>
           <div style="float: left" #subTotal></div>
         </ng-container>
+        <!--      -->
         <div class="m-10 w-auto h-auto">
             <!-- Pizza display   -->
             <ng-content></ng-content>
@@ -27,14 +44,14 @@ import {Pizza, Topping} from "../../models";
         <div class="">
           <!-- 선택할 토핑 메뉴. <pizza-toppings>에서 ControlValueAccess 를 구현함-->
           <pizza-toppings
-            [toppings]="nToppings"
+            [toppings]="_toppings"
             (selected)="addToppings.emit($event)">
           </pizza-toppings>
         </div>
 
         <div class="">
             <app-buttons
-              (create)="create.emit($event)"
+              (create)="onCreate()"
               (update)="update.emit($event)"
               (remove)="remove.emit($event)"
             ></app-buttons>
@@ -74,35 +91,82 @@ import {Pizza, Topping} from "../../models";
     }
 
   `],
-  changeDetection: ChangeDetectionStrategy.OnPush
+   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PizzaFormComponent implements OnInit {
-  pizzaPrice:string;
-  _isInvalid: boolean;
-  _name: string
-  exists = false;
+export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('subTotal', {static:false}) selected_origin: any;
 
   @Input() pizza: Pizza;
-  @Input() toppings : Topping[];
-  @Input() nToppings: Topping[];
+  @Input() set toppings (v : any){
+    this._toppings = {
+      toppings: v
+    };
+    this.toppings2 = v;
+    this.cdr.markForCheck();
+  }
+  // @Input() nToppings: Topping[];
   @Output() addToppings = new EventEmitter<Topping[]>();
   @Output() create = new EventEmitter<Pizza>();
   @Output() update = new EventEmitter<Pizza>();
   @Output() remove = new EventEmitter<Pizza>();
+  pizzaPrice:string;
+  _isInvalid: boolean;
+  _name: any
+  exists = false;
+  _toppings: {};
+  toppings2: Topping[];
+  unsubscribe = new Subject();
+  unsubscribe$ = this.unsubscribe.asObservable();
+  overlayRef: OverlayRef;
+  @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
+
   constructor(
+    private selectedItemService: SelectedItemService,
+    private priceService: PriceService,
+    private cdr: ChangeDetectorRef,
+    private store: Store
 
   ) { }
-
+  selected_toppings: Topping[];
   ngOnInit(): void {
+
+    this.selectedToppings$.pipe(
+      takeUntil(this.unsubscribe$),
+      tap((val)=> {
+        this.selected_toppings = val;
+         this._toppings = {
+           toppings: this.toppings2
+         };
+        // this._toppings = [...this.toppings2, ...val];
+        // console.log('topp-7', this._toppings, this.toppings2, val)
+        this.cdr.markForCheck();
+      })
+    ).subscribe()
   }
-  onInputName(ev: string) {
+  ngAfterViewInit() {
+    this.overlayRef = this.selectedItemService.openSelectedToppings(this.selected_origin,  this.pizza);
+  }
+  onInputName(ev: any) {
     this._name = ev;
   }
   onIsInvalid(ev: boolean) {
     this._isInvalid = ev;
   }
-  onSelectedToppings(ev: Topping[]) {
+  onCreate() {
+    if( this._name === '' || this._name === undefined) {
+      window.alert('Input pizza name!!')
+    }
+    else  {
+      console.log('name', this._name)
+      const pi: Pizza = {id: uniqueId(), name: this._name.name, toppings: this.selected_toppings};
+      this.create.emit(pi)
+    }
+  }
 
+  ngOnDestroy() {
+    this.overlayRef && this.overlayRef.dispose();
+    this.unsubscribe.next({});
+    this.unsubscribe.complete();
   }
 }
+const uniqueId = (function(){ let id=10; return function(){ return id++;} })();

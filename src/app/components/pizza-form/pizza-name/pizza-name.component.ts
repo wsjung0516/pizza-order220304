@@ -9,7 +9,7 @@ import {Form, FormBuilder, FormControl, FormGroup, Validators} from "@angular/fo
         <input
           type="text"
           formControlName="name"
-          placeholder="피자 이름을 입력하세요!"
+          placeholder="Input Pizza Name!"
           class="pizza-form__input"
           [class.error]="nameControlInvalid">
         <div

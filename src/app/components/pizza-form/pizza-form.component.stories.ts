@@ -24,13 +24,13 @@ const Template: Story = (args) => ({
   template: `
   <pizza-form
             [pizza]="pizza"
-            [toppings]="toppings"
-            (selectedToppings)="addToppings($event)"
+            [toppings]="nToppings"
+            (addToppings)="addToppings($event)"
             (create)="onCreate($event)"
             (update)="onUpdate($event)"
             (remove)="onRemove($event)">
         <pizza-display
-                [toppings]="nToppings">
+                [toppings]="toppings">
         </pizza-display>
   </pizza-form>
   `

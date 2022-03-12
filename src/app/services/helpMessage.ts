@@ -6,40 +6,44 @@
 
 import {Inject, Injectable, InjectionToken, Injector} from '@angular/core';
 import {ComponentPortal, PortalInjector} from '@angular/cdk/portal';
+// import {SelectedItemComponent} from './selected-item.component';
 import {ConnectionPositionPair, Overlay, OverlayConfig, OverlayRef} from '@angular/cdk/overlay';
-import {Pizza} from "../models";
-import {
-  SelectedToppingListComponent
-} from "../components/selected-toppings/selected-topping-list/selected-topping-list.component";
-export const PIZZA_CONFIG_TOKEN = new InjectionToken<Pizza>('PIZZA_CONFIG_TOKEN');
+// import {Pizza, Topping} from '../../models';
+import {Observable, Subject} from 'rxjs';
+import {HelpMessageComponent} from './help-message.component';
+export const PIZZA_CONFIG_TOKEN = new InjectionToken<Message>('PIZZA_CONFIG_TOKEN');
+export class Message {
+  constructor(public data: string) {};
 
+}
 @Injectable({
   providedIn: 'root'
 })
-export class SelectedItemService {
+export class HelpMessageService {
   private overlayRef: OverlayRef | undefined;
-// Toppings for temporary display before saving;
-
+  // tToppings$: Subject<Topping[]>;  // Toppings for temporary display before saving;
   constructor(private overlay: Overlay,
               private parentInjector: Injector,
-               ) {
+  ) {
     // this.tToppings$ = new Subject<Topping[]>();
 
 
   }
+  closeHelpMessage() {
+    this.overlayRef && this.overlayRef.detach();
+  }
+  openHelpMessage(origin: any, message: any ): OverlayRef {
 
-  openSelectedToppings(origin: any, pizza: Pizza): OverlayRef {
     this.overlayRef = this.overlay.create( this.getOverlayConfig(origin));
-    const injector = this.getInjector(pizza, this.parentInjector);
-    const portal = new ComponentPortal(SelectedToppingListComponent,null,injector);
+    const injector = this.getInjector(message, this.parentInjector);
+    const portal = new ComponentPortal(HelpMessageComponent,null,injector);
     this.overlayRef.attach(portal);
-    console.log(' overlay, ', this.overlayRef)
     return  this.overlayRef;
   }
-  getOverlayConfig(origin : any) {
+  getOverlayConfig(origin: any) {
     return new OverlayConfig({
-      width: '200px',
-      height: '100px',
+      width: '500px',
+      height: '500px',
       positionStrategy: this.getOverlayPosition(origin),
     })
   }
@@ -55,7 +59,7 @@ export class SelectedItemService {
       .withFlexibleDimensions(false)
       .withPush(false)
   }
-  getInjector(data: Pizza, parentInjector: Injector) {
+  getInjector(data: Message, parentInjector: Injector) {
     const tokens = new WeakMap();
 
     tokens.set( PIZZA_CONFIG_TOKEN, data);

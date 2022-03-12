@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<div class="app">
+  <div class="app__header">
+    <img src="assets/img/logo.svg" class="app__logo">
+  </div>
+  <div class="app__content">
+    <div class="app__nav">
+      <a routerLink="products" routerLinkActive="active" ><i class="material-icons">home</i></a>
+    </div>
+    <div class="app__container">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="app__footer">
+      <p>&copy; Good Morning Pizza Inc.</p>
+    </div>
+  </div>
+  <div #origin style="position: fixed; left: 20px; top: 20px">
+    <button mat-fab color="basic" (click)="openHelpMessage(origin)">Help</button>
+  </div>
+</div>

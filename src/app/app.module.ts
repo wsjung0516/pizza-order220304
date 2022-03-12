@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PizzaDisplayComponent } from './components/pizza-display/pizza-display.component';
-import { PizzaToppingsComponent } from './components/pizza-toppings/pizza-toppings.component';
 import {PizzaModule} from "./components/pizza.module";
-import {AngularMaterialModule} from "./shared/angular-material.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import {RouterModule} from "@angular/router";
+import {NgxsModule} from "@ngxs/store";
+import {AppRoutingModule} from "./app.routing.module";
+import {PizzasGuard, ToppingsGuard} from "./guards";
 
 @NgModule({
   declarations: [
@@ -20,9 +19,10 @@ import {RouterModule} from "@angular/router";
     PizzaModule,
     // AngularMaterialModule,
     MatSnackBarModule,
-    RouterModule
+    AppRoutingModule,
+    NgxsModule.forRoot([]),
   ],
-  providers: [MatSnackBarModule],
+  providers: [MatSnackBarModule, PizzasGuard, ToppingsGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,24 +12,27 @@ import { MainPanelComponent } from './main-panel/main-panel.component';
 import { PizzaProductComponent } from './pizza-product/pizza-product.component';
 import { PizzaItemComponent } from './pizza-item/pizza-item/pizza-item.component';
 import {RouterModule, Routes} from "@angular/router";
-import { PizzaListComponent } from './pizza-list/pizza-list.component';
 import { PizzaItemListComponent } from './pizza-item/pizza-item-list/pizza-item-list.component';
 import { SelectedToppingListComponent } from './selected-toppings/selected-topping-list/selected-topping-list.component';
 import { SelectedToppingItemComponent } from './selected-toppings/selected-topping-item/selected-topping-item.component';
+import {NgxsModule} from "@ngxs/store";
+import {PizzasState, ToppingsState} from "../state";
+import {HttpClientModule} from "@angular/common/http";
+import {PizzaExistsGuards, PizzasGuard, ToppingsGuard} from "../guards";
 const routes: Routes = [
   {
     path: '',
-    // canActivate: [PizzasGuard],
-    component: PizzaListComponent
+    canActivate: [PizzasGuard],
+    component: MainPanelComponent
   },
   {
     path: 'new',
-    // canActivate: [ToppingsGuard],
+    canActivate: [ToppingsGuard],
     component: PizzaItemComponent
   },
   {
     path: ':pizzaId',
-    // canActivate: [PizzaExistsGuards, ToppingsGuard],
+    canActivate: [PizzaExistsGuards, ToppingsGuard],
     component: PizzaProductComponent,
   }
 ];
@@ -43,7 +46,6 @@ const routes: Routes = [
     MainPanelComponent,
     PizzaProductComponent,
     PizzaItemComponent,
-    PizzaListComponent,
     PizzaItemListComponent,
     SelectedToppingListComponent,
     SelectedToppingItemComponent,
@@ -55,6 +57,9 @@ const routes: Routes = [
     AngularMaterialModule,
     BrowserAnimationsModule,
     RouterModule.forChild(routes),
+    NgxsModule.forRoot([]),
+    NgxsModule.forFeature([ToppingsState, PizzasState]),
+    HttpClientModule
   ],
   exports: [
     PizzaDisplayComponent,
@@ -65,7 +70,6 @@ const routes: Routes = [
     MainPanelComponent,
     PizzaProductComponent,
     PizzaItemComponent,
-    PizzaListComponent,
     PizzaItemListComponent,
     SelectedToppingListComponent,
     SelectedToppingItemComponent,

@@ -7,7 +7,7 @@ import {catchError, map} from 'rxjs/operators';
 
 import { Pizza } from '../models';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class PizzasService {
   constructor(private http: HttpClient) {}
 

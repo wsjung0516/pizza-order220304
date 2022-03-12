@@ -1,23 +1,27 @@
 import {
-  ChangeDetectionStrategy,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   EventEmitter,
-  Input,
+  Input, OnChanges,
   OnInit,
-  Output
+  Output, SimpleChanges
 } from '@angular/core';
 import {Pizza, Topping} from "../../models";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {tap} from "rxjs/operators";
+import {Select} from "@ngxs/store";
+import {ToppingsState} from "../../state";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'pizza-toppings',
   template: `
       <div class="pizza-toppings" >
-         <ng-container *ngFor="let topping of toppings;">
+         <ng-container *ngFor="let topping of _toppings;">
            <div class="">
              <div class="w-40 min-w-full md:min-w-0">
                <div  class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
-                     matBadge="{{toppingCount(topping)}}" matBadgeColor="accent" >
+                     matBadge="{{toppingCount(topping)}}" matBadgeColor="warn" >
                  <img src="assets/img/toppings/singles/{{ topping.name }}.svg">
                  {{ topping.name }}<div class="topping_price" >{{topping.price && topping.price * 1000}}원</div>
                </div>
@@ -85,20 +89,39 @@ import {MatSnackBar} from "@angular/material/snack-bar";
       margin: 0 10px 0 0;
     }
   `],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PizzaToppingsComponent implements OnInit {
-  @Input() toppings : Topping[];
+  @Input() set toppings (to: any) {
+    this._toppings = to.toppings;
+  }
   @Output() selected = new EventEmitter<Topping[]>();
   topp: Topping[] = [];
+  _toppings: Topping[] = [];
   pizzaId: number;
   pizza: Pizza;
   snackBar: MatSnackBar;
+  @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
 
   constructor(
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
+    /**
+     * Save the result of selected toppings
+     * */
+    this.selectedToppings$.pipe(
+      // this.selectedToppings$ && this.selectedToppings$.pipe(
+      tap(val => {
+        this.topp = val;
+        console.log('topp-4',val);
+        // this.total = this.priceService.calcTotal(pi.toppings);
+        // this.toppings = pi.toppings;
+      }),
+    ).subscribe();
+    // this.cd.detectChanges();
+
   }
 
   /** 토핑을 추가하는 부분 토핑은 5회까지 만 선택하게 제한함 */
@@ -115,11 +138,8 @@ export class PizzaToppingsComponent implements OnInit {
     // this._onChange(this.topp);
 
   }
-  isExistInToppings( topping: Topping) {
-    /** 이미 선택된 토핑인지 판다하여 메뉴에 체크 표시를 함*/
-    return Array.from(this.topp).some(val => val.id === topping.id);
-  }
-  toppingCount(topping: Topping) : number{
+  /** Display count of selected toppings */
+  toppingCount(topping: Topping): number{
     let count = Array.from(this.topp).filter( val=> val.id === topping.id);
     const ret = count.length === 0 ? null : count.length;
     return ret;

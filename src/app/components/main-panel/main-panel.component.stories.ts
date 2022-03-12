@@ -1,13 +1,17 @@
 import {MainPanelComponent} from "./main-panel.component";
 import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {PizzaModule} from "../pizza.module";
+import {PIZZA_CONFIG_TOKEN, SelectedItemService} from "../../services/selected-item.service";
 
 export default {
   title:'MainPanelComponent',
   component: MainPanelComponent,
   decorators: [
     moduleMetadata({
-      imports: [PizzaModule]
+      imports: [PizzaModule],
+      providers: [
+        {provide: PIZZA_CONFIG_TOKEN, useValue:''}
+      ]
     })
   ]
 } as Meta<MainPanelComponent>
@@ -19,10 +23,6 @@ const Template: Story = (args) => ({
   },
   template: `
     <main-panel
-        [pizzas]="pizzas"
-        [pizza]="pizza"
-        [toppings]="toppings"
-        [nToppings]="nToppings"
         >
     </main-panel>
   `

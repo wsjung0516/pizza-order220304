@@ -10,7 +10,7 @@ import {Form, FormGroup} from "@angular/forms";
         type="button"
         class="btn btn__ok"
         *ngIf="!exists"
-        (click)="createPizza(form)">
+        (click)="createPizza()">
         Create Pizza
       </button>
 
@@ -83,7 +83,8 @@ export class ButtonsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  createPizza(form: FormGroup) {
+  createPizza() {
+/*
     const { value, valid } = form;
     // console.log('--- value', value, valid, form);
     if( value['name'].split(':')[0] === '') window.alert('이름을 입력하세요!')
@@ -91,6 +92,8 @@ export class ButtonsComponent implements OnInit {
     if (valid) {
       this.create.emit(value);
     }
+*/
+      this.create.emit({});
   }
 
   updatePizza(form: FormGroup) {

@@ -32,6 +32,13 @@ Primary.args = {
     {id:2, name:'bacon', price:0.7},
     {id:3, name:'chili', price:1.1},
     {id:4, name:'basil', price:1},
+    {id:5, name:'mozzarella', price:0.8},
+    {id:1, name:'anchovy', price:1},
+    {id:2, name:'bacon', price:0.7},
+    {id:3, name:'chili', price:1.1},
+    {id:4, name:'basil', price:1},
+    {id:5, name:'mozzarella', price:0.8},
+    {id:4, name:'basil', price:1},
     {id:5, name:'mozzarella', price:0.8}
   ]
 }

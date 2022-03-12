@@ -33,7 +33,7 @@ export interface ToppingsStateModel {
 })
 @Injectable()
 export class ToppingsState {
-  constructor(private toppingsSerive: ToppingsService) {}
+  constructor(private toppingsService: ToppingsService) {}
 
   @Selector()
   static toppings(state: ToppingsStateModel): Topping[] {
@@ -53,8 +53,7 @@ export class ToppingsState {
   @Action(LoadToppings)
   loadToppings({ patchState, dispatch }: StateContext<ToppingsStateModel>) {
     patchState({ loading: true });
-    return this.toppingsSerive.getToppings().pipe(
-      tap(val=>console.log('getToppings--val-->',val)),
+    return this.toppingsService.getToppings().pipe(
       map((toppings: Topping[]) => {
         asapScheduler.schedule(() =>
           dispatch(new LoadToppingsSuccess(toppings))
@@ -90,7 +89,7 @@ export class ToppingsState {
   updateToppings({ patchState, dispatch }: StateContext<ToppingsStateModel>) {
 /*
     patchState({ loading: true });
-    return this.toppingsSerive.getToppings().pipe(
+    return this.toppingsService.getToppings().pipe(
       tap(val=>console.log('getToppings--val-->',val)),
       map((toppings: Topping[]) => {
         asapScheduler.schedule(() =>
@@ -109,8 +108,6 @@ export class ToppingsState {
     { patchState, getState }: StateContext<ToppingsStateModel>,
     action: UpdateToppingsSuccess
   ) {
-    console.log('UpdateToppingSuccess action-->',action, action.payload);
-
     patchState({
       toppings: getState().toppings,
       selectedToppings: action.payload,

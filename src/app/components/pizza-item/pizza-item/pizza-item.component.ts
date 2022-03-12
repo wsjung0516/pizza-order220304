@@ -26,7 +26,7 @@ export class PizzaItemComponent implements OnInit {
   nToppings!: Topping[];
   id: number;
   @Input() set pizza(v: any) {
-    // console.log(' pizza-item.component, pizza',v)
+    console.log(' pizza-item.component, pizza',v)
     this.nToppings = v.toppings;
     this.name = v.name;
     this.id = v.id;
