@@ -25,6 +25,7 @@ Primary.args = {
   pizza:{
     id: 1,
     name: 'aaa pizza',
+    price: '7500',
     toppings: [
       {id: 1, name: "anchovy"},
       {id: 2, name: "bacon"},

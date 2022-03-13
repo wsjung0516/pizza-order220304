@@ -1,6 +1,7 @@
 import {PizzaItemListComponent} from "./pizza-item-list.component";
 import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {PizzaModule} from "../../pizza.module";
+import {action} from "@storybook/addon-actions";
 
 export default {
   title: 'PizzaItemListComponent',
@@ -14,10 +15,13 @@ export default {
 
 const Template: Story = (args) => ({
   props: {
-    ...args
+    ...args,
+    onSelected: action('selected')
   },
   template: `
-    <pizza-item-list [pizzas]="pizzas"></pizza-item-list>
+    <pizza-item-list [pizzas]="pizzas"
+        (selected)="onSelected($event)">
+    </pizza-item-list>
   `
 })
 export const Primary = Template.bind({});

@@ -5,11 +5,11 @@ import {
   forwardRef, Inject,
   Input,
   OnDestroy,
-  OnInit
+  OnInit, ViewChild
 } from '@angular/core';
 import {Pizza, Topping} from "../../models";
 import {
-  CreatePizzaSuccess, LoadToppings,
+  CreatePizzaSuccess, LoadPizzas, LoadToppings,
   PizzasState,
   RemovePizzaSuccess, ToppingsState,
   UpdatePizzaSuccess,
@@ -19,13 +19,16 @@ import {Select, Store} from "@ngxs/store";
 import {ActivatedRoute, Router} from "@angular/router";
 import {takeUntil, tap} from "rxjs/operators";
 import {ToppingImageService} from "../../services/topping-image.service";
-import {Observable, Subject} from "rxjs";
+import {Observable, of, Subject} from "rxjs";
+import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
+import {PizzaNameComponent} from "../pizza-form/pizza-name/pizza-name.component";
 
 @Component({
   selector: 'main-panel',
   template: `
-    <div class="grid grid-cols-2 m-1 ">
-      <section class="h-auto  border-4  border-green-300 p-3">
+    <div class="grid grid-cols-2 m-1" >
+      <section>
+      <div class="h-120 border-4  border-green-400 p-3">
         <pizza-form
           [pizza]="pizza$ | async"
           [toppings]="toppings$ | async"
@@ -33,13 +36,15 @@ import {Observable, Subject} from "rxjs";
           (create)="onCreate($event)"
           (update)="onUpdate($event)"
           (remove)="onRemove($event)"
-          >
+        >
           <pizza-display [toppings]="nToppings"></pizza-display>
         </pizza-form>
+      </div>
       </section>
-      <section class="text-gray-600 body-font h-32">
-        <div class="container px-5 py-1 mx-auto overflow-y-auto h-screen">
-            <pizza-item-list [pizzas]="pizzas$ | async"></pizza-item-list>
+      <section>
+        <div class="px-5 py-1 mx-auto overflow-y-auto h-screen">
+            <pizza-item-list [pizzas]="pizzas$ | async"
+            (selected)="onSelectedPizza($event)"></pizza-item-list>
         </div>
       </section>
     </div>
@@ -61,22 +66,40 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]>;
   @Select(ToppingsState.toppings) toppings$: Observable<Topping[]> | undefined;
   @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
+
+  @ViewChild(PizzaFormComponent) pizzaForm: PizzaFormComponent;
   unsubscribe = new Subject();
   unsubscribe$ = this.unsubscribe.asObservable();
   constructor(private store: Store,
-              private router: Router,
+              // private router: Router,
               private toppingImages: ToppingImageService,
-              private route: ActivatedRoute,
-              private cd: ChangeDetectorRef) {}
+              // private route: ActivatedRoute,
+              private cdr: ChangeDetectorRef) {}
   addToppings(toppings: Topping[]) {
 
     this.store.dispatch(new UpdateToppingsSuccess(toppings))
   }
-  onCreate(event: Pizza) {
-    console.log(' pizza -1', event);
-    this.store.dispatch(new CreatePizzaSuccess(event));
-  }
+  onResetPizza() {
+     // console.log('mp', this.pizzaForm )
+     this.pizzaForm.onResetName(); // reset name, price
+     this.nToppings = []; // reset toppings an pizza
+     this.store.dispatch( new UpdateToppingsSuccess([])); // reset selected toppings
 
+    this.cdr.detectChanges();
+    // this.store.dispatch(new CreatePizzaSuccess(pizza));
+  }
+  onSelectedPizza(pizza: Pizza) {
+    console.log('pizza', pizza);
+    this.pizzaForm.onSetName(pizza); // reset name, price
+    this.nToppings = pizza.toppings; // reset toppings an pizza
+    this.store.dispatch( new UpdateToppingsSuccess(pizza.toppings)); // reset selected toppings
+
+    this.cdr.detectChanges();
+  }
+  onCreate(pizza: Pizza) {
+    console.log(' pizza -1', pizza);
+    this.store.dispatch(new CreatePizzaSuccess(pizza));
+  }
   onUpdate(event: Pizza) {
     event.toppings = this.nToppings;
     this.store.dispatch(new UpdatePizzaSuccess(event));
@@ -89,10 +112,31 @@ export class MainPanelComponent implements OnInit, OnDestroy {
     }
   }
   ngOnInit(): void {
+    this.store.dispatch(new LoadPizzas());
     this.store.dispatch(new LoadToppings());
+/*
+    this.pizza$ = this.store.select(PizzasState.SelectedPizza).pipe(
+      tap((pizza: Pizza) => {
+        // 'products/1'
+        const pizzaExist = !!(pizza && pizza.toppings);
+        console.log('---pizzaExist', pizzaExist);
+        const toppingIds = pizzaExist
+          ? pizza.toppings && pizza.toppings.map(topping => topping.id)
+          : [];
+        // console.log('pizza111: ', pizza, toppingIds, pizzaExist);
 
-    const pizzaId = this.route && this.route.snapshot.params.pizzaId;
-    console.log('this.routed -- pizzaId', pizzaId)
+        if (pizzaExist) {
+          this.pizza = pizza;
+          this.nToppings = pizza && pizza.toppings;
+        }
+      }),
+      takeUntil(this.unsubscribe$)
+    );
+*/
+
+    // const pizzaId = this.route && this.route.snapshot.params.pizzaId;
+    // console.log('this.routed -- pizzaId', pizzaId)
+/*
     if( pizzaId ) {  // If new routing state, not working this process.
       this.pizza$ = this.store.select(PizzasState.SelectedPizza).pipe(
         tap((pizza: Pizza) => {
@@ -116,6 +160,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
       let toppings: Topping[] =[];
       this.store.dispatch(new UpdateToppingsSuccess(toppings))
     }
+*/
     this.selectedToppings$.pipe(
       // this.selectedToppings$ && this.selectedToppings$.pipe(
       tap(val => {
@@ -124,7 +169,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
         // this.toppings = pi.toppings;
       }),
     ).subscribe();
-    this.cd.detectChanges();
+    this.cdr.detectChanges();
 
   }
   ngOnDestroy() {

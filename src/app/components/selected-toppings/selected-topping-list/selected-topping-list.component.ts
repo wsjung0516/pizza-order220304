@@ -62,11 +62,22 @@ export class SelectedToppingListComponent implements OnInit, OnDestroy {
         /** Important!!!
          DB와 연결되어 있지 않고, ngxs를 사용하므로, 선택된 토핑 결과를 전달하기 위한 데이터 배열 */
         topp.map( (val: any) => this.nToppings.push(val));
-        /** Calculate total price*/
+
+        if( topp.length === 0) {
+          this.rawToppings = [];
+          this.cdr.markForCheck();
+        }
+        /**
+         * Calculate total price, extract toppings that has the same toppings and
+         * count if there are multiple same toppings
+         * */
         this.priceService.calcSubTotalToppings(topp).pipe(takeUntil(this.unsubscribe$))
-          .subscribe((val:any) => this.rawToppings = val);
+          .subscribe((val:any) => {
+            // console.log('remove toppings - 2',topp);
+            this.rawToppings = val
+            this.cdr.markForCheck();
+          });
         //
-        this.cdr.markForCheck();
       }),
       takeUntil(this.unsubscribe$)
     ).subscribe();
@@ -74,7 +85,7 @@ export class SelectedToppingListComponent implements OnInit, OnDestroy {
   }
   onRemove(topping: Topping) {
     let idx = this.nToppings.findIndex( (value: any) => value.id === topping.id);
-    let data = this.nToppings.splice(idx,1);
+    this.nToppings.splice(idx,1);
     this.store.dispatch(new UpdateToppingsSuccess(this.nToppings));
     this.cdr.markForCheck();
   }

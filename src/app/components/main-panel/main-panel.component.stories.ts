@@ -22,8 +22,7 @@ const Template: Story = (args) => ({
     ...args
   },
   template: `
-    <main-panel
-        >
+    <main-panel>
     </main-panel>
   `
 })
@@ -32,6 +31,7 @@ Primary.args = {
   pizza:{
     id: 1,
     name: 'aaa pizza',
+    price: '6300',
     toppings: [
       {id: 1, name: "anchovy"},
       {id: 2, name: "bacon"},

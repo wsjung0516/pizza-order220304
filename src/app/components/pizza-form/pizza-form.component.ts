@@ -16,6 +16,7 @@ import {SelectedItemService} from "../../services/selected-item.service";
 import {Select, Store} from "@ngxs/store";
 import {LoadToppings, ToppingsState} from "../../state";
 import { takeUntil, tap} from "rxjs/operators";
+import {PizzaNameComponent} from "./pizza-name/pizza-name.component";
 
 @Component({
   selector: 'pizza-form',
@@ -23,7 +24,6 @@ import { takeUntil, tap} from "rxjs/operators";
     <div class="pizza-form">
       <pizza-name
         [input_name]="pizza?.name"
-        [price] = 'pizza?.price'
         (name)="onInputName($event)"
         (isInvalid) = onIsInvalid($event)
       >
@@ -46,6 +46,7 @@ import { takeUntil, tap} from "rxjs/operators";
           <!-- 선택할 토핑 메뉴. <pizza-toppings>에서 ControlValueAccess 를 구현함-->
           <pizza-toppings
             [toppings]="_toppings"
+            (price)="onPrice($event)"
             (selected)="addToppings.emit($event)">
           </pizza-toppings>
         </div>
@@ -105,9 +106,6 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
     this.toppings2 = v;
     this.cdr.markForCheck();
   }
-  @Input() set name (n: any) {
-    this._name = n;
-  }
   // @Input() nToppings: Topping[];
   @Output() addToppings = new EventEmitter<Topping[]>();
   @Output() create = new EventEmitter<Pizza>();
@@ -116,6 +114,7 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   pizzaPrice:string;
   _isInvalid: boolean;
   _name: any
+  price: string;
   exists = false;
   _toppings: {};
   toppings2: Topping[];
@@ -123,6 +122,7 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   unsubscribe$ = this.unsubscribe.asObservable();
   overlayRef: OverlayRef;
   @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
+  @ViewChild(PizzaNameComponent) pizzaName: PizzaNameComponent;
 
   constructor(
     private selectedItemService: SelectedItemService,
@@ -150,11 +150,26 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.overlayRef = this.selectedItemService.openSelectedToppings(this.selected_origin,  this.pizza);
   }
+  onResetName() {
+    this.pizzaName.onResetName();
+  }
+  onSetName(pizza:Pizza) {
+    this.pizzaName.onSetNameNPrice(pizza)
+  }
   onInputName(ev: any) {
     this._name = ev;
   }
   onIsInvalid(ev: boolean) {
     this._isInvalid = ev;
+  }
+  onPrice(price:string) {
+    console.log('price-1', price, this.pizzaName);
+    const pizza = {price}
+    this.pizzaName.onSetNameNPrice(pizza)
+    // console.log('price', price, this.pizza);
+    this.price = this.pizza ? this.pizza.price : price;
+    // if(this.price) this.price = price;
+    // this.pizza.price = price;
   }
   onCreate() {
     if( this._name === '' || this._name === undefined) {
@@ -162,7 +177,7 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     else  {
       console.log('name', this._name)
-      const pi: Pizza = {id: uniqueId(), name: this._name.name, toppings: this.selected_toppings};
+      const pi: Pizza = {id: uniqueId(), name: this._name.name, price: this.price, toppings: this.selected_toppings};
       this.create.emit(pi)
     }
   }

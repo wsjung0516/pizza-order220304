@@ -7,22 +7,21 @@ import {PizzaModule} from "./components/pizza.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {NgxsModule} from "@ngxs/store";
 import {AppRoutingModule} from "./app.routing.module";
-import {PizzasGuard, ToppingsGuard} from "./guards";
+import {PizzaExistsGuards, PizzasGuard, ToppingsGuard} from "./guards";
+import {AngularMaterialModule} from "./shared/angular-material.module";
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     PizzaModule,
-    // AngularMaterialModule,
+    AngularMaterialModule,
     MatSnackBarModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     NgxsModule.forRoot([]),
   ],
-  providers: [MatSnackBarModule, PizzasGuard, ToppingsGuard],
+  providers: [PizzasGuard, ToppingsGuard, PizzaExistsGuards],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

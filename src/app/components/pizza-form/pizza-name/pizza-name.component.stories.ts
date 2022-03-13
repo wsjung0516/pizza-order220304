@@ -31,5 +31,5 @@ const Template: Story = (args) => ({
 })
 export const Primary = Template.bind({});
 Primary.args = {
-  price: '2,000 원'
+  price: '2000'
 }

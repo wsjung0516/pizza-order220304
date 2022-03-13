@@ -64,6 +64,7 @@
   "pizzas": [
     {
       "name": "BBB",
+      "price": "6300",
       "toppings": [
         {
           "id": 1,
@@ -90,6 +91,7 @@
     },
     {
       "name": "맛있는 엄마 피자",
+      "price": "6300",
       "toppings": [
         {
           "id": 1,
@@ -131,6 +133,7 @@
     },
     {
       "name": "굿모닝 피자",
+      "price": "3200",
       "toppings": [
         {
           "id": 1,

@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Form, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {Pizza} from "../../../models";
 
 @Component({
   selector: 'pizza-name',
@@ -69,12 +70,15 @@ export class PizzaNameComponent implements OnInit {
   @Input() set input_name (name: string) {
     this.form.patchValue({name:name});
   }
+/*
   @Input() set price (v: string ) {
-    // console.log('price', v)
-    // const n = this.tName + ': ' + v;
+    // Thousand separator
+    const nv = v.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
+    console.log('nv -1', v)
+    // @ts-ignore
     this.form.patchValue({price: v  })
-    // if( this.tName !== '' ) this.form.patchValue({price: n  })
   }
+*/
   @Output() isInvalid = new EventEmitter<boolean>();
   @Output() name = new EventEmitter<string>();
   tName: string = '';
@@ -83,13 +87,23 @@ export class PizzaNameComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       name: ["", Validators.required],
-      price: [""],
+      price: ["", Validators.required],
     });
+  }
+  onResetName() {
+    this.form.reset();
+  }
+  onSetNameNPrice(pizza: Pizza) {
+    const nv = pizza.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
+    console.log('nv- 2, price', nv, pizza);
+    // this.form.reset();
+    // this.form.patchValue({ price: nv});
+    this.form.patchValue({name: pizza.name, price: nv});
   }
   ngOnInit(): void {
     this.form.valueChanges.pipe().subscribe(val => {
       this.tName = val;
-      console.log('val', val)
+      // console.log('val', val)
       this.name.emit(val);
       this.isInvalid.emit(this.nameControlInvalid);
     })

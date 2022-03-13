@@ -11,7 +11,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MainPanelComponent } from './main-panel/main-panel.component';
 import { PizzaProductComponent } from './pizza-product/pizza-product.component';
 import { PizzaItemComponent } from './pizza-item/pizza-item/pizza-item.component';
-import {RouterModule, Routes} from "@angular/router";
+// import {RouterModule, Routes} from "@angular/router";
 import { PizzaItemListComponent } from './pizza-item/pizza-item-list/pizza-item-list.component';
 import { SelectedToppingListComponent } from './selected-toppings/selected-topping-list/selected-topping-list.component';
 import { SelectedToppingItemComponent } from './selected-toppings/selected-topping-item/selected-topping-item.component';
@@ -19,6 +19,8 @@ import {NgxsModule} from "@ngxs/store";
 import {PizzasState, ToppingsState} from "../state";
 import {HttpClientModule} from "@angular/common/http";
 import {PizzaExistsGuards, PizzasGuard, ToppingsGuard} from "../guards";
+import {BrowserModule} from "@angular/platform-browser";
+/*
 const routes: Routes = [
   {
     path: '',
@@ -36,6 +38,7 @@ const routes: Routes = [
     component: PizzaProductComponent,
   }
 ];
+*/
 @NgModule({
   declarations: [
     PizzaDisplayComponent,
@@ -54,9 +57,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularMaterialModule,
     BrowserAnimationsModule,
-    RouterModule.forChild(routes),
+    AngularMaterialModule,
+    // RouterModule.forChild(routes),
     NgxsModule.forRoot([]),
     NgxsModule.forFeature([ToppingsState, PizzasState]),
     HttpClientModule

@@ -8,28 +8,29 @@ import {
 } from '@angular/core';
 import {Pizza, Topping} from "../../models";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {take, takeUntil, tap} from "rxjs/operators";
+import {skip, switchMap, take, takeLast, takeUntil, tap, toArray} from "rxjs/operators";
 import {Select} from "@ngxs/store";
 import {ToppingsState} from "../../state";
-import {Observable, Subject} from "rxjs";
+import {Observable, Subject, from} from "rxjs";
 import {PriceService} from "../../services/price.service";
 
 @Component({
   selector: 'pizza-toppings',
   template: `
-      <div class="pizza-toppings" >
-         <ng-container *ngFor="let topping of _toppings;">
-           <div class="">
-             <div class="w-40 min-w-full md:min-w-0">
-               <div  class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
-                     matBadge="{{toppingCount(topping)}}" matBadgeColor="warn" >
-                 <img src="assets/img/toppings/singles/{{ topping.name }}.svg">
-                 {{ topping.name }}<div class="topping_price" >{{topping.price && topping.price * 1000}}원</div>
-               </div>
-             </div>
-           </div>
-          </ng-container>
-      </div>
+    <div class="pizza-toppings">
+      <ng-container *ngFor="let topping of _toppings;">
+        <div class="">
+          <div class="w-40 min-w-full md:min-w-0">
+            <div class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
+                 matBadge="{{displayToppingCount(topping)}}" matBadgeColor="warn">
+              <img src="assets/img/toppings/singles/{{ topping.name }}.svg">
+              {{ topping.name }}
+              <div class="topping_price">{{topping.price && topping.price * 1000}}원</div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
   `,
 
   styles: [`
@@ -97,11 +98,12 @@ export class PizzaToppingsComponent implements OnInit, OnDestroy {
     this._toppings = to.toppings;
   }
   @Output() selected = new EventEmitter<Topping[]>();
+  @Output() price = new EventEmitter<string>();
   topp: Topping[] = [];
   _toppings: Topping[] = [];
   pizzaId: number;
   pizza: Pizza;
-  price:string;
+  // price:string;
   unsubscribe = new Subject();
   unsubscribe$ = this.unsubscribe.asObservable();
   snackBar: MatSnackBar;
@@ -116,12 +118,14 @@ export class PizzaToppingsComponent implements OnInit, OnDestroy {
      * Save the result of selected toppings
      * */
     this.selectedToppings$.pipe(
-      // this.selectedToppings$ && this.selectedToppings$.pipe(
       tap(val => {
         this.topp = val;
-        // console.log('topp-4',val);
-        this.calcuratePrice(val);
-        // this.toppings = pi.toppings;
+        if( val.length === 0 ) {
+          // console.log('price-4')
+          this.price.emit('');
+        } else {
+          this.calcuratePrice(val);
+        }
       }),
     ).subscribe();
     // this.cd.detectChanges();
@@ -129,16 +133,18 @@ export class PizzaToppingsComponent implements OnInit, OnDestroy {
   }
 
   private calcuratePrice(val: any[]) {
+    let tot = 0;
+    console.log(' price-3',this.price, val)
     this.priceService.calcSubTotalToppings(val).pipe(
-      takeUntil(this.unsubscribe$)
+      takeUntil(this.unsubscribe$),
+      switchMap((val:any)=> {
+        return this.priceService.calcTotal(val);
+      }),
+      // takeLast(1)
     ).subscribe((val: any) => {
-      // console.log(' price-2', val)
-      this.priceService.calcTotal(val).pipe(
-        takeUntil(this.unsubscribe$)// take(1)
-      ).subscribe(val => {
-        this.price = (val * 1000).toFixed(0).toLocaleString()
-        // console.log(' price-3',this.price, val)
-      });
+        console.log(' price-4',this.price, val)
+        const price = (val * 1000).toFixed(0).toLocaleString()
+        this.price.emit(price);
     });
   }
 
@@ -157,7 +163,7 @@ export class PizzaToppingsComponent implements OnInit, OnDestroy {
 
   }
   /** Display count of selected toppings */
-  toppingCount(topping: Topping): number{
+  displayToppingCount(topping: Topping): number{
     let count = Array.from(this.topp).filter( val=> val.id === topping.id);
     const ret = count.length === 0 ? null : count.length;
     return ret;

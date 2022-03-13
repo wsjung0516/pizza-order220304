@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Pizza} from "../../../models";
 
 @Component({
@@ -6,7 +6,7 @@ import {Pizza} from "../../../models";
   template: `
     <div class="flex flex-wrap -m-1">
       <div class="xl:w-1/2 md:w-1/1 p-2" *ngFor="let pizza of pizzas">
-        <pizza-item [pizza]="pizza"></pizza-item>
+        <pizza-item [pizza]="pizza" (selected)="selected.emit(pizza)"></pizza-item>
       </div>
     </div>
   `,
@@ -15,9 +15,8 @@ import {Pizza} from "../../../models";
 })
 export class PizzaItemListComponent implements OnInit {
   @Input() pizzas: Pizza[];
+  @Output() selected = new EventEmitter<Pizza>();
   constructor() { }
-
   ngOnInit(): void {
   }
-
 }
