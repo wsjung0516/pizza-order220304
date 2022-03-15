@@ -16,12 +16,10 @@ import {
   UpdateToppingsSuccess
 } from "../../state";
 import {Select, Store} from "@ngxs/store";
-import {ActivatedRoute, Router} from "@angular/router";
 import {takeUntil, tap} from "rxjs/operators";
 import {ToppingImageService} from "../../services/topping-image.service";
 import {Observable, of, Subject} from "rxjs";
 import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
-import {PizzaNameComponent} from "../pizza-form/pizza-name/pizza-name.component";
 
 @Component({
   selector: 'main-panel',
@@ -30,9 +28,9 @@ import {PizzaNameComponent} from "../pizza-form/pizza-name/pizza-name.component"
       <section>
       <div class="h-120 border-4  border-green-400 p-3">
         <pizza-form
-          [pizza]="pizza$ | async"
+          [_pizza]="pizza$ | async"
           [toppings]="toppings$ | async"
-          (addToppings)="addToppings($event)"
+          (selectedToppings)="addToppings($event)"
           (create)="onCreate($event)"
           (update)="onUpdate($event)"
           (remove)="onRemove($event)"
@@ -71,9 +69,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   unsubscribe = new Subject();
   unsubscribe$ = this.unsubscribe.asObservable();
   constructor(private store: Store,
-              // private router: Router,
               private toppingImages: ToppingImageService,
-              // private route: ActivatedRoute,
               private cdr: ChangeDetectorRef) {}
   addToppings(toppings: Topping[]) {
 
@@ -81,7 +77,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   }
   onResetPizza() {
      // console.log('mp', this.pizzaForm )
-     this.pizzaForm.onResetName(); // reset name, price
+     // this.pizzaForm.onResetName(); // reset name, price
      this.nToppings = []; // reset toppings an pizza
      this.store.dispatch( new UpdateToppingsSuccess([])); // reset selected toppings
 
@@ -90,7 +86,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   }
   onSelectedPizza(pizza: Pizza) {
     console.log('pizza', pizza);
-    this.pizzaForm.onSetName(pizza); // reset name, price
+    // this.pizzaForm.onSetName(pizza); // reset name, price
     this.nToppings = pizza.toppings; // reset toppings an pizza
     this.store.dispatch( new UpdateToppingsSuccess(pizza.toppings)); // reset selected toppings
 

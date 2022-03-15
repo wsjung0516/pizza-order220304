@@ -23,7 +23,7 @@ const Template: Story = (args) => ({
   },
   template: `
   <pizza-form
-            [pizza]="pizza"
+            [_pizza]="pizza"
             [toppings]="nToppings"
             (addToppings)="addToppings($event)"
             (create)="onCreate($event)"
@@ -42,15 +42,15 @@ Primary.args = {
     name: 'aaa pizza',
     price: '20000',
     toppings: [
-      {id: 1, name: "anchovy"},
-      {id: 2, name: "bacon"},
-      {id: 1, name: "anchovy"},
-      {id: 4, name: "chili"},
-      {id: 7, name: "olive"},
-      {id: 2, name: "bacon"},
-      {id: 7, name: "olive"},
-      {id: 6, name: "mushroom"},
-      {id: 7, name: "olive"},
+      {id: 1, name: "anchovy", price: 0.8},
+      {id: 2, name: "bacon", price: 1.1},
+      {id: 1, name: "anchovy", price: 0.8},
+      {id: 4, name: "chili", price: 0.9},
+      {id: 7, name: "olive", price: 1},
+      {id: 2, name: "bacon", price: 1.1},
+      {id: 7, name: "olive", price: 1},
+      {id: 6, name: "mushroom", price: 1},
+      {id: 7, name: "olive", price: 1},
     ]
   },
   nToppings:[

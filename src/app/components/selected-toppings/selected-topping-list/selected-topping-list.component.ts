@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import {Pizza, Topping} from "../../../models";
 import {ToppingsState, UpdateToppingsSuccess} from "../../../state";
-import {take, takeUntil, tap} from "rxjs/operators";
+import {skip, take, takeUntil, tap} from "rxjs/operators";
 import {PriceService} from "../../../services/price.service";
 import {PIZZA_CONFIG_TOKEN} from "../../../services/selected-item.service";
 import {Select, Store} from "@ngxs/store";
@@ -35,7 +35,7 @@ import {ToppingAddedService} from "../../../services/topping-added.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SelectedToppingListComponent implements OnInit, OnDestroy {
-  toppings: Topping[];
+  @Input() toppings: Topping[];
   nToppings: any[] = [];
   rawToppings: Topping[];
   unsubscribe = new Subject();
@@ -48,11 +48,11 @@ export class SelectedToppingListComponent implements OnInit, OnDestroy {
     private priceService: PriceService,
     private topping_added: ToppingAddedService,
     private cdr: ChangeDetectorRef,
-    @Inject(forwardRef(() => PIZZA_CONFIG_TOKEN)) public pizza?: Pizza,
+    @Optional() @Inject(forwardRef(() => PIZZA_CONFIG_TOKEN)) public pizza?: Pizza,
   ) { }
 
   ngOnInit(): void {
-    this.toppings = this.pizza? this.pizza.toppings : []; // Initial Value
+    this.toppings = this.pizza? this.pizza.toppings : this.toppings; // Initial Value
     /** To sync with current topping list, */
     this.store.dispatch( new UpdateToppingsSuccess(this.toppings));
     //
@@ -90,7 +90,9 @@ export class SelectedToppingListComponent implements OnInit, OnDestroy {
     this.cdr.markForCheck();
   }
   ngOnDestroy() {
-    this.unsubscribe.next({});
-    this.unsubscribe.complete();
+    if( this.unsubscribe.next) {
+      this.unsubscribe.next({});
+      this.unsubscribe.complete();
+    }
   }
 }

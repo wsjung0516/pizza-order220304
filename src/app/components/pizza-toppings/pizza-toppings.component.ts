@@ -1,7 +1,16 @@
+/**
+ * 토핑의 종류를 표시하는 부분
+ *  pizza-form component에서 child로 호출됨,
+ *  perent component에서 reactive form control을 적용하였으므로,
+ *  이 component에서 ControlValueAccessor interface를 적용함.
+ *
+ * */
+
+
 import {
   ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
-  EventEmitter,
+  EventEmitter, forwardRef,
   Input, OnChanges, OnDestroy,
   OnInit,
   Output, SimpleChanges
@@ -10,15 +19,21 @@ import {Pizza, Topping} from "../../models";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {skip, switchMap, take, takeLast, takeUntil, tap, toArray} from "rxjs/operators";
 import {Select} from "@ngxs/store";
-import {ToppingsState} from "../../state";
+import {PizzasState, ToppingsState} from "../../state";
 import {Observable, Subject, from} from "rxjs";
-import {PriceService} from "../../services/price.service";
+import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ToppingImageService} from "../../services/topping-image.service";
+const PIZZA_TOPPINGS_ACCESSOR = {
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() => PizzaToppingsComponent),
+  multi: true,
+};
 
 @Component({
   selector: 'pizza-toppings',
   template: `
     <div class="pizza-toppings">
-      <ng-container *ngFor="let topping of _toppings;">
+      <ng-container *ngFor="let topping of toppings;">
         <div class="">
           <div class="w-40 min-w-full md:min-w-0">
             <div class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
@@ -91,75 +106,67 @@ import {PriceService} from "../../services/price.service";
       margin: 0 10px 0 0;
     }
   `],
-   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [PIZZA_TOPPINGS_ACCESSOR],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PizzaToppingsComponent implements OnInit, OnDestroy {
-  @Input() set toppings (to: any) {
-    this._toppings = to.toppings;
-  }
-  @Output() selected = new EventEmitter<Topping[]>();
-  @Output() price = new EventEmitter<string>();
+  @Input() toppings: Topping[] = [];
+  // @Select(PizzasState.pizzas) pizza$: Observable<Pizza>;
+
   topp: Topping[] = [];
-  _toppings: Topping[] = [];
-  pizzaId: number;
-  pizza: Pizza;
+  pizzaId: number | undefined;
+  pizza: Pizza | undefined;
+  private onTouch: Function = ()=>{};
+  // private onTouch: Function;
+  private _onChange: Function = ()=>{};
   // price:string;
+  // snackBar: MatSnackBar;
   unsubscribe = new Subject();
   unsubscribe$ = this.unsubscribe.asObservable();
-  snackBar: MatSnackBar;
+  @Select(PizzasState.SelectedPizza) pizza$: Observable<Pizza> | undefined;
+  @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]> | undefined;
   @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
 
-  constructor(
-    private cdr: ChangeDetectorRef,
-    private priceService: PriceService
-  ) { }
+  constructor( // private store: Store,
+               private toppingImages: ToppingImageService,
+               // private snackBar: MatSnackBar,
+               private ref: ChangeDetectorRef) {}
   ngOnInit(): void {
     /**
      * Save the result of selected toppings
      * */
     this.selectedToppings$.pipe(
+      // this.selectedToppings$ && this.selectedToppings$.pipe(
       tap(val => {
         this.topp = val;
-        if( val.length === 0 ) {
-          // console.log('price-4')
-          this.price.emit('');
-        } else {
-          this.calcuratePrice(val);
-        }
-      }),
+        // this._onChange(this.topp);
+        this.ref.markForCheck();
+        // this.toppings = pi.toppings;
+      })
     ).subscribe();
-    // this.cd.detectChanges();
 
   }
-
-  private calcuratePrice(val: any[]) {
-    let tot = 0;
-    console.log(' price-3',this.price, val)
-    this.priceService.calcSubTotalToppings(val).pipe(
-      takeUntil(this.unsubscribe$),
-      switchMap((val:any)=> {
-        return this.priceService.calcTotal(val);
-      }),
-      // takeLast(1)
-    ).subscribe((val: any) => {
-        console.log(' price-4',this.price, val)
-        const price = (val * 1000).toFixed(0).toLocaleString()
-        this.price.emit(price);
-    });
+  registerOnChange(fn: (_:any)=> void) {
+    this._onChange = fn;
+  }
+  registerOnTouched(fn: (_:any) => void) {
+    this.onTouch = fn;
+  }
+  writeValue(value: any) {
+    this.topp = value;
   }
 
   /** 토핑을 추가하는 부분 토핑은 5회까지 만 선택하게 제한함 */
-  addTopping( topping: Topping) {
-    let count = Array.from(this.topp).filter( val=> val.id === topping.id);
+  addTopping(topping: Topping) {
+    let count = this.topp.filter( val=> val.id === topping.id);
     if( count.length >= 5) { // addTopping add each topping util each count 5
-      this.snackBar.open("Limited to 5 toppings level", 'Check!!', {duration:3000});
+      // this.snackBar.open("Limited to 5 toppings level", 'Check!!', {duration:3000});
       return;
     }
     this.topp = [...this.topp, topping];
-    // console.log('--- this.topp', this.topp, this.topp.length, topping)
+    // this.writeValue(this.value)
     /** Parent component로 데이터를 전달하는 부분 */
-    this.selected.emit(this.topp);
-    // this._onChange(this.topp);
+    this._onChange(this.topp);
 
   }
   /** Display count of selected toppings */
@@ -169,7 +176,9 @@ export class PizzaToppingsComponent implements OnInit, OnDestroy {
     return ret;
   }
   ngOnDestroy() {
-    this.unsubscribe.next({});
-    this.unsubscribe.complete();
+    if( this.unsubscribe.next) {
+      this.unsubscribe.next({});
+      this.unsubscribe.complete();
+    }
   }
 }

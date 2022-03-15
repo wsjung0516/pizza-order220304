@@ -9,25 +9,42 @@ import {
   ViewChild
 } from '@angular/core';
 import {Pizza, Topping} from "../../models";
-import {Observable, Subject} from "rxjs";
+import {from, Observable, Subject } from "rxjs";
 import {OverlayRef} from "@angular/cdk/overlay";
-import {PriceService} from "../../services/price.service";
 import {SelectedItemService} from "../../services/selected-item.service";
 import {Select, Store} from "@ngxs/store";
-import {LoadToppings, ToppingsState} from "../../state";
-import { takeUntil, tap} from "rxjs/operators";
-import {PizzaNameComponent} from "./pizza-name/pizza-name.component";
+import {PizzasState, ToppingsState} from "../../state";
+import {filter, groupBy, map, mergeMap, skip, switchMap, takeLast, takeUntil, tap, toArray} from "rxjs/operators";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'pizza-form',
   template: `
     <div class="pizza-form">
-      <pizza-name
-        [input_name]="pizza?.name"
-        (name)="onInputName($event)"
-        (isInvalid) = onIsInvalid($event)
-      >
-      </pizza-name>
+      <form [formGroup]="form">
+        <div class="input_name_area">
+          <label>
+            <input
+              type="text"
+              formControlName="name"
+              placeholder="Input Pizza Name!"
+              class="pizza-form__input"
+              [class.error]="nameControlInvalid">
+            <div
+              class="pizza-form__error"
+              *ngIf="nameControlInvalid">
+              <p>피자이름을 입력하세요!</p>
+            </div>
+          </label>
+          <label>
+            <input
+              type="text"
+              formControlName="price"
+              placeholder="Pizza price!"
+              class="pizza-price"
+            >
+          </label>
+        </div>
         <!-- Angular CDK Overlay를 표시하기 위한 Anchor point, 선태된 토핑에 대한 Count를
          표시하기 위함 selected-item.service.ts와 관련이 있음 -->
         <ng-container>
@@ -45,22 +62,55 @@ import {PizzaNameComponent} from "./pizza-name/pizza-name.component";
         <div class="">
           <!-- 선택할 토핑 메뉴. <pizza-toppings>에서 ControlValueAccess 를 구현함-->
           <pizza-toppings
-            [toppings]="_toppings"
-            (price)="onPrice($event)"
-            (selected)="addToppings.emit($event)">
+            [toppings]="toppings"
+            formControlName="toppings">
           </pizza-toppings>
         </div>
 
         <div class="">
             <app-buttons
-              (create)="onCreate()"
-              (update)="update.emit($event)"
-              (remove)="remove.emit($event)"
+              (create)="createPizza(form)"
+              (update)="updatePizza(form)"
+              (remove)="removePizza(form)"
             ></app-buttons>
         </div>
+      </form>
     </div>
   `,
   styles: [`
+    .input_name_area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .pizza-form__input {
+      margin: 0;
+      padding: 15px;
+      outline: 0;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      background: #f5f5f5;
+      border: 1px solid transparent;
+    }
+    .pizza-price {
+      margin: 0;
+      padding: 15px;
+      outline: 0;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      background: #f5f5f5;
+      border: 1px solid transparent;
+    }
+
+    .pizza-form__input.error {
+      border-radius: 4px 4px 0 0;
+      border-color: #b54846;
+    }
+
     .pizza-form__list {
       margin: -20px 0 0;
     }
@@ -96,96 +146,144 @@ import {PizzaNameComponent} from "./pizza-name/pizza-name.component";
    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
+  exists = false;
   @ViewChild('subTotal', {static:false}) selected_origin: any;
 
-  @Input() pizza: Pizza;
-  @Input() set toppings (v : any){
-    this._toppings = {
-      toppings: v
-    };
-    this.toppings2 = v;
-    this.cdr.markForCheck();
+  @Input() set _pizza(pi: Pizza){
+    console.log('pizza',pi)
+    if( pi ) {
+      this.pizza = pi;
+      const nv = pi.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
+
+      this.form.patchValue({name: pi.name, price: nv });
+
+    }
+
   }
-  // @Input() nToppings: Topping[];
-  @Output() addToppings = new EventEmitter<Topping[]>();
+  @Input() toppings : Topping[];
+  @Output() selectedToppings = new EventEmitter<Topping[]>();
   @Output() create = new EventEmitter<Pizza>();
   @Output() update = new EventEmitter<Pizza>();
   @Output() remove = new EventEmitter<Pizza>();
-  pizzaPrice:string;
-  _isInvalid: boolean;
-  _name: any
-  price: string;
-  exists = false;
-  _toppings: {};
-  toppings2: Topping[];
   unsubscribe = new Subject();
   unsubscribe$ = this.unsubscribe.asObservable();
   overlayRef: OverlayRef;
-  @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
-  @ViewChild(PizzaNameComponent) pizzaName: PizzaNameComponent;
+  //
+  @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]> | undefined;
+  @Select(ToppingsState.selectedToppings) selectedToppings$: Observable<Topping[]> | undefined;
+  total:any;
+  pizza: Pizza;
+  @Input() form: FormGroup;
+
 
   constructor(
     private selectedItemService: SelectedItemService,
-    private priceService: PriceService,
     private cdr: ChangeDetectorRef,
-    private store: Store
+    private fb: FormBuilder,
+  ) {
+    this.form = this.fb.group({
+      name: ["", Validators.required],
+      price: [""],
+      toppings: [[]]
+    });
 
-  ) { }
-  selected_toppings: Topping[];
-  ngOnInit(): void {
-
-    this.selectedToppings$.pipe(
-      takeUntil(this.unsubscribe$),
-      tap((val)=> {
-        this.selected_toppings = val;
-         this._toppings = {
-           toppings: this.toppings2
-         };
-        // this._toppings = [...this.toppings2, ...val];
-        // console.log('topp-7', this._toppings, this.toppings2, val)
-        this.cdr.markForCheck();
-      })
-    ).subscribe()
   }
+  ngOnInit(): void {
+    let name;
+    let tmp: any;
+    this.selectedToppings$.pipe(
+      tap(val => console.log(' length', val)),
+      filter( val => !!val && val.length > 0),
+      calcuretePrice(),
+      takeUntil(this.unsubscribe$),
+    ).subscribe((val:any) => {
+      const price = (val * 1000).toFixed(0).toLocaleString()
+      const nv = price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
+      // console.log(' price-3', price, val)
+      this.form.patchValue({name: 'AAA', price: nv })
+    });
+  }
+
   ngAfterViewInit() {
     this.overlayRef = this.selectedItemService.openSelectedToppings(this.selected_origin,  this.pizza);
   }
-  onResetName() {
-    this.pizzaName.onResetName();
+  get nameControl() {
+    return this.form.get("name") as FormControl;
   }
-  onSetName(pizza:Pizza) {
-    this.pizzaName.onSetNameNPrice(pizza)
+
+  get nameControlInvalid() {
+    return this.nameControl.hasError("required") && this.nameControl.touched;
   }
-  onInputName(ev: any) {
-    this._name = ev;
-  }
-  onIsInvalid(ev: boolean) {
-    this._isInvalid = ev;
-  }
-  onPrice(price:string) {
-    console.log('price-1', price, this.pizzaName);
-    const pizza = {price}
-    this.pizzaName.onSetNameNPrice(pizza)
-    // console.log('price', price, this.pizza);
-    this.price = this.pizza ? this.pizza.price : price;
-    // if(this.price) this.price = price;
-    // this.pizza.price = price;
-  }
-  onCreate() {
-    if( this._name === '' || this._name === undefined) {
-      window.alert('Input pizza name!!')
+
+  createPizza(form: FormGroup) {
+    const { value, valid } = form;
+    // console.log('--- value', value, valid, form);
+    if( value['name'].split(':')[0] === '') window.alert('이름을 입력하세요!')
+    // if( value['name'] === '') window.alert('이름을 입력하세요!')
+    if (valid) {
+      this.create.emit(value);
     }
-    else  {
-      console.log('name', this._name)
-      const pi: Pizza = {id: uniqueId(), name: this._name.name, price: this.price, toppings: this.selected_toppings};
-      this.create.emit(pi)
+  }
+
+  updatePizza(form: FormGroup) {
+    const { value, valid, touched, dirty } = form;
+    if (valid) {
+      // console.log('updatePizza-form', form, value);
+      // if (touched && valid) {
+      this.update.emit({ ...this.pizza, ...value });
     }
+  }
+
+  removePizza(form: FormGroup) {
+    const { value } = form;
+    this.remove.emit({ ...this.pizza, ...value });
   }
 
   ngOnDestroy() {
     this.overlayRef && this.overlayRef.dispose();
-    this.unsubscribe.next({});
-    this.unsubscribe.complete();
+    if( this.unsubscribe && this.unsubscribe.next) {
+      this.unsubscribe.next({});
+      this.unsubscribe.complete();
+    }
   }
 }
 const uniqueId = (function(){ let id=10; return function(){ return id++;} })();
+export function calcuretePrice() {
+  return function <T>(source: Observable<T>) {
+    let id: any = null;
+    let name: any;
+    let price: number;
+    let data: any[] = [];
+    let total = 0;
+    return new Observable( observer => {
+      return source.subscribe(
+        {
+          next(value:any) {
+            return from( value ).pipe(
+              groupBy( (value:any) => value.id),
+              mergeMap( (group:any) => group.pipe(toArray())),
+              map( (value:any) => {
+                value.map( (v2: any) => {
+                  id = v2.id;
+                  name = v2.name;
+                  price = v2.price;
+                });
+                data.push({id:id, name:name, count:value.length, price: price});
+              }),
+              takeLast(1),
+              // [{id:1, count:2, price:1.1},{id:2, count:2, price:1},{id:3, count:2, price:1.2}]
+              // map( _ => data),
+              map( _ => {
+                data.forEach(p1 => {
+                  let tval = p1.price * p1.count;
+                  total =  total + tval;
+                })
+              }),
+              map( _ => observer.next(total))
+            ).subscribe();
+          }
+        }
+      )
+    })
+  }
+}
