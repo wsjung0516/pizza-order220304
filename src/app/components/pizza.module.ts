@@ -35,7 +35,6 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    // RouterModule.forChild(routes),
     NgxsModule.forRoot([]),
     NgxsModule.forFeature([ToppingsState, PizzasState]),
     HttpClientModule

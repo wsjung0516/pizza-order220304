@@ -18,7 +18,7 @@ import {Topping} from "../../../models";
       </pizza-display>
       <div class="flex justify-center">
         <div class="text-xl text-red-400">{{ name }}:</div>
-        <div class="text-xl ml-2 text-green-900"> {{ price | number }} 원</div>
+        <div class="text-xl ml-2 text-green-900"> {{ price }}</div>
       </div>
     </div>
   `,

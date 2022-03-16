@@ -17,7 +17,7 @@ import {
 } from '@angular/core';
 import {Pizza, Topping} from "../../models";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {skip, switchMap, take, takeLast, takeUntil, tap, toArray} from "rxjs/operators";
+import {filter, skip, switchMap, take, takeLast, takeUntil, tap, toArray} from "rxjs/operators";
 import {Select} from "@ngxs/store";
 import {PizzasState, ToppingsState} from "../../state";
 import {Observable, Subject, from} from "rxjs";
@@ -110,7 +110,7 @@ const PIZZA_TOPPINGS_ACCESSOR = {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PizzaToppingsComponent implements OnInit, OnDestroy {
-  @Input() toppings: Topping[] = [];
+  @Input() toppings: Topping[];
   // @Select(PizzasState.pizzas) pizza$: Observable<Pizza>;
 
   topp: Topping[] = [];
@@ -136,12 +136,10 @@ export class PizzaToppingsComponent implements OnInit, OnDestroy {
      * Save the result of selected toppings
      * */
     this.selectedToppings$.pipe(
-      // this.selectedToppings$ && this.selectedToppings$.pipe(
+      filter(val => !!val ),
       tap(val => {
         this.topp = val;
-        // this._onChange(this.topp);
         this.ref.markForCheck();
-        // this.toppings = pi.toppings;
       })
     ).subscribe();
 

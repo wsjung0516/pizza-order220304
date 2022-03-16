@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(private helpService: HelpMessageService,
               private store: Store) {}
   message: Message = new Message('Hello world');
-  @ViewChild(MainPanelComponent) mp: MainPanelComponent;
+  @ViewChild(MainPanelComponent) mainPanel: MainPanelComponent;
 
 
   ngOnInit() {}
@@ -31,6 +31,6 @@ export class AppComponent {
     }
   }
   onResetPizza() {
-    this.mp.onResetPizza();
+    this.mainPanel.resetPizza();
   }
 }

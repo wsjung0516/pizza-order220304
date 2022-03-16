@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import {Pizza, Topping} from "../../../models";
 import {ToppingsState, UpdateToppingsSuccess} from "../../../state";
-import {skip, take, takeUntil, tap} from "rxjs/operators";
+import {filter, skip, take, takeUntil, tap} from "rxjs/operators";
 import {PriceService} from "../../../services/price.service";
 import {PIZZA_CONFIG_TOKEN} from "../../../services/selected-item.service";
 import {Select, Store} from "@ngxs/store";
@@ -57,6 +57,7 @@ export class SelectedToppingListComponent implements OnInit, OnDestroy {
     this.store.dispatch( new UpdateToppingsSuccess(this.toppings));
     //
     this.selectedToppings$.pipe(
+      filter(val => !!val ),
       tap((topp: any[]) => {
         this.nToppings = [];
         /** Important!!!

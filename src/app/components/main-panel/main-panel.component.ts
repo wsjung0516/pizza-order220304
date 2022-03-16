@@ -16,7 +16,7 @@ import {
   UpdateToppingsSuccess
 } from "../../state";
 import {Select, Store} from "@ngxs/store";
-import {takeUntil, tap} from "rxjs/operators";
+import {filter, takeUntil, tap} from "rxjs/operators";
 import {ToppingImageService} from "../../services/topping-image.service";
 import {Observable, of, Subject} from "rxjs";
 import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
@@ -62,8 +62,8 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   nToppings: Topping[] | undefined;
 
   @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]>;
-  @Select(ToppingsState.toppings) toppings$: Observable<Topping[]> | undefined;
-  @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]> | undefined;
+  @Select(ToppingsState.toppings) toppings$: Observable<Topping[]>;
+  @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]>;
 
   @ViewChild(PizzaFormComponent) pizzaForm: PizzaFormComponent;
   unsubscribe = new Subject();
@@ -75,12 +75,11 @@ export class MainPanelComponent implements OnInit, OnDestroy {
 
     this.store.dispatch(new UpdateToppingsSuccess(toppings))
   }
-  onResetPizza() {
+  resetPizza() {
      // console.log('mp', this.pizzaForm )
-     // this.pizzaForm.onResetName(); // reset name, price
+     this.pizzaForm.resetPizza(); // reset name, price
      this.nToppings = []; // reset toppings an pizza
      this.store.dispatch( new UpdateToppingsSuccess([])); // reset selected toppings
-
     this.cdr.detectChanges();
     // this.store.dispatch(new CreatePizzaSuccess(pizza));
   }
@@ -110,59 +109,10 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.store.dispatch(new LoadPizzas());
     this.store.dispatch(new LoadToppings());
-/*
-    this.pizza$ = this.store.select(PizzasState.SelectedPizza).pipe(
-      tap((pizza: Pizza) => {
-        // 'products/1'
-        const pizzaExist = !!(pizza && pizza.toppings);
-        console.log('---pizzaExist', pizzaExist);
-        const toppingIds = pizzaExist
-          ? pizza.toppings && pizza.toppings.map(topping => topping.id)
-          : [];
-        // console.log('pizza111: ', pizza, toppingIds, pizzaExist);
-
-        if (pizzaExist) {
-          this.pizza = pizza;
-          this.nToppings = pizza && pizza.toppings;
-        }
-      }),
-      takeUntil(this.unsubscribe$)
-    );
-*/
-
-    // const pizzaId = this.route && this.route.snapshot.params.pizzaId;
-    // console.log('this.routed -- pizzaId', pizzaId)
-/*
-    if( pizzaId ) {  // If new routing state, not working this process.
-      this.pizza$ = this.store.select(PizzasState.SelectedPizza).pipe(
-        tap((pizza: Pizza) => {
-          // 'products/1'
-          const pizzaExist = !!(pizza && pizza.toppings);
-          // console.log('---pizzaExist', pizzaExist);
-          const toppingIds = pizzaExist
-            ? pizza.toppings && pizza.toppings.map(topping => topping.id)
-            : [];
-          // console.log('pizza111: ', pizza, toppingIds, pizzaExist);
-
-          if (pizzaExist) {
-            this.pizza = pizza;
-            this.nToppings = pizza && pizza.toppings;
-          }
-        }),
-        takeUntil(this.unsubscribe$)
-      );
-    } else {
-      // If new route state, make clear saved toppings state.
-      let toppings: Topping[] =[];
-      this.store.dispatch(new UpdateToppingsSuccess(toppings))
-    }
-*/
     this.selectedToppings$.pipe(
-      // this.selectedToppings$ && this.selectedToppings$.pipe(
+      filter( val => !!val),
       tap(val => {
         this.nToppings = val;
-        // this.total = this.priceService.calcTotal(pi.toppings);
-        // this.toppings = pi.toppings;
       }),
     ).subscribe();
     this.cdr.detectChanges();

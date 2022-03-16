@@ -189,23 +189,42 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
 
   }
   ngOnInit(): void {
-    let name;
-    let tmp: any;
+    this.form.get("toppings")
+      .valueChanges.pipe(
+      map ( (rv) => {
+        const { value } = this.form;
+        if( (value['name'].split(':')[0] === '')) {
+          let name = window.prompt('이름을 입력하세요!')
+          this.form.patchValue({name: name});
+          return [];
+        } else  {
+          return  rv;
+        }
+
+      }),
+    )
+      .subscribe(value => {
+        this.selectedToppings.emit(value);
+      });
+    //
     this.selectedToppings$.pipe(
-      tap(val => console.log(' length', val)),
-      filter( val => !!val && val.length > 0),
+      filter( val => !!val),
       calcuretePrice(),
       takeUntil(this.unsubscribe$),
     ).subscribe((val:any) => {
       const price = (val * 1000).toFixed(0).toLocaleString()
       const nv = price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
       // console.log(' price-3', price, val)
-      this.form.patchValue({name: 'AAA', price: nv })
+      this.form.patchValue({ price: nv })
     });
   }
 
   ngAfterViewInit() {
     this.overlayRef = this.selectedItemService.openSelectedToppings(this.selected_origin,  this.pizza);
+  }
+  resetPizza() {
+    this.form.reset({name:'', price:'', toppings:[]});
+    // this.form.reset();
   }
   get nameControl() {
     return this.form.get("name") as FormControl;
@@ -259,6 +278,9 @@ export function calcuretePrice() {
       return source.subscribe(
         {
           next(value:any) {
+            data = [];
+            total = 0;
+            if( value.length === 0 ) observer.next(0);
             return from( value ).pipe(
               groupBy( (value:any) => value.id),
               mergeMap( (group:any) => group.pipe(toArray())),
@@ -275,7 +297,7 @@ export function calcuretePrice() {
               // map( _ => data),
               map( _ => {
                 data.forEach(p1 => {
-                  let tval = p1.price * p1.count;
+                  const tval = p1.price * p1.count;
                   total =  total + tval;
                 })
               }),
