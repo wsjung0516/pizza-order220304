@@ -68,10 +68,11 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
         </div>
 
         <div class="">
-            <app-buttons
+            <app-buttons [exists]="exists"
+                         [form]="form"
               (create)="createPizza(form)"
-              (update)="updatePizza(form)"
-              (remove)="removePizza(form)"
+              (update)="updatePizza()"
+              (remove)="removePizza()"
             ></app-buttons>
         </div>
       </form>
@@ -150,10 +151,10 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('subTotal', {static:false}) selected_origin: any;
 
   @Input() set _pizza(pi: Pizza){
-    console.log('pizza',pi)
+    // console.log('pizza',pi)
     if( pi ) {
       this.pizza = pi;
-      const nv = pi.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
+      const nv = pi.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
       this.form.patchValue({name: pi.name, price: nv });
 
@@ -212,8 +213,9 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
       calcuretePrice(),
       takeUntil(this.unsubscribe$),
     ).subscribe((val:any) => {
+      // console.log('price-2',val);
       const price = (val * 1000).toFixed(0).toLocaleString()
-      const nv = price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' 원';
+      const nv = price.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원";
       // console.log(' price-3', price, val)
       this.form.patchValue({ price: nv })
     });
@@ -224,6 +226,7 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   resetPizza() {
     this.form.reset({name:'', price:'', toppings:[]});
+    this.exists = false;
     // this.form.reset();
   }
   get nameControl() {
@@ -244,17 +247,18 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  updatePizza(form: FormGroup) {
-    const { value, valid, touched, dirty } = form;
+  updatePizza() {
+     const { value, valid, touched, dirty } = this.form;
     if (valid) {
       // console.log('updatePizza-form', form, value);
       // if (touched && valid) {
+      console.log('pizza-2', { ...this.pizza, ...value } )
       this.update.emit({ ...this.pizza, ...value });
     }
   }
 
-  removePizza(form: FormGroup) {
-    const { value } = form;
+  removePizza() {
+    const { value } = this.form;
     this.remove.emit({ ...this.pizza, ...value });
   }
 

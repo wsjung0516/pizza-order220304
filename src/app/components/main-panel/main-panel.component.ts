@@ -26,9 +26,10 @@ import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
   template: `
     <div class="grid grid-cols-2 m-1" >
       <section>
+<!--          [_pizza]="pizza$ | async"-->
       <div class="h-120 border-4  border-green-400 p-3">
         <pizza-form
-          [_pizza]="pizza$ | async"
+          [_pizza]="pizza"
           [toppings]="toppings$ | async"
           (selectedToppings)="addToppings($event)"
           (create)="onCreate($event)"
@@ -58,8 +59,8 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   // @Input() nToppings: Topping[];
   //
   pizza$: Observable<Pizza>;
-  pizza: Pizza | undefined;
-  nToppings: Topping[] | undefined;
+  pizza: Pizza;
+  nToppings: Topping[];
 
   @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]>;
   @Select(ToppingsState.toppings) toppings$: Observable<Topping[]>;
@@ -84,15 +85,15 @@ export class MainPanelComponent implements OnInit, OnDestroy {
     // this.store.dispatch(new CreatePizzaSuccess(pizza));
   }
   onSelectedPizza(pizza: Pizza) {
-    console.log('pizza', pizza);
+    // console.log('pizza', pizza);
+    this.pizza = pizza;
     // this.pizzaForm.onSetName(pizza); // reset name, price
     this.nToppings = pizza.toppings; // reset toppings an pizza
     this.store.dispatch( new UpdateToppingsSuccess(pizza.toppings)); // reset selected toppings
-
+    this.pizzaForm.exists = true; // Change buttons status
     this.cdr.detectChanges();
   }
   onCreate(pizza: Pizza) {
-    console.log(' pizza -1', pizza);
     this.store.dispatch(new CreatePizzaSuccess(pizza));
   }
   onUpdate(event: Pizza) {
@@ -104,6 +105,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
     const remove = window.confirm('선택한 항목을 삭제하시겠습니까?');
     if (remove) {
       this.store.dispatch(new RemovePizzaSuccess(event));
+      this.pizzaForm.resetPizza();
     }
   }
   ngOnInit(): void {

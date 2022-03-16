@@ -17,7 +17,7 @@ export class ToppingsService {
     return this.http
       .get<Topping[]>(`assets/json/db.json`)
       .pipe(
-        tap( val=> console.log('read toppings', val)),
+        // tap( val=> console.log('read toppings', val)),
         map( (val: any)=> val['toppings']),
         catchError((error: any) => throwError(error.json())));
   }

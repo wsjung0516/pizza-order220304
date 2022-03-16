@@ -69,22 +69,26 @@
         {
           "id": 1,
           "name": "anchovy",
-          "image" : "anchovy_1"
+          "image" : "anchovy_1",
+          "price": 1.0
         },
         {
           "id": 2,
           "name": "bacon",
-          "image" : "bacon_1"
+          "image" : "bacon_1",
+          "price": 0.8
         },
         {
           "id": 4,
           "name": "chili",
-          "image" : "chili_1"
+          "image" : "chili_1",
+          "price": 0.9
         },
         {
           "id": 7,
           "name": "olive",
-          "image" : "olive_1"
+          "image" : "olive_1",
+          "price": 1.1
         }
       ],
       "id": 2
@@ -96,37 +100,44 @@
         {
           "id": 1,
           "name": "anchovy",
-          "image" : "anchovy_1"
+          "image" : "anchovy_1",
+          "price": 1.0
         },
         {
           "id": 4,
           "name": "chili",
-          "image" : "chili_1"
+          "image" : "chili_1",
+          "price": 0.9
         },
         {
           "id": 7,
           "name": "olive",
-          "image" : "olive_1"
+          "image" : "olive_1",
+          "price": 1.1
         },
         {
           "id": 3,
           "name": "basil",
-          "image" : "basil_1"
+          "image" : "basil_1",
+          "price": 1.2
         },
         {
           "id": 6,
           "name": "mushroom",
-          "image" : "mushroom_1"
+          "image" : "mushroom_1",
+          "price": 0.7
         },
         {
           "id": 5,
           "name": "mozzarella",
-          "image" : "mozzarella_1"
+          "image" : "mozzarella_1",
+          "price": 0.8
         },
         {
           "id": 2,
           "name": "bacon",
-          "image" : "bacon_1"
+          "image" : "bacon_1",
+          "price": 0.8
         }
       ],
       "id": 5
@@ -138,17 +149,20 @@
         {
           "id": 1,
           "name": "anchovy",
-          "image" : "anchovy_1"
+          "image" : "anchovy_1",
+          "price": 1.0
         },
         {
           "id": 5,
           "name": "mozzarella",
-          "image" : "mozzarella_1"
+          "image" : "mozzarella_1",
+          "price": 0.8
         },
         {
           "id": 9,
           "name": "pepper",
-          "image" : "pepper_1"
+          "image" : "pepper_1",
+          "price": 0.9
         }
       ],
       "id": 6

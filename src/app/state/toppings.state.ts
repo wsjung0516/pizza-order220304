@@ -70,7 +70,7 @@ export class ToppingsState {
     { patchState }: StateContext<ToppingsStateModel>,
     action: LoadToppingsSuccess
   ) {
-    console.log('loadToppingSuccess action-->',action);
+    // console.log('loadToppingSuccess action-->',action);
     patchState({
       toppings: action.payload,
       loaded: true,
@@ -80,7 +80,7 @@ export class ToppingsState {
 
   @Action(LoadToppingsFail)
   loadToppingsFail({ patchState }: StateContext<ToppingsStateModel>) {
-    console.log('loadToppingFailure-->');
+    // console.log('loadToppingFailure-->');
     patchState({ loading: false, loaded: false });
   }
 

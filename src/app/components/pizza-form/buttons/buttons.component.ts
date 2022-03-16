@@ -18,7 +18,7 @@ import {Form, FormGroup} from "@angular/forms";
         type="button"
         class="btn btn__ok"
         *ngIf="exists"
-        (click)="updatePizza(form)">
+        (click)="updatePizza()">
         Save changes
       </button>
 
@@ -26,7 +26,7 @@ import {Form, FormGroup} from "@angular/forms";
         type="button"
         class="btn btn__warning"
         *ngIf="exists"
-        (click)="removePizza(form)">
+        (click)="removePizza()">
         Delete Pizza
       </button>
     </div>
@@ -96,8 +96,8 @@ export class ButtonsComponent implements OnInit {
       this.create.emit({});
   }
 
-  updatePizza(form: FormGroup) {
-    const { value, valid, touched, dirty } = form;
+  updatePizza() {
+    const { value, valid, touched, dirty } = this.form;
     if (valid) {
       // console.log('updatePizza-form', form, value);
       // if (touched && valid) {
@@ -105,8 +105,8 @@ export class ButtonsComponent implements OnInit {
     }
   }
 
-  removePizza(form: FormGroup) {
-    const { value } = form;
+  removePizza() {
+    const { value } = this.form;
     this.remove.emit({ ...this.pizza, ...value });
   }
 

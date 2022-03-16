@@ -12,7 +12,6 @@ import {AngularMaterialModule} from "./shared/angular-material.module";
   imports: [
     PizzaModule,
     AngularMaterialModule,
-    MatSnackBarModule,
     NgxsModule.forRoot([]),
   ],
   bootstrap: [AppComponent]

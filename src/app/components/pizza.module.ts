@@ -14,8 +14,10 @@ import { PizzaItemListComponent } from './pizza-item/pizza-item-list/pizza-item-
 import { SelectedToppingListComponent } from './selected-toppings/selected-topping-list/selected-topping-list.component';
 import { SelectedToppingItemComponent } from './selected-toppings/selected-topping-item/selected-topping-item.component';
 import {NgxsModule} from "@ngxs/store";
-import {PizzasState, ToppingsState} from "../state";
+import {PizzasState, SelectPizza, ToppingsState} from "../state";
 import {HttpClientModule} from "@angular/common/http";
+import {SelectPizzaDirective} from "./directives/select-pizza.directive";
+import {MatBadgeModule} from "@angular/material/badge";
 @NgModule({
   declarations: [
     PizzaDisplayComponent,
@@ -28,16 +30,17 @@ import {HttpClientModule} from "@angular/common/http";
     PizzaItemListComponent,
     SelectedToppingListComponent,
     SelectedToppingItemComponent,
+    SelectPizzaDirective
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AngularMaterialModule,
     NgxsModule.forRoot([]),
     NgxsModule.forFeature([ToppingsState, PizzasState]),
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModule
   ],
   exports: [
     PizzaDisplayComponent,
