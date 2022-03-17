@@ -24,8 +24,8 @@ import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
 @Component({
   selector: 'main-panel',
   template: `
-    <div class="grid grid-cols-2 m-1" >
-      <section>
+    <section class="grid sm:grid-cols-2 m-1" >
+      <section >
 <!--          [_pizza]="pizza$ | async"-->
       <div class="h-120 border-4  border-green-400 p-3">
         <pizza-form
@@ -41,12 +41,12 @@ import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
       </div>
       </section>
       <section>
-        <div class="px-5 py-1 mx-auto overflow-y-auto h-screen">
+        <div class="mx-auto px-5 py-1 mx-auto overflow-y-auto h-screen">
             <pizza-item-list [pizzas]="pizzas$ | async"
             (selected)="onSelectedPizza($event)"></pizza-item-list>
         </div>
       </section>
-    </div>
+    </section>
   `,
   styles: [
   ],

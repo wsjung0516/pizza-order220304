@@ -21,363 +21,543 @@ Node.js version : v16.13.1
 
 Operating system : Windows 10
 
-[20:09:16] No configuration file found, switching to CLI flags.
-[20:09:16] Using tsconfig file : C:\Angular\pizza-order220304\tsconfig.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\.browserslistrc
-[20:09:16] Including      : C:\Angular\pizza-order220304\.editorconfig
-[20:09:16] Including      : C:\Angular\pizza-order220304\angular.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\.gitignore
-[20:09:16] Including      : C:\Angular\pizza-order220304\documentation.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\karma.conf.js
-[20:09:16] Including      : C:\Angular\pizza-order220304\package-lock.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\build-storybook.log
-[20:09:16] Including      : C:\Angular\pizza-order220304\package.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\README.md
-[20:09:16] Including      : C:\Angular\pizza-order220304\tsconfig.app.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\tsconfig.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\tailwind.config.js
-[20:09:16] Including      : C:\Angular\pizza-order220304\tsconfig.spec.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\.storybook\preview.js
-[20:09:16] Including      : C:\Angular\pizza-order220304\.storybook\main.js
-[20:09:16] Including      : C:\Angular\pizza-order220304\.storybook\tsconfig.json
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\.storybook\typings.d.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\.idea\.gitignore
-[20:09:16] Including      : C:\Angular\pizza-order220304\.idea\modules.xml
-[20:09:16] Including      : C:\Angular\pizza-order220304\.idea\vcs.xml
-[20:09:16] Including      : C:\Angular\pizza-order220304\.idea\workspace.xml
-[20:09:16] Including      : C:\Angular\pizza-order220304\.idea\pizza-order220304.iml
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\index.html
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\favicon.ico
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\main.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\polyfills.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\styles.css
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\test.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\.github\workflows\chromatic.yml
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\app.component.css
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\app.component.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\app.component.html
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\app.component.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\app.module.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\app.routing.module.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\environments\environment.prod.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\environments\environment.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\.gitkeep
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\build-storybook.log
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza.module.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\models\pizza.model.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\models\index.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\models\topping.model.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.actions.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\state\index.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.state.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.actions.ts
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\state\toppings.state.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.state.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\shared\angular-material.module.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\index.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\pizzas.service.ts
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\services\price.service.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\price.service.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\topping-added.service.ts
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\services\topping-image.service.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\topping-total.service.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\topping-image.service.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\css\style.css
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\services\toppings.service.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff2
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\json\db.json
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\logo.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\pizza.svg
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.stories.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.css
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.stories.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.ts
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-toppings\pizza-toppings.component.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-toppings\pizza-toppings.component.stories.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-toppings\pizza-toppings.component.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\md\images\structure1.png
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\actions\checked.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\bacon.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\basil.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\chili.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mozzarella.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mushroom.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\olive.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\onion.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepperoni.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\prawn.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepper.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\tomato.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\sweetcorn.svg
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-form\buttons\buttons.component.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\buttons\buttons.component.stories.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\buttons\buttons.component.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-name\pizza-name.component.stories.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-name\pizza-name.component.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_1.svg
-[20:09:16] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-name\pizza-name.component.spec.ts
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_1.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_2.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_3.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\anchovy.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_4.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\bacon.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\basil.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\chili.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mozzarella.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mushroom.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_5.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\olive.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepperoni.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\prawn.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\sweetcorn.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\tomato.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\onion.svg
-[20:09:16] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepper.svg
-[20:09:16] Searching package.json file
-[20:09:16] package.json file found
-[20:09:16] Processing package.json dependencies
-[20:09:16] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
-[20:09:16] README.md file found
-[20:09:16] Error during C:\Angular\pizza-order220304\CHANGELOG read
-[20:09:16] Continuing without CHANGELOG.md file
-[20:09:16] Error during C:\Angular\pizza-order220304\CONTRIBUTING read
-[20:09:16] Continuing without CONTRIBUTING.md file
-[20:09:16] Error during C:\Angular\pizza-order220304\LICENSE read
-[20:09:16] Continuing without LICENSE.md file
-[20:09:16] Error during C:\Angular\pizza-order220304\TODO read
-[20:09:16] Continuing without TODO.md file
-[20:09:16] Get dependencies data
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/main.ts
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/polyfills.ts
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/test.ts
-[20:09:16] found          : require
-[20:09:16] found          : context
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/app.component.ts
-[20:09:16] found          : AppComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/app.module.ts
-[20:09:16] found          : AppModule
-[20:09:16]                : - imports:
-[20:09:16]                : 	- BrowserModule
-[20:09:16]                : 	- BrowserAnimationsModule
-[20:09:16]                : 	- PizzaModule
-[20:09:16]                : 	- MatSnackBarModule
-[20:09:16]                : - declarations:
-[20:09:16]                : 	- AppComponent
-[20:09:16]                : - providers:
-[20:09:16]                : 	- MatSnackBarModule
-[20:09:16]                : - bootstrap:
-[20:09:16]                : 	- AppComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/app.routing.module.ts
-[20:09:16] Analysing routes definitions and clean them if necessary
-[20:09:16] found          : AppRoutingModule
-[20:09:16]                : - imports:
-[20:09:16]                : 	- RouterModule
-[20:09:16]                : - exports:
-[20:09:16]                : 	- RouterModule
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/environments/environment.prod.ts
-[20:09:16] found          : environment
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/environments/environment.ts
-[20:09:16] found          : environment
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza.module.ts
-[20:09:16] found          : PizzaModule
-[20:09:16]                : - imports:
-[20:09:16]                : 	- CommonModule
-[20:09:16]                : 	- FormsModule
-[20:09:16]                : 	- ReactiveFormsModule
-[20:09:16]                : 	- AngularMaterialModule
-[20:09:16]                : 	- BrowserAnimationsModule
-[20:09:16]                : - exports:
-[20:09:16]                : 	- PizzaDisplayComponent
-[20:09:16]                : 	- PizzaToppingsComponent
-[20:09:16]                : 	- PizzaFormComponent
-[20:09:16]                : 	- ButtonsComponent
-[20:09:16]                : 	- PizzaNameComponent
-[20:09:16]                : - declarations:
-[20:09:16]                : 	- PizzaDisplayComponent
-[20:09:16]                : 	- PizzaToppingsComponent
-[20:09:16]                : 	- PizzaFormComponent
-[20:09:16]                : 	- ButtonsComponent
-[20:09:16]                : 	- PizzaNameComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/models/pizza.model.ts
-[20:09:16] found          : Pizza
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/models/index.ts
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/models/topping.model.ts
-[20:09:16] found          : Topping
-[20:09:16] found          : SequenceTopping
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.actions.ts
-[20:09:16] found          : LoadPizzas
-[20:09:16] found          : LoadPizzasSuccess
-[20:09:16] found          : LoadPizzasFail
-[20:09:16] found          : CreatePizza
-[20:09:16] found          : CreatePizzaSuccess
-[20:09:16] found          : CreatePizzaFail
-[20:09:16] found          : UpdatePizza
-[20:09:16] found          : UpdatePizzaSuccess
-[20:09:16] found          : UpdatePizzaFail
-[20:09:16] found          : RemovePizza
-[20:09:16] found          : RemovePizzaSuccess
-[20:09:16] found          : RemovePizzaFail
-[20:09:16] found          : SelectPizza
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/state/index.ts
-[20:09:16] found          : ProductsState
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.state.ts
-[20:09:16] found          : Pizzac
-[20:09:16] found          : PizzasStateModel
-[20:09:16] found          : PizzasState
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.actions.ts
-[20:09:16] found          : LoadToppings
-[20:09:16] found          : LoadToppingsSuccess
-[20:09:16] found          : LoadToppingsFail
-[20:09:16] found          : UpdateToppings
-[20:09:16] found          : UpdateToppingsSuccess
-[20:09:16] found          : UpdateToppingsFail
-[20:09:16] found          : VisualiseToppings
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.state.ts
-[20:09:16] found          : ToppingsStateModel
-[20:09:16] found          : ToppingsState
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/shared/angular-material.module.ts
-[20:09:16] found          : modules
-[20:09:16] found          : AngularMaterialModule
-[20:09:16]                : - imports:
-[20:09:16]                : 	- CommonModule
-[20:09:16]                : 	- modules
-[20:09:16]                : - exports:
-[20:09:16]                : 	- modules
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/index.ts
-[20:09:16] found          : services
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/pizzas.service.ts
-[20:09:16] found          : PizzasService
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/price.service.ts
-[20:09:16] found          : PriceService
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-added.service.ts
-[20:09:16] found          : ToppingAddedService
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-total.service.ts
-[20:09:16] found          : ToppingTotalService
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-image.service.ts
-[20:09:16] found          : ToppingImageService
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/services/toppings.service.ts
-[20:09:16] found          : ToppingsService
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.stories.ts
-[20:09:16] found          : Template
-[20:09:16] found          : Primary
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.ts
-[20:09:16] found          : DROP_ANIMATION
-[20:09:16] found          : PizzaDisplayComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/pizza-form.component.stories.ts
-[20:09:16] found          : Template
-[20:09:16] found          : Primary
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/pizza-form.component.ts
-[20:09:16] found          : PizzaFormComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-toppings/pizza-toppings.component.stories.ts
-[20:09:16] found          : Template
-[20:09:16] found          : Primary
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-toppings/pizza-toppings.component.ts
-[20:09:16] found          : PizzaToppingsComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/buttons/buttons.component.stories.ts
-[20:09:16] found          : Template
-[20:09:16] found          : Primary
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/buttons/buttons.component.ts
-[20:09:16] found          : ButtonsComponent
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/pizza-name/pizza-name.component.stories.ts
-[20:09:16] found          : Template
-[20:09:16] found          : Primary
-[20:09:16] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/pizza-name/pizza-name.component.ts
-[20:09:16] found          : PizzaNameComponent
-[20:09:16] -------------------
-[20:09:16] Project statistics 
-[20:09:16] - files      : 167
-[20:09:16] - module     : 4
-[20:09:16] - component  : 6
-[20:09:16] - injectable : 8
-[20:09:16] - class      : 21
-[20:09:16] - interface  : 5
-[20:09:16] -------------------
-[20:09:16] Prepare components
-[20:09:16]  AppComponent has a templateUrl, include it
-[20:09:16]  AppComponent has styleUrls, include them
-[20:09:16]  ButtonsComponent has styles, include them
-[20:09:16]  PizzaDisplayComponent has styles, include them
-[20:09:16]  PizzaFormComponent has styles, include them
-[20:09:16]  PizzaNameComponent has styles, include them
-[20:09:16]  PizzaToppingsComponent has styles, include them
-[20:09:16] Prepare modules
-[20:09:16] Prepare injectables
-[20:09:16] Prepare classes
-[20:09:16] Prepare interfaces
-[20:09:16] Prepare miscellaneous
-[20:09:16] Process documentation coverage report
-[20:09:16] Generating documentation in export format json
-[20:09:16] Documentation generated in ./ in 0.666 seconds
+[08:44:07] No configuration file found, switching to CLI flags.
+[08:44:07] Using tsconfig file : C:\Angular\pizza-order220304\tsconfig.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\.browserslistrc
+[08:44:07] Including      : C:\Angular\pizza-order220304\.editorconfig
+[08:44:07] Including      : C:\Angular\pizza-order220304\.gitignore
+[08:44:07] Including      : C:\Angular\pizza-order220304\angular.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\documentation.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\karma.conf.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\build-storybook.log
+[08:44:07] Including      : C:\Angular\pizza-order220304\package-lock.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\package.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\tailwind.config.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\tsconfig.app.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\tsconfig.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\README.md
+[08:44:07] Including      : C:\Angular\pizza-order220304\tsconfig.spec.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\.idea\.gitignore
+[08:44:07] Including      : C:\Angular\pizza-order220304\.idea\modules.xml
+[08:44:07] Including      : C:\Angular\pizza-order220304\.idea\vcs.xml
+[08:44:07] Including      : C:\Angular\pizza-order220304\.idea\workspace.xml
+[08:44:07] Including      : C:\Angular\pizza-order220304\.storybook\preview.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\.idea\pizza-order220304.iml
+[08:44:07] Including      : C:\Angular\pizza-order220304\.storybook\main.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\.storybook\tsconfig.json
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\.storybook\typings.d.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\favicon.ico
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\main.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\index.html
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\polyfills.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\styles.css
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\test.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\3rdpartylicenses.txt
+[08:44:07] Including      : C:\Angular\pizza-order220304\.github\workflows\chromatic.yml
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\404.html
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\favicon.ico
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\main.cdb39f3fcb4b744d2636.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\index.html
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\polyfills.75072cd3f3ab04267263.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\styles.b41130767aaecb6233cb.css
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\runtime.61fecb5440a12c370d4f.js
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\app.component.css
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\app.component.html
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\app.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\app.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\app.module.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\app.routing.module.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\.gitkeep
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\environments\environment.prod.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\environments\environment.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\models\index.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\models\pizza.model.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\helpMessage.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\help-message.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\models\topping.model.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\index.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\pizzas.service.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\services\price.service.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\price.service.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\selected-item.service.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\topping-added.service.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\services\topping-image.service.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\topping-image.service.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\topping-total.service.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\services\toppings.service.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\shared\angular-material.module.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\state\index.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.actions.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.state.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.actions.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.state.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\build-storybook.log
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza.module.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\css\style.css
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff2
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\logo.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\pizza.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\json\db.json
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\css\style.css
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\logo.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\pizza.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\fonts\cornerstone.woff
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\fonts\cornerstone.woff2
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\json\db.json
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\directives\select-pizza.directive.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\directives\select-pizza.directive.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\main-panel\main-panel.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\main-panel\main-panel.component.stories.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\main-panel\main-panel.component.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.stories.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.stories.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\pizza-form.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-product\pizza-product.component.stories.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-product\pizza-product.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-toppings\pizza-toppings.component.stories.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-product\pizza-product.component.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-toppings\pizza-toppings.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-toppings\pizza-toppings.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\actions\checked.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\anchovy3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\basil.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\bacon.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\chili.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mozzarella.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\mushroom.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\olive.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepper.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\onion.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\pepperoni.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\prawn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\sweetcorn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\tomato.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\md\images\structure1.png
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\actions\checked.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\anchovy.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\anchovy1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\anchovy3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\bacon.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\basil.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\chili.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\mozzarella.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\mushroom.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\onion.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\olive.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\pepper.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\pepperoni.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\prawn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\tomato.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\sweetcorn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\md\images\structure1.png
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\buttons\buttons.component.stories.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-form\buttons\buttons.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-form\buttons\buttons.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-item\pizza-item\pizza-item.component.stories.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-item\pizza-item\pizza-item.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-item\pizza-item\pizza-item.component.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-item\pizza-item-list\pizza-item-list.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-item\pizza-item-list\pizza-item-list.component.stories.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-item\pizza-item-list\pizza-item-list.component.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\selected-toppings\selected-topping-item\selected-topping-item.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\selected-toppings\selected-topping-item\selected-topping-item.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\selected-toppings\selected-topping-item\selected-topping-item.component.stories.ts
+[08:44:07] Ignoring       : C:\Angular\pizza-order220304\src\app\components\selected-toppings\selected-topping-list\selected-topping-list.component.spec.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\selected-toppings\selected-topping-list\selected-topping-list.component.stories.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\app\components\selected-toppings\selected-topping-list\selected-topping-list.component.ts
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\anchovy_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\bacon_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\basil_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\chili_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mozzarella_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\mushroom_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\olive_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\onion_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepperoni_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\pepper_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\prawn_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\sweetcorn_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\multi\tomato_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\anchovy.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\bacon.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\basil.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\chili.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mozzarella.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\mushroom.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepper.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\olive.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\onion.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\pepperoni.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\prawn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\sweetcorn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\src\assets\img\toppings\singles\tomato.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\anchovy_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\anchovy_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\anchovy_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\anchovy_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\anchovy_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\bacon_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\bacon_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\bacon_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\bacon_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\bacon_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\basil_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\basil_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\basil_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\basil_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\basil_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\chili_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\chili_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\chili_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\chili_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\chili_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mozzarella_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mozzarella_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mozzarella_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mozzarella_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mozzarella_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mushroom_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mushroom_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mushroom_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mushroom_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\mushroom_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\olive_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\olive_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\olive_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\olive_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\olive_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\onion_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\onion_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\onion_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\onion_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\onion_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepperoni_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepperoni_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepperoni_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepperoni_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepperoni_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepper_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepper_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepper_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepper_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\pepper_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\prawn_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\prawn_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\prawn_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\prawn_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\prawn_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\sweetcorn_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\sweetcorn_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\sweetcorn_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\sweetcorn_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\sweetcorn_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\tomato_1.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\tomato_2.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\tomato_3.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\tomato_4.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\multi\tomato_5.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\anchovy.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\bacon.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\basil.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\chili.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\mozzarella.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\mushroom.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\olive.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\onion.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\pepper.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\pepperoni.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\prawn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\sweetcorn.svg
+[08:44:07] Including      : C:\Angular\pizza-order220304\dist\pizza-order220304\assets\img\toppings\singles\tomato.svg
+[08:44:07] Searching package.json file
+[08:44:07] package.json file found
+[08:44:07] Processing package.json dependencies
+[08:44:07] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[08:44:07] README.md file found
+[08:44:07] Error during C:\Angular\pizza-order220304\CHANGELOG read
+[08:44:07] Continuing without CHANGELOG.md file
+[08:44:07] Error during C:\Angular\pizza-order220304\CONTRIBUTING read
+[08:44:07] Continuing without CONTRIBUTING.md file
+[08:44:07] Error during C:\Angular\pizza-order220304\LICENSE read
+[08:44:07] Continuing without LICENSE.md file
+[08:44:07] Error during C:\Angular\pizza-order220304\TODO read
+[08:44:07] Continuing without TODO.md file
+[08:44:07] Get dependencies data
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/main.ts
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/polyfills.ts
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/test.ts
+[08:44:08] found          : require
+[08:44:08] found          : context
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/app.component.ts
+[08:44:08] found          : AppComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/app.module.ts
+[08:44:08] found          : AppModule
+[08:44:08]                : - imports:
+[08:44:08]                : 	- PizzaModule
+[08:44:08]                : 	- AngularMaterialModule
+[08:44:08]                : 	- NgxsModule
+[08:44:08]                : - declarations:
+[08:44:08]                : 	- AppComponent
+[08:44:08]                : - bootstrap:
+[08:44:08]                : 	- AppComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/app.routing.module.ts
+[08:44:08] Analysing routes definitions and clean them if necessary
+[08:44:08] found          : AppRoutingModule
+[08:44:08]                : - imports:
+[08:44:08]                : 	- RouterModule
+[08:44:08]                : - exports:
+[08:44:08]                : 	- RouterModule
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/environments/environment.prod.ts
+[08:44:08] found          : environment
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/environments/environment.ts
+[08:44:08] found          : environment
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/models/index.ts
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/models/pizza.model.ts
+[08:44:08] found          : Pizza
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/helpMessage.ts
+[08:44:08] found          : PIZZA_CONFIG_TOKEN
+[08:44:08] found          : Message
+[08:44:08] found          : HelpMessageService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/help-message.component.ts
+[08:44:08] found          : HelpMessageComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/models/topping.model.ts
+[08:44:08] found          : Topping
+[08:44:08] found          : SequenceTopping
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/index.ts
+[08:44:08] found          : services
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/pizzas.service.ts
+[08:44:08] found          : PizzasService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/price.service.ts
+[08:44:08] found          : PriceService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/selected-item.service.ts
+[08:44:08] found          : PIZZA_CONFIG_TOKEN
+[08:44:08] found          : SelectedItemService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-added.service.ts
+[08:44:08] found          : ToppingAddedService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-image.service.ts
+[08:44:08] found          : ToppingImageService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/topping-total.service.ts
+[08:44:08] found          : ToppingTotalService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/services/toppings.service.ts
+[08:44:08] found          : ToppingsService
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/shared/angular-material.module.ts
+[08:44:08] found          : modules
+[08:44:08] found          : AngularMaterialModule
+[08:44:08]                : - imports:
+[08:44:08]                : 	- CommonModule
+[08:44:08]                : 	- modules
+[08:44:08]                : - exports:
+[08:44:08]                : 	- modules
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/state/index.ts
+[08:44:08] found          : ProductsState
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.actions.ts
+[08:44:08] found          : LoadPizzas
+[08:44:08] found          : LoadPizzasSuccess
+[08:44:08] found          : LoadPizzasFail
+[08:44:08] found          : CreatePizza
+[08:44:08] found          : CreatePizzaSuccess
+[08:44:08] found          : CreatePizzaFail
+[08:44:08] found          : UpdatePizza
+[08:44:08] found          : UpdatePizzaSuccess
+[08:44:08] found          : UpdatePizzaFail
+[08:44:08] found          : RemovePizza
+[08:44:08] found          : RemovePizzaSuccess
+[08:44:08] found          : RemovePizzaFail
+[08:44:08] found          : SelectPizza
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/state/pizzas.state.ts
+[08:44:08] found          : Pizzac
+[08:44:08] found          : PizzasStateModel
+[08:44:08] found          : PizzasState
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.actions.ts
+[08:44:08] found          : LoadToppings
+[08:44:08] found          : LoadToppingsSuccess
+[08:44:08] found          : LoadToppingsFail
+[08:44:08] found          : UpdateToppings
+[08:44:08] found          : UpdateToppingsSuccess
+[08:44:08] found          : UpdateToppingsFail
+[08:44:08] found          : VisualiseToppings
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/state/toppings.state.ts
+[08:44:08] found          : ToppingsStateModel
+[08:44:08] found          : ToppingsState
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza.module.ts
+[08:44:08] found          : PizzaModule
+[08:44:08]                : - imports:
+[08:44:08]                : 	- CommonModule
+[08:44:08]                : 	- FormsModule
+[08:44:08]                : 	- ReactiveFormsModule
+[08:44:08]                : 	- BrowserAnimationsModule
+[08:44:08]                : 	- NgxsModule
+[08:44:08]                : 	- NgxsModule
+[08:44:08]                : 	- HttpClientModule
+[08:44:08]                : 	- AngularMaterialModule
+[08:44:08]                : - exports:
+[08:44:08]                : 	- PizzaDisplayComponent
+[08:44:08]                : 	- PizzaToppingsComponent
+[08:44:08]                : 	- PizzaFormComponent
+[08:44:08]                : 	- ButtonsComponent
+[08:44:08]                : 	- MainPanelComponent
+[08:44:08]                : 	- PizzaProductComponent
+[08:44:08]                : 	- PizzaItemComponent
+[08:44:08]                : 	- PizzaItemListComponent
+[08:44:08]                : 	- SelectedToppingListComponent
+[08:44:08]                : 	- SelectedToppingItemComponent
+[08:44:08]                : - declarations:
+[08:44:08]                : 	- PizzaDisplayComponent
+[08:44:08]                : 	- PizzaToppingsComponent
+[08:44:08]                : 	- PizzaFormComponent
+[08:44:08]                : 	- ButtonsComponent
+[08:44:08]                : 	- MainPanelComponent
+[08:44:08]                : 	- PizzaProductComponent
+[08:44:08]                : 	- PizzaItemComponent
+[08:44:08]                : 	- PizzaItemListComponent
+[08:44:08]                : 	- SelectedToppingListComponent
+[08:44:08]                : 	- SelectedToppingItemComponent
+[08:44:08]                : 	- SelectPizzaDirective
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/directives/select-pizza.directive.ts
+[08:44:08] found          : SelectPizzaDirective
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/main-panel/main-panel.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/main-panel/main-panel.component.ts
+[08:44:08] found          : MainPanelComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-display/pizza-display.component.ts
+[08:44:08] found          : DROP_ANIMATION
+[08:44:08] found          : PizzaDisplayComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/pizza-form.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/pizza-form.component.ts
+[08:44:08] found          : PizzaFormComponent
+[08:44:08] found          : uniqueId
+[08:44:08] found          : calcuretePrice
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-product/pizza-product.component.stories.ts
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-toppings/pizza-toppings.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-product/pizza-product.component.ts
+[08:44:08] found          : PizzaProductComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-toppings/pizza-toppings.component.ts
+[08:44:08] found          : PIZZA_TOPPINGS_ACCESSOR
+[08:44:08] found          : PizzaToppingsComponent
+[08:44:08]                : - providers:
+[08:44:08]                : 	- PIZZA_TOPPINGS_ACCESSOR
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/buttons/buttons.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-form/buttons/buttons.component.ts
+[08:44:08] found          : ButtonsComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-item/pizza-item/pizza-item.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-item/pizza-item/pizza-item.component.ts
+[08:44:08] found          : PizzaItemComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-item/pizza-item-list/pizza-item-list.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/pizza-item/pizza-item-list/pizza-item-list.component.ts
+[08:44:08] found          : PizzaItemListComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/selected-toppings/selected-topping-item/selected-topping-item.component.ts
+[08:44:08] found          : SelectedToppingItemComponent
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/selected-toppings/selected-topping-item/selected-topping-item.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/selected-toppings/selected-topping-list/selected-topping-list.component.stories.ts
+[08:44:08] found          : Template
+[08:44:08] found          : Primary
+[08:44:08] parsing        : C:/Angular/pizza-order220304/src/app/components/selected-toppings/selected-topping-list/selected-topping-list.component.ts
+[08:44:08] found          : SelectedToppingListComponent
+[08:44:08] -------------------
+[08:44:08] Project statistics 
+[08:44:08] - files      : 289
+[08:44:08] - module     : 4
+[08:44:08] - component  : 12
+[08:44:08] - directive  : 1
+[08:44:08] - injectable : 10
+[08:44:08] - class      : 22
+[08:44:08] - interface  : 5
+[08:44:08] -------------------
+[08:44:08] Prepare components
+[08:44:08]  AppComponent has a templateUrl, include it
+[08:44:08]  AppComponent has styleUrls, include them
+[08:44:08]  ButtonsComponent has styles, include them
+[08:44:08]  HelpMessageComponent has styles, include them
+[08:44:08]  PizzaDisplayComponent has styles, include them
+[08:44:08]  PizzaFormComponent has styles, include them
+[08:44:08]  PizzaToppingsComponent has styles, include them
+[08:44:08]  SelectedToppingItemComponent has styles, include them
+[08:44:08] Prepare modules
+[08:44:08] Prepare directives
+[08:44:08] Prepare injectables
+[08:44:08] Prepare classes
+[08:44:08] Prepare interfaces
+[08:44:08] Prepare miscellaneous
+[08:44:08] Process documentation coverage report
+[08:44:08] Generating documentation in export format json
+[08:44:08] Documentation generated in ./ in 1.29 seconds
 info @storybook/angular v6.4.19
 info 
-info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--24284-s8nNosmNTlw6
+info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--5500-kc06bDy3NZiW
 info => Loading presets
 info => Compiling manager..
 info => Compiling preview..
@@ -456,6 +636,7 @@ Starting type checking service...
 <s> [webpack.Progress] 9% setup compilation EntryPlugin
 <s> [webpack.Progress] 9% setup compilation EntryPlugin
 <s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
 <s> [webpack.Progress] 9% setup compilation RuntimePlugin
 <s> [webpack.Progress] 9% setup compilation InferAsyncModulesPlugin
 <s> [webpack.Progress] 9% setup compilation DataUriPlugin
@@ -509,44 +690,48 @@ Starting type checking service...
 <s> [webpack.Progress] 10% building
 <s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/babel-loader/lib/index.js
-<s> [webpack.Progress] 10% building 0/18 entries 3/18 dependencies 0/3 modules
+<s> [webpack.Progress] 10% building 0/19 entries 4/19 dependencies 0/4 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/style-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js
-<s> [webpack.Progress] 10% building 0/18 entries 17/18 dependencies 0/17 modules
-<s> [webpack.Progress] 10% building 0/18 entries 21/69 dependencies 0/20 modules
-<s> [webpack.Progress] 10% building 0/18 entries 174/238 dependencies 12/99 modules
-<s> [webpack.Progress] 13% building 1/18 entries 725/895 dependencies 23/283 modules
-<s> [webpack.Progress] 13% building import loader ./node_modules/ts-loader/index.js
-<s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
-<s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
-<s> [webpack.Progress] 13% building 1/18 entries 838/895 dependencies 35/297 modules
-<s> [webpack.Progress] 13% building 1/18 entries 939/1034 dependencies 45/313 modules
+<s> [webpack.Progress] 10% building 0/19 entries 18/52 dependencies 0/18 modules
+<s> [webpack.Progress] 10% building 0/19 entries 23/81 dependencies 0/22 modules
+<s> [webpack.Progress] 10% building 0/19 entries 100/218 dependencies 11/72 modules
+<s> [webpack.Progress] 10% building 0/19 entries 512/551 dependencies 15/261 modules
+<s> [webpack.Progress] 12% building 1/19 entries 784/948 dependencies 29/293 modules
+<s> [webpack.Progress] 12% building import loader ./node_modules/ts-loader/index.js
+<s> [webpack.Progress] 12% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
+<s> [webpack.Progress] 12% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
+<s> [webpack.Progress] 12% building 1/19 entries 879/948 dependencies 37/312 modules
+<s> [webpack.Progress] 12% building 1/19 entries 987/1032 dependencies 49/329 modules
 [BABEL] Note: The code generator has deoptimised the styling of C:\Angular\pizza-order220304\node_modules\prettier\standalone.js as it exceeds the max of 500KB.
-<s> [webpack.Progress] 13% building 1/18 entries 1000/1038 dependencies 51/337 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1600/1659 dependencies 177/476 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1780/2088 dependencies 200/524 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2394/2520 dependencies 292/671 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2962/3000 dependencies 408/793 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3400/3560 dependencies 550/831 modules
-<s> [webpack.Progress] 17% building 2/18 entries 3928/4000 dependencies 705/964 modules
-<s> [webpack.Progress] 19% building 3/18 entries 4087/4149 dependencies 746/1036 modules
-<s> [webpack.Progress] 20% building 3/18 entries 4800/4956 dependencies 942/1215 modules
-<s> [webpack.Progress] 22% building 4/18 entries 5189/5212 dependencies 1119/1310 modules
-<s> [webpack.Progress] 25% building 5/18 entries 5189/5212 dependencies 1120/1310 modules
-<s> [webpack.Progress] 28% building 6/18 entries 5189/5212 dependencies 1121/1310 modules
-<s> [webpack.Progress] 31% building 7/18 entries 5189/5212 dependencies 1122/1310 modules
-<s> [webpack.Progress] 34% building 8/18 entries 5189/5212 dependencies 1123/1310 modules
-<s> [webpack.Progress] 37% building 9/18 entries 5189/5212 dependencies 1124/1310 modules
-<s> [webpack.Progress] 40% building 10/18 entries 5189/5212 dependencies 1125/1310 modules
-<s> [webpack.Progress] 43% building 11/18 entries 5189/5212 dependencies 1126/1310 modules
-<s> [webpack.Progress] 46% building 12/18 entries 5189/5212 dependencies 1127/1310 modules
-<s> [webpack.Progress] 49% building 13/18 entries 5189/5212 dependencies 1128/1310 modules
-<s> [webpack.Progress] 52% building 14/18 entries 5189/5212 dependencies 1132/1310 modules
-<s> [webpack.Progress] 55% building 15/18 entries 5933/5941 dependencies 1439/1467 modules
-<s> [webpack.Progress] 58% building 16/18 entries 5951/5957 dependencies 1458/1474 modules
-<s> [webpack.Progress] 61% building 17/18 entries 5959/5959 dependencies 1478/1479 modules
-<s> [webpack.Progress] 64% building 18/18 entries 5959/5959 dependencies 1479/1479 modules
+<s> [webpack.Progress] 12% building 1/19 entries 1037/1100 dependencies 54/347 modules
+<s> [webpack.Progress] 12% building 1/19 entries 1562/1600 dependencies 140/455 modules
+<s> [webpack.Progress] 12% building 1/19 entries 1954/2150 dependencies 228/600 modules
+<s> [webpack.Progress] 15% building 2/19 entries 2367/2476 dependencies 267/716 modules
+<s> [webpack.Progress] 15% building 2/19 entries 3024/3062 dependencies 479/800 modules
+<s> [webpack.Progress] 16% building 2/19 entries 3500/3754 dependencies 603/869 modules
+<s> [webpack.Progress] 17% building 2/19 entries 4000/4088 dependencies 714/975 modules
+<s> [webpack.Progress] 19% building 2/19 entries 4722/4800 dependencies 831/1217 modules
+<s> [webpack.Progress] 22% building 3/19 entries 5306/5323 dependencies 1136/1332 modules
+<s> [webpack.Progress] 22% building 4/19 entries 5306/5323 dependencies 1137/1332 modules
+<s> [webpack.Progress] 24% building 5/19 entries 5306/5323 dependencies 1138/1332 modules
+<s> [webpack.Progress] 27% building 6/19 entries 5306/5323 dependencies 1139/1332 modules
+<s> [webpack.Progress] 30% building 7/19 entries 5306/5323 dependencies 1140/1332 modules
+<s> [webpack.Progress] 33% building 8/19 entries 5306/5323 dependencies 1141/1332 modules
+<s> [webpack.Progress] 36% building 9/19 entries 5306/5323 dependencies 1142/1332 modules
+<s> [webpack.Progress] 38% building 10/19 entries 5306/5323 dependencies 1143/1332 modules
+<s> [webpack.Progress] 41% building 11/19 entries 5306/5323 dependencies 1147/1332 modules
+<s> [webpack.Progress] 44% building 12/19 entries 5306/5323 dependencies 1151/1332 modules
+<s> [webpack.Progress] 47% building 13/19 entries 5306/5323 dependencies 1157/1332 modules
+<s> [webpack.Progress] 47% building 13/19 entries 5579/5608 dependencies 1260/1400 modules
+<s> [webpack.Progress] 50% building 14/19 entries 5614/5686 dependencies 1262/1403 modules
+<s> [webpack.Progress] 50% building 14/19 entries 6080/6084 dependencies 1441/1500 modules
+<s> [webpack.Progress] 53% building 15/19 entries 6088/6099 dependencies 1468/1502 modules
+<s> [webpack.Progress] 56% building 16/19 entries 6117/6118 dependencies 1495/1514 modules
+<s> [webpack.Progress] 59% building 17/19 entries 6118/6118 dependencies 1511/1515 modules
+<s> [webpack.Progress] 62% building 18/19 entries 6118/6118 dependencies 1512/1515 modules
+<s> [webpack.Progress] 65% building 19/19 entries 6118/6118 dependencies 1515/1515 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
 <s> [webpack.Progress] 69% building finish
@@ -646,11 +831,11 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing copy-webpack-plugin
 <s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
 <s> [webpack.Progress] 92% sealing asset processing TerserPlugin
-info => Manager built (32 s)
+info => Manager built (36 s)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.110ae1eb.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.110ae1eb.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.9b151a24.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.9b151a24.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.a72d0157.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.a72d0157.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 701.afc546ab.iframe.bundle.js generate SourceMap
@@ -673,8 +858,8 @@ info => Manager built (32 s)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.082c5d07.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.49c00c83.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.49c00c83.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 584.7e89a4d5.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 584.7e89a4d5.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 884.bcd00645.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 884.bcd00645.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin assets/css/style.css generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin assets/css/style.css generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
@@ -685,8 +870,8 @@ info => Manager built (32 s)
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.01fd75c2.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.01fd75c2.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.f7ca28c6.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.f7ca28c6.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.b85036c9.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.b85036c9.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 701.5c6edf83.iframe.bundle.js generate SourceMap
@@ -709,8 +894,8 @@ info => Manager built (32 s)
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 331.9a4f69b5.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.139ff10e.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.139ff10e.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 584.5e7033b5.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 584.5e7033b5.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 884.84f2c338.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 884.84f2c338.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin resolve sources
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing AnyComponentStyleBudgetChecker
@@ -740,32 +925,82 @@ info => Manager built (32 s)
 <s> [webpack.Progress] 99% cache begin idle
 <s> [webpack.Progress] 100% 
 
-info => Preview built (36 s)
+info => Preview built (40 s)
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
 WARN export 'Pizza' (imported as 'Pizza') was not found in '../../../models' (module has no exports)
 WARN export 'Pizza' (imported as 'Pizza') was not found in '../../../models' (module has no exports)
 WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
 WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../models' (module has no exports)
+WARN export 'Topping' (imported as 'Topping') was not found in '../../../models' (module has no exports)
+WARN export 'Topping' (imported as 'Topping') was not found in '../../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../../../models' (module has no exports)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../models' (module has no exports)
+WARN export 'Pizza' (imported as 'Pizza') was not found in '../models' (module has no exports)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
 WARN Assets: 
 WARN   assets/img/toppings/pepperoni.svg (627 KiB)
-WARN   main.01fd75c2.iframe.bundle.js (268 KiB)
+WARN   main.f7ca28c6.iframe.bundle.js (387 KiB)
 WARN   42.0f491190.iframe.bundle.js (634 KiB)
 WARN   236.463453b5.iframe.bundle.js (595 KiB)
-WARN   584.5e7033b5.iframe.bundle.js (3.25 MiB)
+WARN   884.84f2c338.iframe.bundle.js (3.54 MiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
-WARN   main (3.52 MiB)
+WARN   main (3.92 MiB)
 WARN       runtime~main.b85036c9.iframe.bundle.js
-WARN       584.5e7033b5.iframe.bundle.js
-WARN       main.01fd75c2.iframe.bundle.js
+WARN       884.84f2c338.iframe.bundle.js
+WARN       main.f7ca28c6.iframe.bundle.js
 WARN 
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--24284-s8nNosmNTlw6
+info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--5500-kc06bDy3NZiW
