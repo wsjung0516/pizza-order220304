@@ -18,6 +18,7 @@ import {PizzasState, SelectPizza, ToppingsState} from "../state";
 import {HttpClientModule} from "@angular/common/http";
 import {SelectPizzaDirective} from "./directives/select-pizza.directive";
 import {MatBadgeModule} from "@angular/material/badge";
+import {NgxsSelectSnapshotModule} from "@ngxs-labs/select-snapshot";
 @NgModule({
   declarations: [
     PizzaDisplayComponent,
@@ -39,6 +40,7 @@ import {MatBadgeModule} from "@angular/material/badge";
     BrowserAnimationsModule,
     NgxsModule.forRoot([]),
     NgxsModule.forFeature([ToppingsState, PizzasState]),
+    NgxsSelectSnapshotModule,
     HttpClientModule,
     AngularMaterialModule
   ],

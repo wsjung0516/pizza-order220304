@@ -16,6 +16,7 @@ import {Select, Store} from "@ngxs/store";
 import {PizzasState, ToppingsState} from "../../state";
 import {filter, groupBy, map, mergeMap, skip, switchMap, takeLast, takeUntil, tap, toArray} from "rxjs/operators";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {SelectSnapshot} from "@ngxs-labs/select-snapshot";
 
 @Component({
   selector: 'pizza-form',
@@ -48,7 +49,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
         <!-- Angular CDK Overlay를 표시하기 위한 Anchor point, 선태된 토핑에 대한 Count를
          표시하기 위함 selected-item.service.ts와 관련이 있음 -->
         <ng-container>
-          <div style="float: left" #subTotal></div>
+          <div  #subTotal></div>
         </ng-container>
         <!--      -->
         <div class="m-10 w-auto h-auto">
@@ -155,11 +156,8 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
     if( pi ) {
       this.pizza = pi;
       const nv = pi.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
       this.form.patchValue({name: pi.name, price: nv });
-
     }
-
   }
   @Input() toppings : Topping[];
   @Output() selectedToppings = new EventEmitter<Topping[]>();
@@ -171,6 +169,7 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   overlayRef: OverlayRef;
   //
   @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]> | undefined;
+  @SelectSnapshot(PizzasState.pizzas) pizzas: Pizza[];
   @Select(ToppingsState.selectedToppings) selectedToppings$: Observable<Topping[]> | undefined;
   total:any;
   pizza: Pizza;
@@ -192,17 +191,6 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
     this.form.get("toppings")
       .valueChanges.pipe(
-      map ( (rv) => {
-        const { value } = this.form;
-        if( (value['name'].split(':')[0] === '')) {
-          let name = window.prompt('이름을 입력하세요!')
-          this.form.patchValue({name: name});
-          return [];
-        } else  {
-          return  rv;
-        }
-
-      }),
     )
       .subscribe(value => {
         this.selectedToppings.emit(value);
@@ -220,7 +208,17 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
       this.form.patchValue({ price: nv })
     });
   }
-
+  private isDuplicatedName(name: string) {
+    const idx =  this.pizzas.findIndex(val => val.name === name)
+    console.log(' idx', idx, name, this.pizzas)
+    let newName;
+    if( idx > -1 ) {
+      newName = window.prompt('중복된 이름이 있습니다. 다른 이름을 입력하세요')
+      return newName;
+    } else {
+      return name;
+    }
+  }
   ngAfterViewInit() {
     this.overlayRef = this.selectedItemService.openSelectedToppings(this.selected_origin,  this.pizza);
   }
@@ -239,10 +237,11 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
 
   createPizza(form: FormGroup) {
     const { value, valid } = form;
-    // console.log('--- value', value, valid, form);
-    if( value['name'].split(':')[0] === '') window.alert('이름을 입력하세요!')
-    // if( value['name'] === '') window.alert('이름을 입력하세요!')
-    if (valid) {
+    console.log('--- value', value, valid, form);
+    const name = value['name'].split(':')[0];
+    if( name === '') window.alert('이름을 입력하세요!')
+    let na = checkDuplicatedName(this.pizzas, name)// if( value['name'] === '') window.alert('이름을 입력하세요!')
+    if (valid && na !== 'cancel') {
       this.create.emit(value);
     }
   }
@@ -270,7 +269,26 @@ export class PizzaFormComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 }
-const uniqueId = (function(){ let id=10; return function(){ return id++;} })();
+export function checkDuplicatedName(pizzas: Pizza[], name:string) {
+  let ret = true;
+  let newName;
+  do {
+    const idx =  pizzas.findIndex(val => val.name === name)
+    console.log(' idx', idx, name, pizzas)
+    if( idx > -1 ) {
+      newName = window.prompt('중복된 이름이 있습니다. 다른 이름을 입력하세요')
+      console.log('newName', newName);
+      if( !newName) {  // In case cancel is pressed
+        newName = 'cancel';
+        ret = false;
+      } else if( newName !== name) ret = false
+    } else {
+      ret = false
+      newName = name;
+    }
+  } while (ret)
+  return newName
+}
 export function calcuretePrice() {
   return function <T>(source: Observable<T>) {
     let id: any = null;
@@ -288,6 +306,8 @@ export function calcuretePrice() {
             return from( value ).pipe(
               groupBy( (value:any) => value.id),
               mergeMap( (group:any) => group.pipe(toArray())),
+              // [{id:1, name: anchovy, price:1.1},{id:1, name: anchovy, price:1.1},{id:2, name: bacon, price:1},{id:3, name: basil, price:1.2}]
+
               map( (value:any) => {
                 value.map( (v2: any) => {
                   id = v2.id;
@@ -297,7 +317,7 @@ export function calcuretePrice() {
                 data.push({id:id, name:name, count:value.length, price: price});
               }),
               takeLast(1),
-              // [{id:1, count:2, price:1.1},{id:2, count:2, price:1},{id:3, count:2, price:1.2}]
+              // [{id:1, name: anchovy, count:2, price:1.1},{id:2, name: bacon, count:1, price:1},{id:3, name:basil, count:1, price:1.2}]
               // map( _ => data),
               map( _ => {
                 data.forEach(p1 => {

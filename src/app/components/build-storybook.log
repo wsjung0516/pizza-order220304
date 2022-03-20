@@ -55,7 +55,7 @@ Operating system : Windows 10
 [10:10:06] Including      : C:\Angular\pizza-order220304\.github\workflows\chromatic.yml
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\app.component.html
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\app.component.css
-[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\app.component.spec.ts
+[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\app.component.main-panel.spec.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\app.component.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\app.module.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\.gitkeep
@@ -67,18 +67,18 @@ Operating system : Windows 10
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\models\topping.model.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\index.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\pizzas.service.ts
-[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\services\price.service.spec.ts
+[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\services\price.service.main-panel.spec.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\price.service.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\topping-added.service.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\topping-image.service.ts
-[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\services\topping-image.service.spec.ts
+[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\services\topping-image.service.main-panel.spec.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\topping-total.service.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\services\toppings.service.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\state\index.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.actions.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\state\pizzas.state.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.actions.ts
-[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\state\toppings.state.spec.ts
+[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\state\toppings.state.main-panel.spec.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\state\toppings.state.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\css\style.css
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\fonts\cornerstone.woff
@@ -86,7 +86,7 @@ Operating system : Windows 10
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\img\logo.svg
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\img\pizza.svg
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\json\db.json
-[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.spec.ts
+[10:10:06] Ignoring       : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.main-panel.spec.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.stories.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\app\components\pizza-display\pizza-display.component.ts
 [10:10:06] Including      : C:\Angular\pizza-order220304\src\assets\img\actions\checked.svg
@@ -277,7 +277,7 @@ Operating system : Windows 10
 [10:10:06] found          : DROP_ANIMATION
 [10:10:06] found          : PizzaDisplayComponent
 [10:10:06] -------------------
-[10:10:06] Project statistics 
+[10:10:06] Project statistics
 [10:10:06] - files      : 155
 [10:10:06] - module     : 1
 [10:10:06] - component  : 2
@@ -298,7 +298,7 @@ Operating system : Windows 10
 [10:10:06] Generating documentation in export format json
 [10:10:06] Documentation generated in ./ in 0.564 seconds
 info @storybook/angular v6.4.19
-info 
+info
 info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--11768-gWGScVidYmHT
 info => Loading presets
 info => Compiling manager..
@@ -309,7 +309,7 @@ info => Loading angular-cli config for angular lower than 12.2.0
 info => Using angular project "pizza-order220304:build" for configuring Storybook
 info => Using angular-cli webpack config
 info => Using default Webpack5 setup
-<s> [webpack.Progress] 0% 
+<s> [webpack.Progress] 0%
 
 <s> [webpack.Progress] 1% setup initialize
 <s> [webpack.Progress] 1% setup initialize HtmlWebpackPlugin
@@ -656,13 +656,13 @@ info => Manager built (33 s)
 <s> [webpack.Progress] 99% done plugins fork-ts-checker-webpack-plugin
 <s> [webpack.Progress] 99% done plugins fork-ts-checker-webpack-plugin
 <s> [webpack.Progress] 99% done plugins
-<s> [webpack.Progress] 99% 
+<s> [webpack.Progress] 99%
 
 <s> [webpack.Progress] 99% cache store build dependencies
 <s> [webpack.Progress] 99% cache store build dependencies
 <s> [webpack.Progress] 99% cache begin idle
 <s> [webpack.Progress] 99% cache begin idle
-<s> [webpack.Progress] 100% 
+<s> [webpack.Progress] 100%
 
 info => Preview built (38 s)
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
@@ -671,7 +671,7 @@ WARN System.import() is deprecated and will be removed soon. Use import() instea
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
-WARN Assets: 
+WARN Assets:
 WARN   assets/img/toppings/pepperoni.svg (627 KiB)
 WARN   42.0f491190.iframe.bundle.js (634 KiB)
 WARN   236.463453b5.iframe.bundle.js (595 KiB)
@@ -682,9 +682,9 @@ WARN   main (3.06 MiB)
 WARN       runtime~main.b85036c9.iframe.bundle.js
 WARN       901.beabd8fa.iframe.bundle.js
 WARN       main.03887d14.iframe.bundle.js
-WARN 
+WARN
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
-<s> [webpack.Progress] 100% 
+<s> [webpack.Progress] 100%
 
 info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--11768-gWGScVidYmHT

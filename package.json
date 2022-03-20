@@ -10,7 +10,10 @@
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
-    "chromatic": "npx chromatic --project-token=484225048769 --force-rebuild main"
+    "chromatic": "npx chromatic --project-token=484225048769 --force-rebuild main",
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@ngxs-labs/select-snapshot": "^3.0.0",
     "@ngxs/router-plugin": "^3.7.3",
     "@ngxs/store": "^3.7.3",
     "rxjs": "~6.6.0",
@@ -38,6 +42,7 @@
     "@angular/compiler-cli": "~12.2.0",
     "@babel/core": "^7.17.5",
     "@compodoc/compodoc": "^1.1.19",
+    "@cypress/schematic": "^1.6.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -51,6 +56,7 @@
     "angular-cli-ghpages": "^1.0.0",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.1",
+    "cypress": "latest",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

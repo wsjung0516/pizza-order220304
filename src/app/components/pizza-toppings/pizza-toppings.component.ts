@@ -37,7 +37,7 @@ const PIZZA_TOPPINGS_ACCESSOR = {
         <div class="">
           <div class="w-40 min-w-full md:min-w-0">
             <div class="pizza-toppings-item" (click)="addTopping(topping)" style="text-align: justify-all"
-                 matBadge="{{displayToppingCount(topping)}}" matBadgeColor="warn">
+                 matBadge="{{displayToppingCount(topping)}}" >
               <img src="assets/img/toppings/singles/{{ topping.name }}.svg">
               {{ topping.name }}
               <div class="topping_price">{{topping.price && topping.price * 1000}}원</div>

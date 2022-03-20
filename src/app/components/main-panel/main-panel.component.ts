@@ -19,7 +19,8 @@ import {Select, Store} from "@ngxs/store";
 import {filter, takeUntil, tap} from "rxjs/operators";
 import {ToppingImageService} from "../../services/topping-image.service";
 import {Observable, of, Subject} from "rxjs";
-import {PizzaFormComponent} from "../pizza-form/pizza-form.component";
+import {checkDuplicatedName, PizzaFormComponent} from "../pizza-form/pizza-form.component";
+import {SelectSnapshot} from "@ngxs-labs/select-snapshot";
 
 @Component({
   selector: 'main-panel',
@@ -63,6 +64,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
   nToppings: Topping[];
 
   @Select(PizzasState.pizzas) pizzas$: Observable<Pizza[]>;
+  @SelectSnapshot(PizzasState.pizzas) pizzas: Pizza[];
   @Select(ToppingsState.toppings) toppings$: Observable<Topping[]>;
   @Select(ToppingsState.selectedToppings ) selectedToppings$: Observable<any[]>;
 
@@ -94,6 +96,7 @@ export class MainPanelComponent implements OnInit, OnDestroy {
     this.cdr.detectChanges();
   }
   onCreate(pizza: Pizza) {
+    pizza.name = checkDuplicatedName(this.pizzas,pizza.name);
     this.store.dispatch(new CreatePizzaSuccess(pizza));
   }
   onUpdate(event: Pizza) {

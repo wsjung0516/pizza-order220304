@@ -20,15 +20,16 @@ import {ToppingAddedService} from "../../../services/topping-added.service";
 @Component({
   selector: 'selected-topping-list',
   template: `
-    <div class="flex flex-wrap" >
-      <ng-container>
+    <div class="" style="width: 45vw">
+      <div class="flex flex-wrap ">
         <ng-container *ngFor="let topping of rawToppings">
           <selected-topping-item
             (remove)="onRemove($event)"
             [topping]="topping">
           </selected-topping-item>
         </ng-container>
-      </ng-container>
+      </div>
+
     </div>
   `,
   styles: [],
