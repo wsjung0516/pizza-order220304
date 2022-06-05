@@ -54,6 +54,7 @@
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^1.0.0",
+    "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.1",
     "cypress": "latest",

@@ -25,7 +25,7 @@ const Template: Story = (args) => ({
   <pizza-form
             [_pizza]="pizza"
             [toppings]="nToppings"
-            (addToppings)="addToppings($event)"
+            (selectedToppings)="addToppings($event)"
             (create)="onCreate($event)"
             (update)="onUpdate($event)"
             (remove)="onRemove($event)">

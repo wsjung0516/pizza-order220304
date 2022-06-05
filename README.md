@@ -1,3 +1,4 @@
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](link to site)
 # SpectatorPizza211001
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
